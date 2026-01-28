@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Quiz Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <!-- Left Section - Hero -->
+        <div class="login-hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to<br><span class="highlight">Quiz Platform</span></h1>
+                <p class="hero-subtitle">Compete for scholarships and prove your excellence</p>
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">⏱️</div>
+                        <div class="feature-text">60 Minute Test</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🏆</div>
+                        <div class="feature-text">Win Scholarships</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📊</div>
+                        <div class="feature-text">Instant Results</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Section - Login Form -->
+        <div class="login-form-section">
+            <div class="form-wrapper">
+                <div class="form-header">
+                    <h2 class="form-title">Student Login</h2>
+                    <p class="form-description">Enter your details to start the test</p>
+                </div>
+
+                {% if error %}
+                <div class="alert alert-error">
+                    <svg class="alert-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                    </svg>
+                    {{ error }}
+                </div>
+                {% endif %}
+
+                <form method="POST" action="{{ url_for('login') }}" class="login-form">
+                    <!-- Username Field -->
+                    <div class="form-group">
+                        <label for="username" class="form-label">Full Name</label>
+                        <input 
+                            type="text" 
+                            id="username" 
+                            name="username" 
+                            class="form-input" 
+                            placeholder="Enter your full name"
+                            required
+                            autocomplete="name"
+                        >
+                    </div>
+
+                    <!-- Password Field -->
+                    <div class="form-group">
+                        <label for="password" class="form-label">Password</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            class="form-input" 
+                            placeholder="Enter password"
+                            required
+                            autocomplete="current-password"
+                        >
+                    </div>
+
+                    <!-- Class Selection -->
+                    <div class="form-group">
+                        <label for="class_level" class="form-label">Class (Being Promoted To)</label>
+                        <select id="class_level" name="class_level" class="form-select" required>
+                            <option value="">Select Class</option>
+                            <option value="class9">Class 9</option>
+                            <option value="class10">Class 10</option>
+                            <option value="class11">Class 11</option>
+                            <option value="class12">Class 12</option>
+                            <option value="dropper">Dropper</option>
+                        </select>
+                    </div>
+
+                    <!-- Stream Selection (Only for Class 11, 12, and Dropper) -->
+                    <div class="form-group" id="stream-group" style="display: none;">
+                        <label for="stream" class="form-label">Stream</label>
+                        <select id="stream" name="stream" class="form-select">
+                            <option value="">Select Stream</option>
+                            <option value="jee">JEE</option>
+                            <option value="neet">NEET</option>
+                        </select>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary btn-block">
+                        Start Test
+                        <svg class="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                </form>
+
+                <div class="form-footer">
+                    <p class="footer-text">
+                        <svg class="footer-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                        </svg>
+                        Please read all instructions carefully before starting the test
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Show/hide stream selection based on class level
+        const classSelect = document.getElementById('class_level');
+        const streamGroup = document.getElementById('stream-group');
+        const streamSelect = document.getElementById('stream');
+        
+        classSelect.addEventListener('change', function() {
+            const selectedClass = this.value;
+            
+            // Show stream only for class 11, 12, and dropper
+            if (selectedClass === 'class11' || selectedClass === 'class12' || selectedClass === 'dropper') {
+                streamGroup.style.display = 'flex';
+                streamSelect.required = true;
+            } else {
+                streamGroup.style.display = 'none';
+                streamSelect.required = false;
+                streamSelect.value = ''; // Reset stream selection
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "question": "What is the value of √144?",
+    "options": ["10", "11", "12", "13"],
+    "correct": 2
+  },
+  {
+    "id": 2,
+    "question": "Which of the following is a prime number?",
+    "options": ["15", "17", "21", "25"],
+    "correct": 1
+  },
+  {
+    "id": 3,
+    "question": "If 2x + 3 = 11, what is the value of x?",
+    "options": ["2", "3", "4", "5"],
+    "correct": 2
+  },
+  {
+    "id": 4,
+    "question": "What is the SI unit of force?",
+    "options": ["Joule", "Newton", "Watt", "Pascal"],
+    "correct": 1
+  },
+  {
+    "id": 5,
+    "question": "The powerhouse of the cell is:",
+    "options": ["Nucleus", "Ribosome", "Mitochondria", "Golgi Body"],
+    "correct": 2
+  },
+  {
+    "id": 6,
+    "question": "What is 15% of 200?",
+    "options": ["25", "30", "35", "40"],
+    "correct": 1
+  },
+  {
+    "id": 7,
+    "question": "The atomic number of Oxygen is:",
+    "options": ["6", "7", "8", "9"],
+    "correct": 2
+  },
+  {
+    "id": 8,
+    "question": "What is the formula for the area of a circle?",
+    "options": ["2πr", "πr²", "πd", "2πr²"],
+    "correct": 1
+  },
+  {
+    "id": 9,
+    "question": "Who wrote 'Romeo and Juliet'?",
+    "options": [
+      "Charles Dickens",
+      "William Shakespeare",
+      "Jane Austen",
+      "Mark Twain"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 10,
+    "question": "What is the capital of France?",
+    "options": ["Berlin", "Madrid", "Paris", "Rome"],
+    "correct": 2
+  }
+]

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Results - Quiz Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="score-page">
+    <div class="score-container">
+        <!-- Result Card -->
+        <div class="result-card">
+            <!-- Header -->
+            <div class="result-header">
+                <div class="result-icon-wrapper">
+                    {% if percentage >= 90 %}
+                    <div class="result-icon success-icon">🏆</div>
+                    {% elif percentage >= 60 %}
+                    <div class="result-icon good-icon">⭐</div>
+                    {% else %}
+                    <div class="result-icon neutral-icon">📝</div>
+                    {% endif %}
+                </div>
+                <h1 class="result-title">Test Completed!</h1>
+                <p class="result-subtitle">Here are your results</p>
+            </div>
+
+            <!-- Student Info -->
+            <div class="student-details">
+                <div class="detail-row">
+                    <span class="detail-label">Student Name:</span>
+                    <span class="detail-value">{{ username }}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Class:</span>
+                    <span class="detail-value">{{ class_level|upper }}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Stream:</span>
+                    <span class="detail-value">{{ stream|upper }}</span>
+                </div>
+                {% if submission_type != 'manual' %}
+                <div class="detail-row warning-row">
+                    <span class="detail-label">Submission Type:</span>
+                    <span class="detail-value warning-value">
+                        {% if submission_type == 'timeout' %}
+                        ⏰ Auto-submitted (Time Expired)
+                        {% elif submission_type == 'tab_violation' %}
+                        ⚠️ Auto-submitted (Tab Switch Violation)
+                        {% endif %}
+                    </span>
+                </div>
+                {% endif %}
+            </div>
+
+            <!-- Score Display -->
+            <div class="score-display">
+                <div class="score-circle">
+                    <svg class="score-ring" width="200" height="200">
+                        <circle 
+                            class="score-ring-background" 
+                            cx="100" 
+                            cy="100" 
+                            r="85" 
+                            stroke-width="12"
+                            fill="none"
+                        />
+                        <circle 
+                            class="score-ring-progress" 
+                            cx="100" 
+                            cy="100" 
+                            r="85" 
+                            stroke-width="12"
+                            fill="none"
+                            stroke-dasharray="{{ (percentage / 100) * 534 }} 534"
+                            stroke-dashoffset="0"
+                            {% if percentage >= 90 %}
+                            stroke="#10B981"
+                            {% elif percentage >= 75 %}
+                            stroke="#2563EB"
+                            {% elif percentage >= 60 %}
+                            stroke="#F59E0B"
+                            {% else %}
+                            stroke="#EF4444"
+                            {% endif %}
+                        />
+                    </svg>
+                    <div class="score-content">
+                        <div class="score-percentage">{{ percentage }}%</div>
+                        <div class="score-fraction">{{ score }} / {{ total }}</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scholarship Info -->
+            <div class="scholarship-section">
+                <div class="scholarship-card {% if scholarship_percent >= 90 %}scholarship-gold{% elif scholarship_percent >= 50 %}scholarship-silver{% elif scholarship_percent >= 25 %}scholarship-bronze{% else %}scholarship-none{% endif %}">
+                    <div class="scholarship-icon">
+                        {% if scholarship_percent == 100 %}
+                        🎓
+                        {% elif scholarship_percent == 50 %}
+                        🎖️
+                        {% elif scholarship_percent == 25 %}
+                        🏅
+                        {% else %}
+                        📚
+                        {% endif %}
+                    </div>
+                    <div class="scholarship-title">Scholarship Award</div>
+                    <div class="scholarship-percent">{{ scholarship_percent }}%</div>
+                    <div class="scholarship-message">{{ scholarship_message }}</div>
+                </div>
+            </div>
+
+            <!-- Additional Info -->
+            {% if tab_switches > 0 %}
+            <div class="additional-info">
+                <div class="info-box warning-box">
+                    <svg class="info-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>You switched tabs {{ tab_switches }} time(s) during the test</span>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <a href="{{ url_for('logout') }}" class="btn btn-secondary">
+                    <svg class="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"/>
+                    </svg>
+                    Logout
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="score-footer">
+            <p>Thank you for taking the test. Best of luck with your studies!</p>
+        </div>
+    </div>
+</body>
+</html>
