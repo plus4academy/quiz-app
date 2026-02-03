@@ -1,0 +1,277 @@
+[
+  {
+    "id": 1,
+    "question": "The value of 82–62 is",
+    "options": [
+      "16",
+      "28",
+      "32",
+      "64"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 2,
+    "question": "If x=4, find the value of x2–3x is",
+    "options": [
+      "4",
+      "8",
+      "16",
+      "28"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 3,
+    "question": "The square root of 196 is",
+    "options": [
+      "12",
+      "13",
+      "14",
+      "16"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 4,
+    "question": "Which of the following numbers is a prime number?",
+    "options": [
+      "9",
+      "15",
+      "21",
+      "23"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 5,
+    "question": "The perimeter of a square whose side is 5 cm is",
+    "options": [
+      "10 cm",
+      "15 cm",
+      "20 cm",
+      "25 cm"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 6,
+    "question": "The value of (−2)4 is",
+    "options": [
+      "–16",
+      "–8",
+      "8",
+      "16"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 7,
+    "question": "Two angles whose sum is 90° are called",
+    "options": [
+      "Supplementary",
+      "Complementary",
+      "Linear",
+      "Adjacent"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 8,
+    "question": "The sum of interior angles of a quadrilateral is",
+    "options": [
+      "180°",
+      "270°",
+      "360°",
+      "540°"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 9,
+    "question": "The decimal form of ¾ is",
+    "options": [
+      "0.25",
+      "0.5",
+      "0.75",
+      "1.25"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 10,
+    "question": "The value of 20–4×3 is",
+    "options": [
+      "48",
+      "8",
+      "12",
+      "32"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 11,
+    "question": "Which of the following is an odd number?",
+    "options": [
+      "12",
+      "18",
+      "20",
+      "27"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 12,
+    "question": "Mean of 10, 20, 30 is",
+    "options": [
+      "15",
+      "20",
+      "25",
+      "30"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 13,
+    "question": "A right angle measures",
+    "options": [
+      "45°",
+      "60°",
+      "90°",
+      "180°"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 14,
+    "question": "The SI unit of power is",
+    "options": [
+      "Joule",
+      "Newton",
+      "Watt",
+      "Pascal"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 15,
+    "question": "Which part of the human eye controls the amount of light entering?",
+    "options": [
+      "Retina",
+      "Iris",
+      "Cornea",
+      "Optic nerve"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 16,
+    "question": "The process of solid changing directly into gas is called",
+    "options": [
+      "Evaporation",
+      "Condensation",
+      "Sublimation",
+      "Freezing"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 17,
+    "question": "Which gas is filled in electric bulbs?",
+    "options": [
+      "Oxygen",
+      "Nitrogen",
+      "Hydrogen",
+      "Carbon dioxide"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 18,
+    "question": "The speed of light is maximum in",
+    "options": [
+      "Water",
+      "Glass",
+      "Air",
+      "Vacuum"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 19,
+    "question": "Which vitamin helps in blood clotting?",
+    "options": [
+      "Vitamin A",
+      "Vitamin B",
+      "Vitamin C",
+      "Vitamin K"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 20,
+    "question": "The unit of frequency is",
+    "options": [
+      "Hertz",
+      "Newton",
+      "Joule",
+      "Watt"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 21,
+    "question": "Which component of blood fights diseases?",
+    "options": [
+      "RBC",
+      "WBC",
+      "Platelets",
+      "Plasma"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 22,
+    "question": "The chemical formula of common salt is",
+    "options": [
+      "NaCl",
+      "Na₂CO₃",
+      "CaCO₃",
+      "KCl"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 23,
+    "question": "Which source of energy is renewable?",
+    "options": [
+      "Coal",
+      "Petroleum",
+      "Natural gas",
+      "Solar energy"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 24,
+    "question": "The largest organ of human body is",
+    "options": [
+      "Heart",
+      "Liver",
+      "Skin",
+      "Brain"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 25,
+    "question": "The force acting between two charges is",
+    "options": [
+      "Gravitational force",
+      "Magnetic force",
+      "Electrostatic force",
+      "Nuclear force"
+    ],
+    "correct": 2
+  }
+]

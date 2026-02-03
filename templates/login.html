@@ -49,18 +49,19 @@
                 {% endif %}
 
                 <form method="POST" action="{{ url_for('login') }}" class="login-form">
-                    <!-- Username Field -->
+                    <!-- Username Field (generated: firstname.lastname + last 4 digits of phone) -->
                     <div class="form-group">
-                        <label for="username" class="form-label">Full Name</label>
+                        <label for="username" class="form-label">Username</label>
                         <input 
                             type="text" 
                             id="username" 
                             name="username" 
                             class="form-input" 
-                            placeholder="Enter your full name"
+                            placeholder="e.g. om.wadhwani3210"
                             required
-                            autocomplete="name"
+                            autocomplete="username"
                         >
+                        <span class="form-hint">firstname.lastname + last 4 digits of phone</span>
                     </div>
 
                     <!-- Password Field -->

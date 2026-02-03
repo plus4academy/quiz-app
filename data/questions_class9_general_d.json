@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "question": "10² ÷ 10¹",
+    "options": ["1", "2", "5", "10"],
+    "correct": 3
+  },
+  {
+    "id": 2,
+    "question": "Which is irrational?",
+    "options": ["4/7", "0.25", "√5", "-3"],
+    "correct": 2
+  },
+  {
+    "id": 3,
+    "question": "9/14 + 5/14",
+    "options": ["1", "14/9", "1", "14/9"],
+    "correct": 0
+  },
+  {
+    "id": 4,
+    "question": "Right triangle has one angle:",
+    "options": ["30°", "45°", "60°", "90°"],
+    "correct": 3
+  },
+  {
+    "id": 5,
+    "question": "Area of rectangle 12cm × 4cm =",
+    "options": ["16", "24", "36", "48"],
+    "correct": 3
+  },
+  {
+    "id": 6,
+    "question": "LCM of 10 and 15 =",
+    "options": ["15", "20", "30", "45"],
+    "correct": 2
+  },
+  {
+    "id": 7,
+    "question": "Median of: 1,1,2,3,4 =",
+    "options": ["1", "2", "3", "4"],
+    "correct": 1
+  },
+  {
+    "id": 8,
+    "question": "Solve: 4x - 8 = 4",
+    "options": ["1", "2", "3", "4"],
+    "correct": 2
+  },
+  {
+    "id": 9,
+    "question": "Divisibility rule for 4:",
+    "options": [
+      "Sum of digits divisible by 4",
+      "Last digit divisible by 4",
+      "Last two digits divisible by 4",
+      "Last three digits divisible by 4"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 10,
+    "question": "√225 =",
+    "options": ["13", "14", "15", "16"],
+    "correct": 2
+  },
+  {
+    "id": 11,
+    "question": "10% of 750 =",
+    "options": ["55", "65", "75", "80"],
+    "correct": 2
+  },
+  {
+    "id": 12,
+    "question": "A plane contains:",
+    "options": ["No point", "Only one point", "Two points", "Infinite points"],
+    "correct": 3
+  },
+  {
+    "id": 13,
+    "question": "Profit% if CP = ₹500, SP = ₹550",
+    "options": ["5%", "8%", "10%", "12%"],
+    "correct": 0
+  },
+  {
+    "id": 14,
+    "question": "Freezing point of water =",
+    "options": ["-10°C", "0°C", "10°C", "100°C"],
+    "correct": 1
+  },
+  {
+    "id": 15,
+    "question": "SI unit of work =",
+    "options": ["Watt", "Joule", "Pascal", "Newton"],
+    "correct": 1
+  },
+  {
+    "id": 16,
+    "question": "Ozone protects us from:",
+    "options": ["Infrared rays", "UV rays", "X Rays", "Radio waves"],
+    "correct": 1
+  },
+  {
+    "id": 17,
+    "question": "The food factory of plant is:",
+    "options": ["Root", "Leaf", "Stem", "Flower"],
+    "correct": 1
+  },
+  {
+    "id": 18,
+    "question": "Which is an insulator?",
+    "options": ["Iron", "Silver", "Rubber", "Copper"],
+    "correct": 2
+  },
+  {
+    "id": 19,
+    "question": "Burning of paper is:",
+    "options": [
+      "Physical change",
+      "Chemical change",
+      "No change",
+      "Temporary change"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 20,
+    "question": "Table salt (NaCl) is a:",
+    "options": ["Mixture", "Compound", "Element", "Alloy"],
+    "correct": 1
+  },
+  {
+    "id": 21,
+    "question": "Sound is produced due to:",
+    "options": ["Heat", "Light", "Vibration", "Pressure"],
+    "correct": 2
+  },
+  {
+    "id": 22,
+    "question": "Nucleus controls:",
+    "options": ["Digestion", "Breathing", "Cell activity", "Excretion"],
+    "correct": 2
+  },
+  {
+    "id": 23,
+    "question": "The largest bone in human body:",
+    "options": ["Humerus", "Sternum", "Femur", "Tibia"],
+    "correct": 2
+  },
+  {
+    "id": 24,
+    "question": "Which planet has rings?",
+    "options": ["Earth", "Mars", "Saturn", "Venus"],
+    "correct": 2
+  },
+  {
+    "id": 25,
+    "question": "The smallest planet in solar system:",
+    "options": ["Mercury", "Mars", "Venus", "Saturn"],
+    "correct": 0
+  }
+]

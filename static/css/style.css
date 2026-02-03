@@ -231,6 +231,13 @@ body {
     color: var(--main-text);
 }
 
+/* small grey line under the username input explaining the format */
+.form-hint {
+    font-size: 0.78rem;
+    color: var(--muted-text);
+    margin-top: 0.25rem;
+}
+
 .form-input,
 .form-select {
     width: 100%;

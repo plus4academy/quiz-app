@@ -1,0 +1,442 @@
+[
+  {
+    "id": 1,
+    "question": "The zeroes of polynomial x² – 9 are",
+    "options": [
+      "3, 3",
+      "–3, –3",
+      "3, –3",
+      "0, 9"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 2,
+    "question": "LCM of 24 and 36 is",
+    "options": [
+      "72",
+      "48",
+      "12",
+      "144"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 3,
+    "question": "If sin θ = √3/2, then θ =",
+    "options": [
+      "30°",
+      "45°",
+      "60°",
+      "90°"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 4,
+    "question": "Distance between (–2,4) and (–2,–2) is",
+    "options": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 5,
+    "question": "First term of AP is 5 and common difference is 3. Second term is",
+    "options": [
+      "8",
+      "10",
+      "15",
+      "2"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 6,
+    "question": "Value of cos 60° + sin 0° is",
+    "options": [
+      "1",
+      "1/2",
+      "0",
+      "3/2"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 7,
+    "question": "The degree of polynomial 7 – 3x⁴ is",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 8,
+    "question": "Probability of getting a prime number on a die is",
+    "options": [
+      "1/2",
+      "1/3",
+      "2/3",
+      "1/6"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 9,
+    "question": "Which is a linear equation?",
+    "options": [
+      "x² + 1 = 0",
+      "2x + 3 = 0",
+      "x³ = 4",
+      "xy = 5"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 10,
+    "question": "Area of triangle with base 10 cm and height 8 cm is",
+    "options": [
+      "40 cm²",
+      "80 cm²",
+      "18 cm²",
+      "160 cm²"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 11,
+    "question": "If P(A) = 0.35, then P(not A) =",
+    "options": [
+      "0.65",
+      "0.35",
+      "0.75",
+      "1"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 12,
+    "question": "tan 0° equals",
+    "options": [
+      "0",
+      "1",
+      "∞",
+      "–1"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 13,
+    "question": "The graph of x = 3 is",
+    "options": [
+      "Horizontal line",
+      "Vertical line",
+      "Curve",
+      "Circle"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 14,
+    "question": "Volume of sphere of radius r is",
+    "options": [
+      "πr²",
+      "2πr",
+      "4/3 πr³",
+      "πr³"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 15,
+    "question": "The value of √144 is",
+    "options": [
+      "10",
+      "11",
+      "12",
+      "14"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 16,
+    "question": "The mean of first 10 natural numbers is",
+    "options": [
+      "5",
+      "5.5",
+      "6",
+      "10"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 17,
+    "question": "Which is not a quadratic equation?",
+    "options": [
+      "x² + 3 = 0",
+      "2x² – x = 0",
+      "x³ – 1 = 0",
+      "x² – 5x + 6 = 0"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 18,
+    "question": "The point (0,5) lies on",
+    "options": [
+      "x-axis",
+      "y-axis",
+      "origin",
+      "none"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 19,
+    "question": "Value of sin 90° is",
+    "options": [
+      "0",
+      "1",
+      "–1",
+      "1/2"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 20,
+    "question": "Sum of angles of triangle is",
+    "options": [
+      "90°",
+      "180°",
+      "270°",
+      "360°"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 21,
+    "question": "SI unit of work is",
+    "options": [
+      "Watt",
+      "Joule",
+      "Newton",
+      "Ampere"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 22,
+    "question": "Which acid is present in curd?",
+    "options": [
+      "Citric acid",
+      "Acetic acid",
+      "Lactic acid",
+      "Hydrochloric acid"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 23,
+    "question": "Force that opposes motion is",
+    "options": [
+      "Gravity",
+      "Friction",
+      "Magnetic",
+      "Nuclear"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 24,
+    "question": "Cell wall is present in",
+    "options": [
+      "Animal cell",
+      "Plant cell",
+      "Human cell",
+      "RBC"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 25,
+    "question": "Unit of resistance is",
+    "options": [
+      "Volt",
+      "Ohm",
+      "Ampere",
+      "Watt"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 26,
+    "question": "The process of loss of electrons is",
+    "options": [
+      "Reduction",
+      "Oxidation",
+      "Neutralisation",
+      "Decomposition"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 27,
+    "question": "Which vitamin is produced in skin?",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 28,
+    "question": "Heart pumps",
+    "options": [
+      "Oxygen",
+      "Blood",
+      "Water",
+      "Hormones"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 29,
+    "question": "Image formed by convex mirror is always",
+    "options": [
+      "Real",
+      "Inverted",
+      "Virtual",
+      "Enlarged"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 30,
+    "question": "Which gas is essential for respiration?",
+    "options": [
+      "Nitrogen",
+      "Oxygen",
+      "Hydrogen",
+      "Carbon dioxide"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 31,
+    "question": "The atomic number of oxygen is",
+    "options": [
+      "6",
+      "7",
+      "8",
+      "16"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 32,
+    "question": "Speed of light is maximum in",
+    "options": [
+      "Water",
+      "Glass",
+      "Vacuum",
+      "Air"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 33,
+    "question": "Which organ helps in balance of body?",
+    "options": [
+      "Heart",
+      "Cerebellum",
+      "Kidney",
+      "Liver"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 34,
+    "question": "The chemical formula of lime water is",
+    "options": [
+      "CaCO₃",
+      "CaO",
+      "Ca(OH)₂",
+      "NaOH"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 35,
+    "question": "Energy stored in food is",
+    "options": [
+      "Mechanical",
+      "Heat",
+      "Chemical",
+      "Electrical"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 36,
+    "question": "Plants prepare food by",
+    "options": [
+      "Respiration",
+      "Transpiration",
+      "Photosynthesis",
+      "Fermentation"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 37,
+    "question": "SI unit of frequency is",
+    "options": [
+      "m/s",
+      "Hertz",
+      "Joule",
+      "Newton"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 38,
+    "question": "Which blood cells fight infection?",
+    "options": [
+      "RBC",
+      "Platelets",
+      "WBC",
+      "Plasma"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 39,
+    "question": "Rust is",
+    "options": [
+      "Iron sulphide",
+      "Iron oxide",
+      "Iron chloride",
+      "Iron carbonate"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 40,
+    "question": "The main source of energy on Earth is",
+    "options": [
+      "Coal",
+      "Wind",
+      "Sun",
+      "Water"
+    ],
+    "correct": 2
+  }
+]

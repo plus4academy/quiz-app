@@ -1,0 +1,277 @@
+[
+  {
+    "id": 1,
+    "question": "The value of (92-82) is",
+    "options": [
+      "1",
+      "9",
+      "17",
+      "81"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 2,
+    "question": "If x=5, find the value of 3x-7",
+    "options": [
+      "8",
+      "15",
+      "10",
+      "7"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 3,
+    "question": "The cube of 4 is",
+    "options": [
+      "12",
+      "16",
+      "64",
+      "256"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 4,
+    "question": "Which of the following is an irrational number?",
+    "options": [
+      "2/3",
+      "0.25",
+      "√7",
+      "1.5"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 5,
+    "question": "If the radius of a circle is 7 cm, its diameter is",
+    "options": [
+      "7 cm",
+      "14 cm",
+      "21 cm",
+      "49 cm"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 6,
+    "question": "The value of (-3)2 is",
+    "options": [
+      "–9",
+      "–6",
+      "6",
+      "9"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 7,
+    "question": "A triangle with all sides unequal is called",
+    "options": [
+      "Isosceles",
+      "Equilateral",
+      "Scalene",
+      "Right"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 8,
+    "question": "The perimeter of a rectangle is given by",
+    "options": [
+      "l+b",
+      "2(l+b)",
+      "lxb",
+      "l2+b2"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 9,
+    "question": "The value of ⅕ + ⅖  is",
+    "options": [
+      "3/10",
+      "1/5",
+      "3/5",
+      "2/5"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 10,
+    "question": "Mean of numbers 2, 4, 6, 8 is",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 11,
+    "question": "If one angle of a right triangle is 90°, the other two angles sum to",
+    "options": [
+      "45°",
+      "60°",
+      "90°",
+      "180°"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 12,
+    "question": "The value of 100 is",
+    "options": [
+      "0",
+      "1",
+      "10",
+      "Undefined"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 13,
+    "question": "Which of the following is a prime number?",
+    "options": [
+      "1",
+      "4",
+      "9",
+      "11"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 14,
+    "question": "SI unit of work is",
+    "options": [
+      "Newton",
+      "Joule",
+      "Watt",
+      "Pascal"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 15,
+    "question": "Which state of matter has fixed volume but no fixed shape?",
+    "options": [
+      "Solid",
+      "Liquid",
+      "Gas",
+      "Plasma"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 16,
+    "question": "The chemical symbol of sodium is",
+    "options": [
+      "So",
+      "S",
+      "Na",
+      "N"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 17,
+    "question": "Which organ is responsible for breathing?",
+    "options": [
+      "Heart",
+      "Brain",
+      "Lungs",
+      "Liver"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 18,
+    "question": "Speed of an object increases when",
+    "options": [
+      "Distance increases",
+      "Time increases",
+      "Distance decreases",
+      "Distance increases for same time"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 19,
+    "question": "The force that opposes motion is",
+    "options": [
+      "Gravitational force",
+      "Magnetic force",
+      "Frictional force",
+      "Nuclear force"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 20,
+    "question": "Plants prepare their food by",
+    "options": [
+      "Respiration",
+      "Transpiration",
+      "Photosynthesis",
+      "Germination"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 21,
+    "question": "The boiling point of water in Kelvin scale is",
+    "options": [
+      "0 K",
+      "100 K",
+      "273 K",
+      "373 K"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 22,
+    "question": "Which vitamin is produced in human body by sunlight?",
+    "options": [
+      "Vitamin A",
+      "Vitamin B",
+      "Vitamin C",
+      "Vitamin D"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 23,
+    "question": "The unit of electric current is",
+    "options": [
+      "Volt",
+      "Ampere",
+      "Ohm",
+      "Watt"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 24,
+    "question": "The hardest natural substance is",
+    "options": [
+      "Gold",
+      "Iron",
+      "Diamond",
+      "Graphite"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 25,
+    "question": "Which blood cells help in clotting?",
+    "options": [
+      "RBC",
+      "WBC",
+      "Platelets",
+      "Plasma"
+    ],
+    "correct": 2
+  }
+]

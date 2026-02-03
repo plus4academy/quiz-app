@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1,
+    "question": "5²÷5¹",
+    "options": ["1", "5", "25", "125"],
+    "correct": 1
+  },
+  {
+    "id": 2,
+    "question": "Rational number among:",
+    "options": ["√3", "π", "7/9", "-√7"],
+    "correct": 2
+  },
+  {
+    "id": 3,
+    "question": "11/12 - 5/12",
+    "options": ["2/3", "4/12", "6/12", "1"],
+    "correct": 0
+  },
+  {
+    "id": 4,
+    "question": "The exterior angle of triangle = sum of:",
+    "options": [
+      "All angles",
+      "Adjacent interior angles",
+      "Two opposite interior angles",
+      "Right angles"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 5,
+    "question": "Area of square of side 5 cm =",
+    "options": ["10", "15", "20", "25"],
+    "correct": 3
+  },
+  {
+    "id": 6,
+    "question": "HCF of 8 and 20 =",
+    "options": ["2", "4", "5", "10"],
+    "correct": 1
+  },
+  {
+    "id": 7,
+    "question": "Mode of: 5,6,7,7,8,8,8 =",
+    "options": ["5", "7", "8", "None"],
+    "correct": 2
+  },
+  {
+    "id": 8,
+    "question": "Solve: 3x + 9 = 0",
+    "options": ["-3", "0", "3", "-9"],
+    "correct": 0
+  },
+  {
+    "id": 9,
+    "question": "A number divisible by 5 ends with:",
+    "options": ["0 or 5", "1", "2", "9"],
+    "correct": 0
+  },
+  {
+    "id": 10,
+    "question": "√169 =",
+    "options": ["11", "12", "13", "14"],
+    "correct": 2
+  },
+  {
+    "id": 11,
+    "question": "20% of 450 =",
+    "options": ["45", "70", "90", "100"],
+    "correct": 2
+  },
+  {
+    "id": 12,
+    "question": "A point is represented by:",
+    "options": ["Dot", "Line", "Ray", "Segment"],
+    "correct": 0
+  },
+  {
+    "id": 13,
+    "question": "Loss % if CP = ₹600, SP = ₹540",
+    "options": ["5%", "8%", "10%", "12%"],
+    "correct": 2
+  },
+  {
+    "id": 14,
+    "question": "Melting point of ice =",
+    "options": ["0°C", "4°C", "37°C", "100°C"],
+    "correct": 0
+  },
+  {
+    "id": 15,
+    "question": "1 N = 1 kg·m/s² represents:",
+    "options": ["Work", "Force", "Pressure", "Energy"],
+    "correct": 1
+  },
+  {
+    "id": 16,
+    "question": "Gas responsible for global warming:",
+    "options": ["N₂", "O₂", "CO₂", "He"],
+    "correct": 2
+  },
+  {
+    "id": 17,
+    "question": "Plants absorb water from soil by:",
+    "options": ["Leaves", "Stomata", "Roots", "Stem"],
+    "correct": 2
+  },
+  {
+    "id": 18,
+    "question": "Good conductor:",
+    "options": ["Rubber", "Plastic", "Copper", "Wood"],
+    "correct": 2
+  },
+  {
+    "id": 19,
+    "question": "Formation of curd is:",
+    "options": [
+      "Physical change",
+      "Chemical change",
+      "Temporary change",
+      "No change"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 20,
+    "question": "Pure water is a:",
+    "options": ["Element", "Compound", "Mixture", "Alloy"],
+    "correct": 1
+  },
+  {
+    "id": 21,
+    "question": "Sound cannot travel in:",
+    "options": ["Air", "Water", "Iron", "Space"],
+    "correct": 3
+  },
+  {
+    "id": 22,
+    "question": "Cell membrane is:",
+    "options": [
+      "Permeable",
+      "Semi-permeable",
+      "Impermeable",
+      "Selectively permeable"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 23,
+    "question": "Main function of rib cage:",
+    "options": ["Pump blood", "Protect lungs", "Digest food", "Filter blood"],
+    "correct": 1
+  },
+  {
+    "id": 24,
+    "question": "Time taken by Earth to revolve around Sun:",
+    "options": ["24h", "30d", "365d", "6 months"],
+    "correct": 2
+  },
+  {
+    "id": 25,
+    "question": "Which planet is called \"Earth's twin\"?",
+    "options": ["Mars", "Venus", "Mercury", "Saturn"],
+    "correct": 1
+  }
+]
