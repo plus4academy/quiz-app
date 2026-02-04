@@ -1089,3 +1089,140 @@ body {
         display: none;
     }
 }
+
+/* ========================================================================
+   SIGNUP PAGE STYLES
+   ======================================================================== */
+
+.signup-page {
+    background: linear-gradient(135deg, #FDF2F8 0%, #FEF3C7 100%);
+    min-height: 100vh;
+}
+
+.signup-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+
+.signup-hero {
+    background: linear-gradient(135deg, #2563EB 0%, #1E3A8A 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    color: var(--white);
+}
+
+.signup-form-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: var(--white);
+}
+
+.signup-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* ========================================================================
+   ALERT STYLES (Success/Error/Warning)
+   ======================================================================== */
+
+.alert {
+    padding: 1rem 1.25rem;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.alert-icon {
+    flex-shrink: 0;
+}
+
+.alert-success {
+    background: #ECFDF5;
+    border: 1px solid #10B981;
+    color: #065F46;
+}
+
+.alert-success .alert-icon {
+    color: #10B981;
+}
+
+.alert-error {
+    background: #FEF2F2;
+    border: 1px solid #EF4444;
+    color: #991B1B;
+}
+
+.alert-error .alert-icon {
+    color: #EF4444;
+}
+
+.alert-warning {
+    background: #FFFBEB;
+    border: 1px solid #F59E0B;
+    color: #92400E;
+}
+
+.alert-warning .alert-icon {
+    color: #F59E0B;
+}
+
+/* ========================================================================
+   FOOTER LINK STYLES
+   ======================================================================== */
+
+.footer-link {
+    color: #2563EB;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #1E3A8A;
+    text-decoration: underline;
+}
+
+/* ========================================================================
+   RESPONSIVE ADJUSTMENTS
+   ======================================================================== */
+
+@media (max-width: 1024px) {
+    .signup-container {
+        grid-template-columns: 1fr;
+    }
+
+    .signup-hero {
+        min-height: 40vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .signup-container {
+        grid-template-columns: 1fr;
+    }
+
+    .signup-hero {
+        padding: 2rem;
+        min-height: 30vh;
+    }
+
+    .signup-form-section {
+        padding: 1.5rem;
+    }
+
+    .form-wrapper {
+        padding: 2rem 1.5rem;
+    }
+}

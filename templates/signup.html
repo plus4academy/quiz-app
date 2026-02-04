@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Quiz Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body class="signup-page">
+    <div class="signup-container">
+        <!-- Left Section - Hero -->
+        <div class="signup-hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Join Our<br><span class="highlight">Quiz Platform</span></h1>
+                <p class="hero-subtitle">Register now to compete for scholarships</p>
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">📝</div>
+                        <div class="feature-text">Simple Registration</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🔒</div>
+                        <div class="feature-text">Secure Account</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎯</div>
+                        <div class="feature-text">One-Time Test</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Section - Signup Form -->
+        <div class="signup-form-section">
+            <div class="form-wrapper">
+                <div class="form-header">
+                    <h2 class="form-title">Create Account</h2>
+                    <p class="form-description">Fill in your details to register</p>
+                </div>
+
+                {% if success %}
+                <div class="alert alert-success">
+                    <svg class="alert-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    {{ success }}
+                </div>
+                {% endif %}
+
+                {% if error %}
+                <div class="alert alert-error">
+                    <svg class="alert-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                    </svg>
+                    {{ error }}
+                </div>
+                {% endif %}
+
+                <form method="POST" action="{{ url_for('signup') }}" class="signup-form" id="signupForm">
+                    <!-- Full Name Field -->
+                    <div class="form-group">
+                        <label for="full_name" class="form-label">Full Name *</label>
+                        <input 
+                            type="text" 
+                            id="full_name" 
+                            name="full_name" 
+                            class="form-input" 
+                            placeholder="e.g. Om Wadhwani"
+                            required
+                            pattern="[A-Za-z\s]{2,}"
+                            title="Please enter your full name (letters and spaces only)"
+                        >
+                    </div>
+
+                    <!-- Phone Number Field -->
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone Number *</label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            class="form-input" 
+                            placeholder="10-digit mobile number"
+                            required
+                            pattern="[0-9]{10}"
+                            maxlength="10"
+                            title="Please enter a valid 10-digit phone number"
+                        >
+                        <span class="form-hint">Your username will be: <strong id="usernamePreview">firstname.lastname + last 4 digits</strong></span>
+                    </div>
+
+                    <!-- Email Field -->
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address *</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            class="form-input" 
+                            placeholder="your.email@example.com"
+                            required
+                            title="Please enter a valid email address"
+                        >
+                    </div>
+
+                    <!-- Password Field -->
+                    <div class="form-group">
+                        <label for="password" class="form-label">Password *</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            class="form-input" 
+                            placeholder="Choose a strong password"
+                            required
+                            minlength="6"
+                            title="Password must be at least 6 characters"
+                        >
+                        <span class="form-hint">Minimum 6 characters</span>
+                    </div>
+
+                    <!-- Class Selection -->
+                    <div class="form-group">
+                        <label for="promoted_to_class" class="form-label">Class (Being Promoted To) *</label>
+                        <select id="promoted_to_class" name="promoted_to_class" class="form-select" required>
+                            <option value="">Select Class</option>
+                            <option value="9">Class 9</option>
+                            <option value="10">Class 10</option>
+                            <option value="11">Class 11</option>
+                            <option value="12">Class 12</option>
+                            <option value="dropper">Dropper</option>
+                        </select>
+                    </div>
+
+                    <!-- Stream Selection (Only for Class 11, 12, and Dropper) -->
+                    <div class="form-group" id="stream-group" style="display: none;">
+                        <label for="stream" class="form-label">Stream *</label>
+                        <select id="stream" name="stream" class="form-select">
+                            <option value="">Select Stream</option>
+                            <option value="jee">JEE (Engineering)</option>
+                            <option value="neet">NEET (Medical)</option>
+                        </select>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary btn-block">
+                        Create Account
+                        <svg class="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                </form>
+
+                <div class="form-footer">
+                    <p class="footer-text">
+                        Already have an account? 
+                        <a href="{{ url_for('login') }}" class="footer-link">Login here</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Show/hide stream selection based on class level
+        const classSelect = document.getElementById('promoted_to_class');
+        const streamGroup = document.getElementById('stream-group');
+        const streamSelect = document.getElementById('stream');
+        const fullNameInput = document.getElementById('full_name');
+        const phoneInput = document.getElementById('phone');
+        const usernamePreview = document.getElementById('usernamePreview');
+        
+        classSelect.addEventListener('change', function() {
+            const selectedClass = this.value;
+            
+            // Show stream only for class 11, 12, and dropper
+            if (selectedClass === '11' || selectedClass === '12' || selectedClass === 'dropper') {
+                streamGroup.style.display = 'flex';
+                streamSelect.required = true;
+            } else {
+                streamGroup.style.display = 'none';
+                streamSelect.required = false;
+                streamSelect.value = ''; // Reset stream selection
+            }
+        });
+
+        // Live username preview
+        function updateUsernamePreview() {
+            const fullName = fullNameInput.value.trim();
+            const phone = phoneInput.value.trim();
+            
+            if (fullName && phone.length >= 4) {
+                const nameParts = fullName.toLowerCase().split(' ');
+                if (nameParts.length >= 2) {
+                    const firstName = nameParts[0];
+                    const lastName = nameParts[nameParts.length - 1];
+                    const last4 = phone.slice(-4);
+                    const username = `${firstName}.${lastName}${last4}`;
+                    usernamePreview.textContent = username;
+                    usernamePreview.style.color = '#10B981'; // Green for valid
+                } else {
+                    usernamePreview.textContent = 'Please enter first and last name';
+                    usernamePreview.style.color = '#F59E0B'; // Orange for warning
+                }
+            } else {
+                usernamePreview.textContent = 'firstname.lastname + last 4 digits';
+                usernamePreview.style.color = '#6B7280'; // Muted
+            }
+        }
+
+        fullNameInput.addEventListener('input', updateUsernamePreview);
+        phoneInput.addEventListener('input', updateUsernamePreview);
+    </script>
+</body>
+</html>

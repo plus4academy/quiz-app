@@ -36,7 +36,7 @@
             <div class="form-wrapper">
                 <div class="form-header">
                     <h2 class="form-title">Student Login</h2>
-                    <p class="form-description">Enter your details to start the test</p>
+                    <p class="form-description">Enter your credentials to start the test</p>
                 </div>
 
                 {% if error %}
@@ -49,7 +49,7 @@
                 {% endif %}
 
                 <form method="POST" action="{{ url_for('login') }}" class="login-form">
-                    <!-- Username Field (generated: firstname.lastname + last 4 digits of phone) -->
+                    <!-- Username Field -->
                     <div class="form-group">
                         <label for="username" class="form-label">Username</label>
                         <input 
@@ -78,29 +78,6 @@
                         >
                     </div>
 
-                    <!-- Class Selection -->
-                    <div class="form-group">
-                        <label for="class_level" class="form-label">Class (Being Promoted To)</label>
-                        <select id="class_level" name="class_level" class="form-select" required>
-                            <option value="">Select Class</option>
-                            <option value="class9">Class 9</option>
-                            <option value="class10">Class 10</option>
-                            <option value="class11">Class 11</option>
-                            <option value="class12">Class 12</option>
-                            <option value="dropper">Dropper</option>
-                        </select>
-                    </div>
-
-                    <!-- Stream Selection (Only for Class 11, 12, and Dropper) -->
-                    <div class="form-group" id="stream-group" style="display: none;">
-                        <label for="stream" class="form-label">Stream</label>
-                        <select id="stream" name="stream" class="form-select">
-                            <option value="">Select Stream</option>
-                            <option value="jee">JEE</option>
-                            <option value="neet">NEET</option>
-                        </select>
-                    </div>
-
                     <!-- Submit Button -->
                     <button type="submit" class="btn btn-primary btn-block">
                         Start Test
@@ -112,35 +89,12 @@
 
                 <div class="form-footer">
                     <p class="footer-text">
-                        <svg class="footer-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
-                        </svg>
-                        Please read all instructions carefully before starting the test
+                        Don't have an account? 
+                        <a href="{{ url_for('signup') }}" class="footer-link">Sign up here</a>
                     </p>
                 </div>
             </div>
         </div>
     </div>
-
-    <script>
-        // Show/hide stream selection based on class level
-        const classSelect = document.getElementById('class_level');
-        const streamGroup = document.getElementById('stream-group');
-        const streamSelect = document.getElementById('stream');
-        
-        classSelect.addEventListener('change', function() {
-            const selectedClass = this.value;
-            
-            // Show stream only for class 11, 12, and dropper
-            if (selectedClass === 'class11' || selectedClass === 'class12' || selectedClass === 'dropper') {
-                streamGroup.style.display = 'flex';
-                streamSelect.required = true;
-            } else {
-                streamGroup.style.display = 'none';
-                streamSelect.required = false;
-                streamSelect.value = ''; // Reset stream selection
-            }
-        });
-    </script>
 </body>
 </html>

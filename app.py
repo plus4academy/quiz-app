@@ -1,10 +1,3 @@
-"""
-Quiz Web Application - Flask Backend
-A complete quiz platform with authentication, timer, and tab switching detection.
-Uses MySQL for user auth (credentials + one-attempt gate) and SQLite for local
-session tracking and result logging.
-"""
-
 from flask import Flask, render_template, request, session, redirect, url_for, jsonify
 from datetime import datetime, timedelta
 from functools import wraps
@@ -12,61 +5,57 @@ import secrets
 import sqlite3
 import json
 import os
-import random
+import re
 
-import pymysql                                  # pure-Python MySQL driver (handles caching_sha2_password)
+import pymysql
 
-from config import MYSQL_CONFIG                 # single source of truth for MySQL creds
+from config import MYSQL_CONFIG
 
-# ==========================================================================
-# App bootstrap
-# ==========================================================================
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(32)
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(hours=2)
 
 # ==========================================================================
-# SQLite — local session / result tracking
+# SQLite init
 # ==========================================================================
 def init_db():
-    """Create SQLite tables if they don't exist."""
     conn = sqlite3.connect('quiz_app.db')
-    cur  = conn.cursor()
+    cur = conn.cursor()
 
     cur.execute('''
         CREATE TABLE IF NOT EXISTS users (
-            id            INTEGER PRIMARY KEY AUTOINCREMENT,
-            username      TEXT NOT NULL,
-            password      TEXT NOT NULL,
-            class_level   TEXT NOT NULL,
-            stream        TEXT NOT NULL,
-            assigned_set  TEXT NOT NULL,
-            login_time    TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            username TEXT NOT NULL,
+            password TEXT NOT NULL,
+            class_level TEXT NOT NULL,
+            stream TEXT NOT NULL,
+            assigned_set TEXT NOT NULL,
+            login_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
     ''')
 
     cur.execute('''
         CREATE TABLE IF NOT EXISTS test_results (
-            id              INTEGER PRIMARY KEY AUTOINCREMENT,
-            user_id         INTEGER,
-            username        TEXT NOT NULL,
-            class_level     TEXT NOT NULL,
-            stream          TEXT NOT NULL,
-            assigned_set    TEXT NOT NULL,
-            score           INTEGER NOT NULL,
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_id INTEGER,
+            username TEXT NOT NULL,
+            class_level TEXT NOT NULL,
+            stream TEXT NOT NULL,
+            assigned_set TEXT NOT NULL,
+            score INTEGER NOT NULL,
             total_questions INTEGER NOT NULL,
-            tab_switches    INTEGER DEFAULT 0,
+            tab_switches INTEGER DEFAULT 0,
             submission_type TEXT,
-            test_date       TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            test_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
             FOREIGN KEY (user_id) REFERENCES users (id)
         )
     ''')
 
     cur.execute('''
         CREATE TABLE IF NOT EXISTS set_counter (
-            id                INTEGER PRIMARY KEY,
-            class_level       TEXT NOT NULL,
-            stream            TEXT NOT NULL,
+            id INTEGER PRIMARY KEY,
+            class_level TEXT NOT NULL,
+            stream TEXT NOT NULL,
             current_set_index INTEGER DEFAULT 0,
             UNIQUE(class_level, stream)
         )
@@ -78,30 +67,66 @@ def init_db():
 init_db()
 
 # ==========================================================================
-# MySQL connection helper
+# MySQL helper
 # ==========================================================================
 def get_mysql_connection():
-    """Return a PyMySQL connection.  Credentials come from config.py."""
     return pymysql.connect(
         host=MYSQL_CONFIG['host'],
         user=MYSQL_CONFIG['user'],
         password=MYSQL_CONFIG['password'],
         database=MYSQL_CONFIG['database'],
         charset=MYSQL_CONFIG.get('charset', 'utf8mb4'),
-        cursorclass=pymysql.cursors.DictCursor   # rows come back as dicts
+        cursorclass=pymysql.cursors.DictCursor
     )
 
 # ==========================================================================
-# Round-robin question-set assignment (SQLite)
+# Helper: Generate username and password from name + phone
+# ==========================================================================
+def generate_username(full_name, phone):
+    """Generate username: firstname.lastname + last 4 digits of phone"""
+    name_parts = full_name.strip().lower().split()
+    if len(name_parts) < 2:
+        raise ValueError("Full name must include first and last name")
+    
+    first_name = name_parts[0]
+    last_name = name_parts[-1]
+    last_4_digits = phone[-4:]
+    
+    return f"{first_name}.{last_name}{last_4_digits}"
+
+# ==========================================================================
+# Helper: Parse promoted_to_class into class_level + stream
+# ==========================================================================
+def parse_promoted_class(promoted_to_class):
+    """
+    Input examples: "9", "10", "11 jee", "12 neet", "dropper jee"
+    Returns: (class_level, stream)
+    """
+    parts = promoted_to_class.strip().lower().split()
+    
+    if len(parts) == 1:
+        # "9" or "10"
+        return (f"class{parts[0]}", "general")
+    elif len(parts) == 2:
+        # "11 jee", "12 neet", "dropper jee"
+        class_num = parts[0]
+        stream = parts[1]
+        
+        if class_num == "dropper":
+            return ("dropper", stream)
+        else:
+            return (f"class{class_num}", stream)
+    else:
+        raise ValueError("Invalid promoted_to_class format")
+
+# ==========================================================================
+# Round-robin set assignment
 # ==========================================================================
 def get_next_set(class_level, stream):
-    """Return 'a', 'b', 'c', or 'd' via round-robin across logins."""
     sets = ['a', 'b', 'c', 'd']
-
     conn = sqlite3.connect('quiz_app.db')
-    cur  = conn.cursor()
+    cur = conn.cursor()
 
-    # seed row if this class+stream pair has never been seen
     cur.execute('''
         INSERT OR IGNORE INTO set_counter (class_level, stream, current_set_index)
         VALUES (?, ?, 0)
@@ -109,17 +134,16 @@ def get_next_set(class_level, stream):
 
     cur.execute('''
         SELECT current_set_index FROM set_counter
-        WHERE  class_level = ? AND stream = ?
+        WHERE class_level = ? AND stream = ?
     ''', (class_level, stream))
 
-    row           = cur.fetchone()
+    row = cur.fetchone()
     current_index = row[0] if row else 0
-    assigned_set  = sets[current_index % len(sets)]
+    assigned_set = sets[current_index % len(sets)]
 
-    # bump counter for the next login
     cur.execute('''
         UPDATE set_counter SET current_set_index = ?
-        WHERE  class_level = ? AND stream = ?
+        WHERE class_level = ? AND stream = ?
     ''', ((current_index + 1) % len(sets), class_level, stream))
 
     conn.commit()
@@ -127,39 +151,27 @@ def get_next_set(class_level, stream):
     return assigned_set
 
 # ==========================================================================
-# Question loader  — tries set-specific file first, falls back to shared file
+# Question loader
 # ==========================================================================
 def load_questions(class_level, stream, set_name):
-    """
-    Attempt to load questions in this priority order:
-      1. data/questions_{class}_{stream}_{set}.json   (per-set file)
-      2. data/questions_{class}_{stream}.json         (shared file)
-    Returns a list of question dicts, or [] if nothing found.
-    """
     base_dir = os.path.dirname(os.path.abspath(__file__))
 
-    # priority 1 – set-specific file  (e.g. questions_class9_general_a.json)
     set_path = os.path.join(base_dir, f'data/questions_{class_level}_{stream}_{set_name}.json')
     if os.path.exists(set_path):
         with open(set_path, 'r', encoding='utf-8') as fh:
             return json.load(fh)
 
-    # priority 2 – shared file  (e.g. questions_class9_general.json)
     shared_path = os.path.join(base_dir, f'data/questions_{class_level}_{stream}.json')
     if os.path.exists(shared_path):
         with open(shared_path, 'r', encoding='utf-8') as fh:
             return json.load(fh)
 
-    print(f'[WARN] No question file found.  Tried:\n'
-          f'       {set_path}\n'
-          f'       {shared_path}')
     return []
 
 # ==========================================================================
 # Auth decorator
 # ==========================================================================
 def login_required(f):
-    """Redirect to /login if no active session."""
     @wraps(f)
     def wrapper(*args, **kwargs):
         if 'username' not in session:
@@ -171,7 +183,6 @@ def login_required(f):
 # Scholarship calculator
 # ==========================================================================
 def calculate_scholarship(percentage):
-    """Return (scholarship_percent, message) tuple."""
     if percentage >= 90:
         return 100, "Full Scholarship - Congratulations!"
     elif percentage >= 75:
@@ -182,107 +193,165 @@ def calculate_scholarship(percentage):
         return 0, "No Scholarship - Keep Trying!"
 
 # ==========================================================================
-# Routes
+# ROUTES
 # ==========================================================================
 
-# --------------------------------------------------------------------------
-# INDEX  –  smart redirect depending on session state
-# --------------------------------------------------------------------------
 @app.route('/')
 def index():
     if 'username' not in session:
         return redirect(url_for('login'))
 
-    # test already done -> show score
     if 'test_completed' in session:
         return redirect(url_for('score'))
 
-    # test in progress -> resume
     class_level = session.get('class_level')
-    stream      = session.get('stream')
+    stream = session.get('stream')
     if class_level in ('class9', 'class10'):
         return redirect(url_for('test_page', class_level=class_level))
     return redirect(url_for('test_page', class_level=class_level, stream=stream))
 
 # --------------------------------------------------------------------------
-# LOGIN
+# SIGNUP ROUTE
+# --------------------------------------------------------------------------
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
+    if request.method == 'POST':
+        full_name = request.form.get('full_name', '').strip()
+        phone = request.form.get('phone', '').strip()
+        email = request.form.get('email', '').strip()
+        password = request.form.get('password', '').strip()
+        promoted_to_class_raw = request.form.get('promoted_to_class', '').strip()
+        stream_raw = request.form.get('stream', '').strip()
+
+        # Basic validation
+        if not all([full_name, phone, email, password, promoted_to_class_raw]):
+            return render_template('signup.html', error="All required fields must be filled")
+        
+        # Validate password length
+        if len(password) < 6:
+            return render_template('signup.html', error="Password must be at least 6 characters")
+
+        # Validate phone
+        if not re.match(r'^\d{10}$', phone):
+            return render_template('signup.html', error="Phone must be 10 digits")
+
+        # Validate email
+        if not re.match(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$', email):
+            return render_template('signup.html', error="Invalid email format")
+
+        # Build promoted_to_class value for MySQL
+        if promoted_to_class_raw in ('11', '12', 'dropper'):
+            if not stream_raw:
+                return render_template('signup.html', error="Stream required for Class 11, 12, and Dropper")
+            promoted_to_class = f"{promoted_to_class_raw} {stream_raw}"
+        else:
+            promoted_to_class = promoted_to_class_raw  # "9" or "10"
+
+        # Generate username
+        try:
+            username = generate_username(full_name, phone)
+        except ValueError as e:
+            return render_template('signup.html', error=str(e))
+
+        # Insert into MySQL
+        try:
+            conn = get_mysql_connection()
+            cur = conn.cursor()
+
+            # Check if username already exists
+            cur.execute("SELECT id FROM users WHERE username = %s", (username,))
+            if cur.fetchone():
+                cur.close()
+                conn.close()
+                return render_template('signup.html', error="Username already exists. Please contact admin.")
+
+            # Check if phone already exists
+            cur.execute("SELECT id FROM users WHERE phone = %s", (phone,))
+            if cur.fetchone():
+                cur.close()
+                conn.close()
+                return render_template('signup.html', error="Phone number already registered")
+
+            # Check if email already exists
+            cur.execute("SELECT id FROM users WHERE email = %s", (email,))
+            if cur.fetchone():
+                cur.close()
+                conn.close()
+                return render_template('signup.html', error="Email already registered")
+
+            # Insert new user
+            cur.execute("""
+                INSERT INTO users (full_name, phone, email, username, password, promoted_to_class, has_attempted_test)
+                VALUES (%s, %s, %s, %s, %s, %s, 0)
+            """, (full_name, phone, email, username, password, promoted_to_class))
+
+            conn.commit()
+            cur.close()
+            conn.close()
+
+            return render_template('signup.html', 
+                                   success=f"Account created successfully! Your username is: {username}. Please login to start the test.")
+
+        except Exception as e:
+            return render_template('signup.html', error=f"Database error: {e}")
+
+    return render_template('signup.html')
+
+# --------------------------------------------------------------------------
+# LOGIN ROUTE (UPDATED)
 # --------------------------------------------------------------------------
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    """
-    GET  – render login form.
-    POST – authenticate against MySQL, validate class/stream, start session.
-    """
     if request.method == 'POST':
-        username    = request.form.get('username', '').strip()
-        password    = request.form.get('password', '').strip()
-        class_level = request.form.get('class_level', '').strip()
-        stream      = request.form.get('stream', '').strip()
+        username = request.form.get('username', '').strip()
+        password = request.form.get('password', '').strip()
 
-        # ── presence check ────────────────────────────────────────────────
-        if not all([username, password, class_level]):
-            return render_template('login.html',
-                                   error="Username, password, and class are required")
+        if not all([username, password]):
+            return render_template('login.html', error="Username and password required")
 
-        # ── MySQL authentication (plain text password) ────────────────────
         try:
             conn = get_mysql_connection()
-            cur  = conn.cursor()
+            cur = conn.cursor()
 
             cur.execute("""
-                SELECT id, full_name, username, password, has_attempted_test
-                FROM   users
-                WHERE  username = %s
+                SELECT id, full_name, username, password, promoted_to_class, has_attempted_test
+                FROM users
+                WHERE username = %s
             """, (username,))
 
-            user = cur.fetchone()   # dict or None
+            user = cur.fetchone()
 
             if not user:
-                cur.close(); conn.close()
-                return render_template('login.html',
-                                       error="Invalid username or password")
+                cur.close()
+                conn.close()
+                return render_template('login.html', error="Invalid username or password")
 
-            # Direct password comparison (plain text)
             if user['password'] != password:
-                cur.close(); conn.close()
-                return render_template('login.html',
-                                       error="Invalid username or password")
+                cur.close()
+                conn.close()
+                return render_template('login.html', error="Invalid username or password")
 
-            if user['has_attempted_test']:
-                cur.close(); conn.close()
-                return render_template('login.html',
-                                       error="You have already attempted the test. "
-                                             "Contact the administrator if this is a mistake.")
+            if user['has_attempted_test'] == 1:
+                cur.close()
+                conn.close()
+                return render_template('login.html', 
+                                       error="You have already attempted the test. Only one attempt is allowed.")
 
             cur.close()
             conn.close()
 
-        except pymysql.err.OperationalError as err:
-            return render_template('login.html',
-                                   error=f"Database connection error: {err}")
         except Exception as err:
-            return render_template('login.html',
-                                   error=f"Database error: {err}")
-        # ── end MySQL auth ────────────────────────────────────────────────
+            return render_template('login.html', error=f"Database error: {err}")
 
-        # ── class / stream validation ─────────────────────────────────────
-        valid_classes = ('class9', 'class10', 'class11', 'class12', 'dropper')
-        if class_level not in valid_classes:
-            return render_template('login.html', error="Invalid class selection")
+        # Parse promoted_to_class into class_level + stream
+        class_level, stream = parse_promoted_class(user['promoted_to_class'])
 
-        if class_level in ('class11', 'class12', 'dropper'):
-            if stream not in ('jee', 'neet'):
-                return render_template('login.html',
-                                       error="Please select a stream (JEE / NEET)")
-        else:
-            stream = 'general'          # class 9 / 10 have no stream
-
-        # ── assign question set ───────────────────────────────────────────
+        # Assign question set
         assigned_set = get_next_set(class_level, stream)
 
-        # ── log session in SQLite (store plain password) ──────────────────
+        # Log in SQLite
         conn = sqlite3.connect('quiz_app.db')
-        cur  = conn.cursor()
+        cur = conn.cursor()
         cur.execute('''
             INSERT INTO users (username, password, class_level, stream, assigned_set)
             VALUES (?, ?, ?, ?, ?)
@@ -291,50 +360,54 @@ def login():
         conn.commit()
         conn.close()
 
-        # ── populate Flask session ────────────────────────────────────────
-        session.permanent        = True
-        session['username']      = user['full_name']       # human-readable name for UI
-        session['user_id']       = sqlite_user_id          # SQLite PK
-        session['mysql_user_id'] = user['id']              # MySQL PK – used for the UPDATE later
-        session['class_level']   = class_level
-        session['stream']        = stream
-        session['assigned_set']  = assigned_set
-        session['tab_switches']  = 0
+        # Set session
+        session.permanent = True
+        session['username'] = user['full_name']
+        session['user_id'] = sqlite_user_id
+        session['mysql_user_id'] = user['id']
+        session['class_level'] = class_level
+        session['stream'] = stream
+        session['assigned_set'] = assigned_set
+        session['tab_switches'] = 0
         session['test_start_time'] = datetime.now().isoformat()
 
-        # ── redirect to test ──────────────────────────────────────────────
+        # Redirect to test
         if class_level in ('class9', 'class10'):
             return redirect(url_for('test_page', class_level=class_level))
         return redirect(url_for('test_page', class_level=class_level, stream=stream))
 
-    # GET
     return render_template('login.html')
 
 # --------------------------------------------------------------------------
-# TEST PAGE
+# TEST PAGE (MARK ATTEMPTED ON START)
 # --------------------------------------------------------------------------
 @app.route('/test/<class_level>')
 @app.route('/test/<class_level>/<stream>')
 @login_required
 def test_page(class_level=None, stream=None):
-    """Render the test.  Re-checks has_attempted_test on every page-load."""
-
-    # ── guard: already attempted? (survives session replay) ───────────────
+    # Check if already attempted
     try:
         conn = get_mysql_connection()
-        cur  = conn.cursor()
+        cur = conn.cursor()
         cur.execute("SELECT has_attempted_test FROM users WHERE id = %s",
                     (session.get('mysql_user_id'),))
         row = cur.fetchone()
+
+        if row and row['has_attempted_test'] == 1:
+            cur.close()
+            conn.close()
+            return render_template('error.html',
+                                   message="You have already attempted the test. Only one attempt is allowed.")
+
+        # 🔥 MARK TEST AS ATTEMPTED RIGHT NOW (when test starts)
+        cur.execute("UPDATE users SET has_attempted_test = 1 WHERE id = %s",
+                    (session.get('mysql_user_id'),))
+        conn.commit()
         cur.close()
         conn.close()
 
-        if row and row['has_attempted_test']:
-            return render_template('error.html',
-                                   message="You have already attempted the test.")
     except Exception as err:
         return render_template('error.html', message=f"Database error: {err}")
-    # ── end guard ─────────────────────────────────────────────────────────
 
     if 'test_completed' in session:
         return redirect(url_for('score'))
@@ -342,7 +415,7 @@ def test_page(class_level=None, stream=None):
     if session.get('class_level') != class_level:
         return redirect(url_for('login'))
 
-    # resolve stream
+    # Resolve stream
     if class_level in ('class9', 'class10'):
         user_stream = 'general'
     else:
@@ -351,7 +424,7 @@ def test_page(class_level=None, stream=None):
             return redirect(url_for('login'))
 
     assigned_set = session.get('assigned_set', 'a')
-    questions    = load_questions(class_level, user_stream, assigned_set)
+    questions = load_questions(class_level, user_stream, assigned_set)
 
     if not questions:
         label = class_level
@@ -369,25 +442,24 @@ def test_page(class_level=None, stream=None):
                            username=session.get('username'))
 
 # --------------------------------------------------------------------------
-# SUBMIT TEST  (called by test.js via POST /api/submit_test)
+# SUBMIT TEST
 # --------------------------------------------------------------------------
 @app.route('/api/submit_test', methods=['POST'])
 @login_required
 def submit_test():
-    """Score answers, lock the attempt in MySQL, persist result in SQLite."""
     try:
-        data            = request.get_json()
-        answers         = data.get('answers', {})
-        tab_switches    = data.get('tab_switches', 0)
-        submission_type = data.get('submission_type', 'manual')   # manual | timeout | tab_violation
+        data = request.get_json()
+        answers = data.get('answers', {})
+        tab_switches = data.get('tab_switches', 0)
+        submission_type = data.get('submission_type', 'manual')
 
-        class_level  = session.get('class_level')
-        stream       = session.get('stream')
+        class_level = session.get('class_level')
+        stream = session.get('stream')
         assigned_set = session.get('assigned_set', 'a')
-        questions    = load_questions(class_level, stream, assigned_set)
+        questions = load_questions(class_level, stream, assigned_set)
 
-        # ── score ─────────────────────────────────────────────────────────
-        correct_count   = 0
+        # Score
+        correct_count = 0
         total_questions = len(questions)
 
         for q in questions:
@@ -395,25 +467,9 @@ def submit_test():
             if qid in answers and int(answers[qid]) == q['correct']:
                 correct_count += 1
 
-        # ── lock attempt in MySQL (do this FIRST – once locked, it stays) ─
-        try:
-            conn = get_mysql_connection()
-            cur  = conn.cursor()
-            cur.execute("""
-                UPDATE users
-                SET    has_attempted_test = TRUE
-                WHERE  id = %s
-            """, (session.get('mysql_user_id'),))
-            conn.commit()
-            cur.close()
-            conn.close()
-        except Exception as err:
-            # log but don't abort – the score must still be saved
-            print(f"[ERROR] MySQL UPDATE has_attempted_test failed: {err}")
-
-        # ── persist result in SQLite ──────────────────────────────────────
+        # Save to SQLite
         conn = sqlite3.connect('quiz_app.db')
-        cur  = conn.cursor()
+        cur = conn.cursor()
         cur.execute('''
             INSERT INTO test_results
             (user_id, username, class_level, stream, assigned_set,
@@ -425,11 +481,11 @@ def submit_test():
         conn.commit()
         conn.close()
 
-        # ── stamp session so /score can render ────────────────────────────
-        session['test_completed']  = True
-        session['score']           = correct_count
+        # Update session
+        session['test_completed'] = True
+        session['score'] = correct_count
         session['total_questions'] = total_questions
-        session['tab_switches']    = tab_switches
+        session['tab_switches'] = tab_switches
         session['submission_type'] = submission_type
 
         return jsonify({'success': True, 'score': correct_count, 'total': total_questions})
@@ -438,7 +494,7 @@ def submit_test():
         return jsonify({'success': False, 'error': str(e)}), 500
 
 # --------------------------------------------------------------------------
-# TAB-SWITCH LOG  (called by test.js)
+# TAB-SWITCH LOG
 # --------------------------------------------------------------------------
 @app.route('/api/log_tab_switch', methods=['POST'])
 @login_required
@@ -458,9 +514,9 @@ def score():
     if 'test_completed' not in session:
         return redirect(url_for('index'))
 
-    sc    = session.get('score', 0)
+    sc = session.get('score', 0)
     total = session.get('total_questions', 0)
-    pct   = (sc / total * 100) if total > 0 else 0
+    pct = (sc / total * 100) if total > 0 else 0
     s_pct, s_msg = calculate_scholarship(pct)
 
     return render_template('score.html',
@@ -485,17 +541,17 @@ def logout():
     return redirect(url_for('login'))
 
 # --------------------------------------------------------------------------
-# ADMIN – quick view of set distribution (SQLite)
+# ADMIN
 # --------------------------------------------------------------------------
 @app.route('/admin/set-distribution')
 def admin_set_distribution():
     conn = sqlite3.connect('quiz_app.db')
-    cur  = conn.cursor()
+    cur = conn.cursor()
     cur.execute('''
         SELECT class_level, stream, assigned_set, COUNT(*) as cnt
-        FROM   users
-        GROUP  BY class_level, stream, assigned_set
-        ORDER  BY class_level, stream, assigned_set
+        FROM users
+        GROUP BY class_level, stream, assigned_set
+        ORDER BY class_level, stream, assigned_set
     ''')
     rows = cur.fetchall()
     conn.close()
@@ -513,6 +569,5 @@ def not_found(e):
 def server_error(e):
     return render_template('error.html', message="Internal server error"), 500
 
-# --------------------------------------------------------------------------
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
