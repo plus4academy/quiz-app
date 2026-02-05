@@ -1,0 +1,277 @@
+[
+  {
+    "id": 1,
+    "question": "The value of 62+52 is",
+    "options": [
+      "11",
+      "36",
+      "61",
+      "121"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 2,
+    "question": "If x=2, then value of x3+3x is",
+    "options": [
+      "10",
+      "14",
+      "16",
+      "20"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 3,
+    "question": "The square root of 81 is",
+    "options": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 4,
+    "question": "Which of the following is a composite number?",
+    "options": [
+      "2",
+      "3",
+      "5",
+      "9"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 5,
+    "question": "If the length of a square is 6 cm, its area is",
+    "options": [
+      "12 cm²",
+      "24 cm²",
+      "36 cm²",
+      "18 cm²"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 6,
+    "question": "The value of (−5)3 is",
+    "options": [
+      "125",
+      "–125",
+      "–25",
+      "25"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 7,
+    "question": "The angle between two intersecting lines is always",
+    "options": [
+      "Right angle",
+      "Acute angle",
+      "Obtuse angle",
+      "Vertically opposite angles"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 8,
+    "question": "The sum of angles of a triangle is",
+    "options": [
+      "90°",
+      "120°",
+      "180°",
+      "360°"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 9,
+    "question": "The fraction equivalent to 4/8​ is",
+    "options": [
+      "1/4",
+      "1/2",
+      "2/3",
+      "3/4"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 10,
+    "question": "The value of 15÷3×5 is",
+    "options": [
+      "1",
+      "15",
+      "25",
+      "75"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 11,
+    "question": "Which of the following is an even number?",
+    "options": [
+      "11",
+      "17",
+      "21",
+      "24"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 12,
+    "question": "The mean of 5, 10, 15 is",
+    "options": [
+      "10",
+      "12",
+      "15",
+      "20"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 13,
+    "question": "A straight angle is equal to",
+    "options": [
+      "90°",
+      "120°",
+      "180°",
+      "360°"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 14,
+    "question": "The SI unit of mass is",
+    "options": [
+      "Gram",
+      "Kilogram",
+      "Newton",
+      "Tonne"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 15,
+    "question": "Which part of the plant conducts food?",
+    "options": [
+      "Xylem",
+      "Phloem",
+      "Root",
+      "Stem"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 16,
+    "question": "The process of breathing in is called",
+    "options": [
+      "Exhalation",
+      "Respiration",
+      "Inhalation",
+      "Transpiration"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 17,
+    "question": "Which gas is released during photosynthesis?",
+    "options": [
+      "Oxygen",
+      "Nitrogen",
+      "Carbon dioxide",
+      "Hydrogen"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 18,
+    "question": "The instrument used to measure temperature is",
+    "options": [
+      "Barometer",
+      "Thermometer",
+      "Hygrometer",
+      "Anemometer"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 19,
+    "question": "The smallest unit of an element is",
+    "options": [
+      "Molecule",
+      "Atom",
+      "Cell",
+      "Compound"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 20,
+    "question": "Which planet is known as the Red Planet?",
+    "options": [
+      "Earth",
+      "Venus",
+      "Mars",
+      "Jupiter"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 21,
+    "question": "The boiling point of water on Celsius scale is",
+    "options": [
+      "0°C",
+      "50°C",
+      "100°C",
+      "273°C"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 22,
+    "question": "The energy possessed by a moving object is",
+    "options": [
+      "Potential energy",
+      "Chemical energy",
+      "Heat energy",
+      "Kinetic energy"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 23,
+    "question": "Which organ removes waste from blood?",
+    "options": [
+      "Heart",
+      "Kidney",
+      "Liver",
+      "Lungs"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 24,
+    "question": "Which metal is the best conductor of electricity?",
+    "options": [
+      "Copper",
+      "Aluminium",
+      "Iron",
+      "Silver"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 25,
+    "question": "The force that keeps planets in their orbits is",
+    "options": [
+      "Magnetic force",
+      "Electrostatic force",
+      "Gravitational force",
+      "Nuclear force"
+    ],
+    "correct": 2
+  }
+]

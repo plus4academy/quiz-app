@@ -1,0 +1,662 @@
+[
+  {
+    "id": 1,
+    "question": "If n(A)=4n(A) = 4n(A)=4, number of proper subsets is",
+    "options": [
+      "14",
+      "15",
+      "16",
+      "8"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 2,
+    "question": "Range of function f(x)=x2f(x) = x^2f(x)=x2 is",
+    "options": [
+      "ℝ",
+      "x ≥ 0",
+      "x ≤ 0",
+      "(–∞,0)"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 3,
+    "question": "Value of cos⁡0∘\\cos 0^\\circcos0∘ is",
+    "options": [
+      "0",
+      "1",
+      "–1",
+      "1/2"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 4,
+    "question": "Simplify: i4i^4i4",
+    "options": [
+      "–1",
+      "i",
+      "1",
+      "–i"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 5,
+    "question": "Nature of roots of equation x2–4x+4=0x^2 – 4x + 4 = 0x2–4x+4=0",
+    "options": [
+      "Real & distinct",
+      "Real & equal",
+      "Imaginary",
+      "Irrational"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 6,
+    "question": "Sum of first 10 terms of AP: 3, 7, 11…",
+    "options": [
+      "210",
+      "220",
+      "230",
+      "200"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 7,
+    "question": "Middle term of (x + y)⁶ is",
+    "options": [
+      "20x³y³",
+      "15x³y³",
+      "6x³y³",
+      "10x³y³"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 8,
+    "question": "Number of permutations of 4 different objects taken 2 at a time",
+    "options": [
+      "6",
+      "8",
+      "12",
+      "24"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 9,
+    "question": "Equation of line with slope 0 is",
+    "options": [
+      "x = a",
+      "y = a",
+      "x + y = 0",
+      "y = mx"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 10,
+    "question": "Radius of circle x² + y² + 4x – 6y + 9 = 0",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 11,
+    "question": "lim⁡x→01−cos⁡xx2=\\lim_{x \\to 0} \\frac{1 - \\cos x}{x^2} =limx→0​x21−cosx​=",
+    "options": [
+      "0",
+      "1",
+      "1/2",
+      "∞"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 12,
+    "question": "Derivative of sin x is",
+    "options": [
+      "–cos x",
+      "cos x",
+      "sin x",
+      "–sin x"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 13,
+    "question": "If sin θ = 0, θ =",
+    "options": [
+      "0°",
+      "30°",
+      "45°",
+      "60°"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 14,
+    "question": "Sum of first n odd numbers is",
+    "options": [
+      "n",
+      "n²",
+      "2n",
+      "n(n+1)"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 15,
+    "question": "Solution of equation x² = 9 is",
+    "options": [
+      "3",
+      "–3",
+      "±3",
+      "0"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 16,
+    "question": "Distance between (1,2) and (4,6)",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 17,
+    "question": "nC0 =",
+    "options": [
+      "0",
+      "1",
+      "n",
+      "Undefined"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 18,
+    "question": "Equation of y-axis",
+    "options": [
+      "y = 0",
+      "x = 0",
+      "x + y = 0",
+      "y = x"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 19,
+    "question": "tan 45° =",
+    "options": [
+      "0",
+      "1",
+      "√3",
+      "∞"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 20,
+    "question": "Degree of constant polynomial 7 is",
+    "options": [
+      "0",
+      "1",
+      "–1",
+      "Undefined"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 21,
+    "question": "SI unit of length",
+    "options": [
+      "cm",
+      "mm",
+      "m",
+      "km"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 22,
+    "question": "Dimensional formula of acceleration",
+    "options": [
+      "LT⁻¹",
+      "LT⁻²",
+      "L²T⁻¹",
+      "T⁻¹"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 23,
+    "question": "Slope of displacement–time graph gives",
+    "options": [
+      "Acceleration",
+      "Velocity",
+      "Distance",
+      "Force"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 24,
+    "question": "Action–reaction forces act on",
+    "options": [
+      "Same body",
+      "Different bodies",
+      "Same direction",
+      "Same surface"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 25,
+    "question": "Work done when force is perpendicular to displacement",
+    "options": [
+      "Max",
+      "Min",
+      "Zero",
+      "Infinite"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 26,
+    "question": "KE depends on",
+    "options": [
+      "Mass only",
+      "Velocity only",
+      "Both m and v",
+      "Force"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 27,
+    "question": "Weight of body is zero at",
+    "options": [
+      "Earth",
+      "Moon",
+      "Centre of Earth",
+      "Surface"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 28,
+    "question": "Unit of density",
+    "options": [
+      "kg",
+      "kg/m³",
+      "N/m²",
+      "g"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 29,
+    "question": "Linear momentum is conserved when",
+    "options": [
+      "External force = 0",
+      "Force ≠ 0",
+      "Energy conserved",
+      "Motion circular"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 30,
+    "question": "Moment of inertia depends on",
+    "options": [
+      "Mass only",
+      "Shape only",
+      "Axis of rotation",
+      "All"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 31,
+    "question": "Value of g on Moon is about",
+    "options": [
+      "1.6 m/s²",
+      "9.8 m/s²",
+      "4.9 m/s²",
+      "3.7 m/s²"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 32,
+    "question": "Angular displacement unit",
+    "options": [
+      "Degree",
+      "radian",
+      "both A & B",
+      "meter"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 33,
+    "question": "Heat flows from",
+    "options": [
+      "Low to high temp",
+      "High to low temp",
+      "Any direction",
+      "No direction"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 34,
+    "question": "SI unit of temperature",
+    "options": [
+      "°C",
+      "K",
+      "°F",
+      "J"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 35,
+    "question": "Boyle’s law relates",
+    "options": [
+      "P–T",
+      "V–T",
+      "P–V",
+      "n–V"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 36,
+    "question": "Centripetal force acts",
+    "options": [
+      "Tangential",
+      "Radially outward",
+      "Radially inward",
+      "Random"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 37,
+    "question": "Power =",
+    "options": [
+      "Work × time",
+      "Work / time",
+      "Force × distance",
+      "Energy × time"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 38,
+    "question": "Sound cannot travel in",
+    "options": [
+      "Air",
+      "Water",
+      "Steel",
+      "Vacuum"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 39,
+    "question": "1 mole contains",
+    "options": [
+      "6.02×10²²",
+      "6.02×10²³",
+      "6.02×10²¹",
+      "6.02×10²⁴"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 40,
+    "question": "Law of conservation of mass given by",
+    "options": [
+      "Dalton",
+      "Lavoisier",
+      "Avogadro",
+      "Bohr"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 41,
+    "question": "pH value of acidic solution is",
+    "options": [
+      "<7",
+      ">7",
+      "=7",
+      "=0"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 42,
+    "question": "Number of electrons in neutral atom =",
+    "options": [
+      "Neutrons",
+      "Protons",
+      "Mass number",
+      "Atomic mass"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 43,
+    "question": "Shape of sp² hybridisation",
+    "options": [
+      "Linear",
+      "Trigonal planar",
+      "Tetrahedral",
+      "Octahedral"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 44,
+    "question": "Least electronegative element",
+    "options": [
+      "F",
+      "O",
+      "Na",
+      "Cl"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 45,
+    "question": "Endothermic reaction absorbs",
+    "options": [
+      "Heat",
+      "Light",
+      "Work",
+      "Catalyst"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 46,
+    "question": "If A={1,2,3}A = \\{1,2,3\\}A={1,2,3}, number of subsets of A is",
+    "options": [
+      "3",
+      "6",
+      "8",
+      "9"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 47,
+    "question": "Domain of 2x−1\\sqrt{2x-1}2x−1​ is",
+    "options": [
+      "x ≥ 1/2",
+      "x ≤ 1/2",
+      "x ≥ 2",
+      "All real x"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 48,
+    "question": "sin⁡30∘+cos⁡60∘=\\sin 30^\\circ + \\cos 60^\\circ =sin30∘+cos60∘=",
+    "options": [
+      "1",
+      "0",
+      "1/2",
+      "√2"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 49,
+    "question": "Value of i2025i^{2025}i2025 is",
+    "options": [
+      "1",
+      "–1",
+      "i",
+      "–i"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 50,
+    "question": "Roots of equation x2−5x+6=0x^2 - 5x + 6 = 0x2−5x+6=0 are",
+    "options": [
+      "1,6",
+      "2,3",
+      "–2,–3",
+      "3,4"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 51,
+    "question": "10th term of AP: 2, 5, 8, … is",
+    "options": [
+      "29",
+      "30",
+      "32",
+      "28"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 52,
+    "question": "Coefficient of x² in (1 + x)⁴ is",
+    "options": [
+      "4",
+      "6",
+      "12",
+      "24"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 53,
+    "question": "Number of ways to arrange letters of “MATH” is",
+    "options": [
+      "12",
+      "16",
+      "24",
+      "48"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 54,
+    "question": "Slope of line 3x – 2y + 6 = 0 is",
+    "options": [
+      "3/2",
+      "–3/2",
+      "2/3",
+      "–2/3"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 55,
+    "question": "Centre of circle x² + y² = 9 is",
+    "options": [
+      "(0,0)",
+      "(3,0)",
+      "(0,3)",
+      "(–3,0)"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 56,
+    "question": "limₓ→0 (sin x / x) =",
+    "options": [
+      "0",
+      "1",
+      "∞",
+      "–1"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 57,
+    "question": "Derivative of x² is",
+    "options": [
+      "x",
+      "2x",
+      "x²",
+      "2"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 58,
+    "question": "If tan θ = 1, θ =",
+    "options": [
+      "30°",
+      "45°",
+      "60°",
+      "90°"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 59,
+    "question": "Sum of first 20 natural numbers is",
+    "options": [
+      "200",
+      "210",
+      "220",
+      "190"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 60,
+    "question": "Number of solutions of |x| = 5 is",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "Infinite"
+    ],
+    "correct": 0
+  }
+]

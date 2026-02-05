@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Quiz Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="test-page">
+    <!-- Tab Switch Warning Modal -->
+    <div id="tabWarningModal" class="modal">
+        <div class="modal-content warning-modal">
+            <div class="modal-icon warning-icon">⚠️</div>
+            <h2 class="modal-title">Tab Switch Warning!</h2>
+            <p class="modal-text">You have switched tabs <span id="switchCount">0</span> time(s).</p>
+            <p class="modal-text"><strong>After 3 switches, your test will be automatically submitted!</strong></p>
+            <button onclick="closeWarningModal()" class="btn btn-warning">I Understand</button>
+        </div>
+    </div>
+
+    <!-- Test Terminated Modal -->
+    <div id="testTerminatedModal" class="modal">
+        <div class="modal-content error-modal">
+            <div class="modal-icon error-icon">❌</div>
+            <h2 class="modal-title">Test Terminated!</h2>
+            <p class="modal-text">You have switched tabs more than 3 times.</p>
+            <p class="modal-text"><strong>Your test has been automatically submitted.</strong></p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="test-header">
+        <div class="header-content">
+            <div class="header-left">
+                <h1 class="header-title">Quiz Platform</h1>
+                <div class="student-info">
+                    <span class="info-badge">{{ username }}</span>
+                    <span class="info-separator">|</span>
+                    <span class="info-badge">{{ class_level|upper }} - {{ stream|upper }}</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="timer-container">
+                    <svg class="timer-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/>
+                    </svg>
+                    <div class="timer-display">
+                        <div class="timer-label">Time Remaining</div>
+                        <div id="timer" class="timer-value">60:00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="test-main">
+        <div class="test-container">
+            <!-- Instructions Panel -->
+            <div class="instructions-panel">
+                <h3 class="instructions-title">Important Instructions</h3>
+                <ul class="instructions-list">
+                    <li>Test duration: 60 minutes</li>
+                    <li>Total questions: {{ questions|length }}</li>
+                    <li>Select one answer for each question</li>
+                    <li><strong>Do not switch tabs</strong> - Test will be terminated after 3 switches</li>
+                    <li>Click "Submit Test" when finished</li>
+                    <li>Test will auto-submit when time expires</li>
+                </ul>
+                <div class="tab-switch-counter">
+                    <div class="counter-label">Tab Switches:</div>
+                    <div id="tabSwitchDisplay" class="counter-value">0 / 3</div>
+                </div>
+            </div>
+
+            <!-- Questions Form -->
+            <form id="testForm" class="test-form">
+                <div class="questions-container">
+                    {% for question in questions %}
+                    <div class="question-card" id="question-{{ question.id }}">
+                        <div class="question-header">
+                            <span class="question-number">Question {{ loop.index }}</span>
+                            <span class="question-required">Required</span>
+                        </div>
+                        <div class="question-text">{{ question.question }}</div>
+                        <div class="options-container">
+                            {% for option in question.options %}
+                            <label class="option-label">
+                                <input 
+                                    type="radio" 
+                                    name="question_{{ question.id }}" 
+                                    value="{{ loop.index0 }}" 
+                                    class="option-input"
+                                    data-question-id="{{ question.id }}"
+                                >
+                                <span class="option-text">
+                                    <span class="option-letter">{{ ['A', 'B', 'C', 'D'][loop.index0] }}.</span>
+                                    {{ option }}
+                                </span>
+                            </label>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- Submit Button -->
+                <div class="submit-section">
+                    <button type="button" onclick="confirmSubmit()" class="btn btn-primary btn-large">
+                        <svg class="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        Submit Test
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Data for JavaScript -->
+    <script>
+        const TOTAL_QUESTIONS = {{ questions|length }};
+        const TEST_DURATION = 60 * 60; // 60 minutes in seconds
+        const questions = {{ questions|tojson }};
+    </script>
+    <script src="{{ url_for('static', filename='js/test.js') }}"></script>
+</body>
+</html>

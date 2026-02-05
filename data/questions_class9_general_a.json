@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1,
+    "question": "The value of 3²×3³ is:",
+    "options": ["3⁵", "3⁶", "9", "27"],
+    "correct": 0
+  },
+  {
+    "id": 2,
+    "question": "Which of the following is a rational number?",
+    "options": ["√2", "π", "3/7", "√5"],
+    "correct": 2
+  },
+  {
+    "id": 3,
+    "question": "⅝ + ⅜",
+    "options": ["1", "8/5", "1/2", "5/8"],
+    "correct": 0
+  },
+  {
+    "id": 4,
+    "question": "A triangle has angles 60° and 80°. The third angle is:",
+    "options": ["40°", "60°", "80°", "120°"],
+    "correct": 0
+  },
+  {
+    "id": 5,
+    "question": "Perimeter of a square of side 6 cm is:",
+    "options": ["12 cm", "24 cm", "36 cm", "48 cm"],
+    "correct": 1
+  },
+  {
+    "id": 6,
+    "question": "HCF of 24 and 36 is:",
+    "options": ["6", "12", "18", "24"],
+    "correct": 1
+  },
+  {
+    "id": 7,
+    "question": "Mode of: 3, 4, 4, 6, 7, 7, 7, 8 = ?",
+    "options": ["4", "6", "7", "8"],
+    "correct": 2
+  },
+  {
+    "id": 8,
+    "question": "Solution of: 5x - 10 = 0",
+    "options": ["x = 2", "x = 5", "x = 10", "x = -2"],
+    "correct": 0
+  },
+  {
+    "id": 9,
+    "question": "A number divisible by 9 must have:",
+    "options": [
+      "Even last digit",
+      "Sum of digits divisible by 9",
+      "Last digit 0",
+      "Sum of digits divisible by 3"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 10,
+    "question": "Value of √144 =",
+    "options": ["10", "11", "12", "14"],
+    "correct": 2
+  },
+  {
+    "id": 11,
+    "question": "25% of 240 = ?",
+    "options": ["60", "80", "100", "120"],
+    "correct": 0
+  },
+  {
+    "id": 12,
+    "question": "A line segment has:",
+    "options": [
+      "No length",
+      "One end point",
+      "Two end points",
+      "Infinite length"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 13,
+    "question": "If CP = ₹500 and SP = ₹450, then loss% =",
+    "options": ["5%", "8%", "9%", "10%"],
+    "correct": 3
+  },
+  {
+    "id": 14,
+    "question": "The physical state of water at 100°C is:",
+    "options": ["Solid", "Liquid", "Gas", "Plasma"],
+    "correct": 2
+  },
+  {
+    "id": 15,
+    "question": "The SI unit of force is:",
+    "options": ["Watt", "Joule", "Newton", "Pascal"],
+    "correct": 2
+  },
+  {
+    "id": 16,
+    "question": "The element used in bulbs as filament:",
+    "options": ["Iron", "Copper", "Tungsten", "Aluminium"],
+    "correct": 2
+  },
+  {
+    "id": 17,
+    "question": "Which gas is used by plants for photosynthesis?",
+    "options": ["O₂", "CO₂", "N₂", "H₂"],
+    "correct": 1
+  },
+  {
+    "id": 18,
+    "question": "Rusting of iron requires:",
+    "options": ["Air only", "Water only", "Air & Water", "Oxygen only"],
+    "correct": 2
+  },
+  {
+    "id": 19,
+    "question": "Which of these is NOT a non-metal?",
+    "options": ["Sulphur", "Carbon", "Neon", "Mercury"],
+    "correct": 3
+  },
+  {
+    "id": 20,
+    "question": "The process of separation of salt from seawater is:",
+    "options": ["Filtration", "Evaporation", "Sedimentation", "Distillation"],
+    "correct": 1
+  },
+  {
+    "id": 21,
+    "question": "Sound cannot travel through:",
+    "options": ["Solid", "Liquid", "Gas", "Vacuum"],
+    "correct": 3
+  },
+  {
+    "id": 22,
+    "question": "Human heart is made of:",
+    "options": [
+      "Skeletal muscle",
+      "Voluntary muscle",
+      "Cardiac muscle",
+      "Smooth muscle"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 23,
+    "question": "Chlorophyll is present in:",
+    "options": ["Mitochondria", "Chloroplast", "Nucleus", "Vacuole"],
+    "correct": 1
+  },
+  {
+    "id": 24,
+    "question": "Push or pull acting on a body is called:",
+    "options": ["Pressure", "Force", "Energy", "Work"],
+    "correct": 1
+  },
+  {
+    "id": 25,
+    "question": "The closest planet to the Sun:",
+    "options": ["Earth", "Venus", "Mercury", "Jupiter"],
+    "correct": 2
+  }
+]

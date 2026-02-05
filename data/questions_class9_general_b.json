@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1,
+    "question": "2³×2²",
+    "options": ["2⁵", "2⁶", "2", "32"],
+    "correct": 0
+  },
+  {
+    "id": 2,
+    "question": "A number divisible by 11 must satisfy:",
+    "options": [
+      "Last digit is 0",
+      "Alt. digit difference divisible by 11",
+      "Sum of digits divisible by 11",
+      "Both sums equal"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 3,
+    "question": "7/10 - 3/10",
+    "options": ["1", "2/5", "4/10", "4/10"],
+    "correct": 2
+  },
+  {
+    "id": 4,
+    "question": "Sum of angles of a triangle:",
+    "options": ["90°", "180°", "270°", "360°"],
+    "correct": 1
+  },
+  {
+    "id": 5,
+    "question": "Area of a rectangle 8cm × 3cm =",
+    "options": ["11cm²", "22cm²", "24cm²", "32cm²"],
+    "correct": 2
+  },
+  {
+    "id": 6,
+    "question": "LCM of 6 and 8 =",
+    "options": ["12", "18", "24", "48"],
+    "correct": 2
+  },
+  {
+    "id": 7,
+    "question": "Median of: 2, 4, 5, 7, 9 = ?",
+    "options": ["4", "5", "7", "9"],
+    "correct": 1
+  },
+  {
+    "id": 8,
+    "question": "The solution of: x + 12 = 20",
+    "options": ["6", "8", "10", "12"],
+    "correct": 2
+  },
+  {
+    "id": 9,
+    "question": "Value of √81 =",
+    "options": ["7", "8", "9", "10"],
+    "correct": 2
+  },
+  {
+    "id": 10,
+    "question": "15% of 200 =",
+    "options": ["15", "20", "25", "30"],
+    "correct": 3
+  },
+  {
+    "id": 11,
+    "question": "A ray has:",
+    "options": [
+      "One end point",
+      "Two end points",
+      "Infinite end points",
+      "No end point"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 12,
+    "question": "If SP > CP, then there is:",
+    "options": ["Profit", "Loss", "No profit no loss", "Error"],
+    "correct": 0
+  },
+  {
+    "id": 13,
+    "question": "Perimeter of a rectangle =",
+    "options": ["l × b", "l + b", "2(l + b)", "l/b"],
+    "correct": 2
+  },
+  {
+    "id": 14,
+    "question": "Boiling point of water =",
+    "options": ["0°C", "37°C", "100°C", "212°C"],
+    "correct": 2
+  },
+  {
+    "id": 15,
+    "question": "Unit of pressure =",
+    "options": ["Watt", "Pascal", "Newton", "Joule"],
+    "correct": 1
+  },
+  {
+    "id": 16,
+    "question": "The major gas in the air:",
+    "options": ["O₂", "CO₂", "N₂", "Ar"],
+    "correct": 2
+  },
+  {
+    "id": 17,
+    "question": "Plants convert glucose into:",
+    "options": ["Starch", "Protein", "Vitamins", "Fat"],
+    "correct": 0
+  },
+  {
+    "id": 18,
+    "question": "Which is a conductor?",
+    "options": ["Glass", "Plastic", "Water", "Rubber"],
+    "correct": 2
+  },
+  {
+    "id": 19,
+    "question": "Rusting is a:",
+    "options": [
+      "Physical change",
+      "Chemical change",
+      "Temporary change",
+      "No change"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 20,
+    "question": "Separation of oil & water:",
+    "options": ["Decantation", "Filtration", "Evaporation", "Sublimation"],
+    "correct": 0
+  },
+  {
+    "id": 21,
+    "question": "Sound travels fastest in:",
+    "options": ["Solid", "Liquid", "Gas", "Vacuum"],
+    "correct": 0
+  },
+  {
+    "id": 22,
+    "question": "The basic unit of life is:",
+    "options": ["Tissue", "Organ", "Cell", "Organism"],
+    "correct": 2
+  },
+  {
+    "id": 23,
+    "question": "Photosynthesis occurs in:",
+    "options": ["Roots", "Leaves", "Stem", "Flowers"],
+    "correct": 1
+  },
+  {
+    "id": 24,
+    "question": "Earth completes 1 rotation in:",
+    "options": ["12 hours", "24 hours", "30 days", "365 days"],
+    "correct": 1
+  },
+  {
+    "id": 25,
+    "question": "Which planet is known as \"Red Planet\"?",
+    "options": ["Venus", "Earth", "Mars", "Saturn"],
+    "correct": 2
+  }
+]
