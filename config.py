@@ -30,7 +30,6 @@ else:
         'charset':  'utf8mb4',
     }
 
-
 #### **Create `Procfile`:**
 
 # from werkzeug.security import generate_password_hash
@@ -39,5 +38,6 @@ else:
 # hashed   = generate_password_hash(password)
 
 # print(hashed)
+
 
 
