@@ -211,7 +211,7 @@ def index():
     return redirect(url_for('test_page', class_level=class_level, stream=stream))
 
 # --------------------------------------------------------------------------
-# SIGNUP ROUTE (FIXED)
+# SIGNUP ROUTE
 # --------------------------------------------------------------------------
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
@@ -279,9 +279,9 @@ def signup():
                 conn.close()
                 return render_template('signup.html', error="Email already registered")
 
-            # ✅ FIXED: Insert with correct column name and created_at timestamp
+            # Insert new user with has_attempted_set (your renamed column)
             cur.execute("""
-                INSERT INTO users (full_name, phone, email, username, password, promoted_to_class, has_attempted_test, created_at)
+                INSERT INTO users (full_name, phone, email, username, password, promoted_to_class, has_attempted_set, created_at)
                 VALUES (%s, %s, %s, %s, %s, %s, 0, %s)
             """, (full_name, phone, email, username, password, promoted_to_class, datetime.now()))
 
@@ -298,7 +298,7 @@ def signup():
     return render_template('signup.html')
 
 # --------------------------------------------------------------------------
-# LOGIN ROUTE (FIXED)
+# LOGIN ROUTE
 # --------------------------------------------------------------------------
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -313,9 +313,9 @@ def login():
             conn = get_mysql_connection()
             cur = conn.cursor()
 
-            # ✅ FIXED: Query correct column name
+            # Query with has_attempted_set (your renamed column)
             cur.execute("""
-                SELECT id, full_name, username, password, promoted_to_class, has_attempted_test
+                SELECT id, full_name, username, password, promoted_to_class, has_attempted_set
                 FROM users
                 WHERE username = %s
             """, (username,))
@@ -332,8 +332,8 @@ def login():
                 conn.close()
                 return render_template('login.html', error="Invalid username or password")
 
-            # ✅ FIXED: Check correct column name
-            if user['has_attempted_test'] == 1:
+            # Check has_attempted_set (your renamed column)
+            if user['has_attempted_set'] == 1:
                 cur.close()
                 conn.close()
                 return render_template('login.html', 
@@ -381,7 +381,7 @@ def login():
     return render_template('login.html')
 
 # --------------------------------------------------------------------------
-# TEST PAGE (FIXED - MARK ATTEMPTED ON START)
+# TEST PAGE (MARK ATTEMPTED ON START)
 # --------------------------------------------------------------------------
 @app.route('/test/<class_level>')
 @app.route('/test/<class_level>/<stream>')
@@ -392,21 +392,21 @@ def test_page(class_level=None, stream=None):
         conn = get_mysql_connection()
         cur = conn.cursor()
         
-        # ✅ FIXED: Query correct column name
-        cur.execute("SELECT has_attempted_test FROM users WHERE id = %s",
+        # Query has_attempted_set (your renamed column)
+        cur.execute("SELECT has_attempted_set FROM users WHERE id = %s",
                     (session.get('mysql_user_id'),))
         row = cur.fetchone()
 
-        # ✅ FIXED: Check correct column name
-        if row and row['has_attempted_test'] == 1:
+        # Check has_attempted_set (your renamed column)
+        if row and row['has_attempted_set'] == 1:
             cur.close()
             conn.close()
             return render_template('error.html',
                                    message="You have already attempted the test. Only one attempt is allowed.")
 
-        # ✅ FIXED: Update correct column name
         # 🔥 MARK TEST AS ATTEMPTED RIGHT NOW (when test starts)
-        cur.execute("UPDATE users SET has_attempted_test = 1 WHERE id = %s",
+        # Update has_attempted_set (your renamed column)
+        cur.execute("UPDATE users SET has_attempted_set = 1 WHERE id = %s",
                     (session.get('mysql_user_id'),))
         conn.commit()
         cur.close()
