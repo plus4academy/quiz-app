@@ -4,11 +4,11 @@
 import os
 from urllib.parse import urlparse
 
-# Get DATABASE_URL from environment (Railway provides this)
-database_url = os.getenv('DATABASE_URL', 'mysql://root:uskuEvQQvvSAkWFsMmYvcAjnrNJUTZeC@mysql.railway.internal:3306/railway')
+# Railway provides DATABASE_URL
+database_url = os.getenv('DATABASE_URL')
 
 if database_url:
-    # Parse the Railway MySQL URL
+    # Production: Parse Railway's MYSQL_URL
     url = urlparse(database_url)
     
     MYSQL_CONFIG = {
@@ -16,11 +16,11 @@ if database_url:
         'port':     url.port or 3306,
         'user':     url.username,
         'password': url.password,
-        'database': url.path[1:],  # Remove leading '/'
+        'database': url.path[1:] if url.path else 'railway',
         'charset':  'utf8mb4',
     }
 else:
-    # Fallback for local development
+    # Local development
     MYSQL_CONFIG = {
         'host':     'localhost',
         'user':     'root',
@@ -30,10 +30,14 @@ else:
         'charset':  'utf8mb4',
     }
 
+
+#### **Create `Procfile`:**
+
 # from werkzeug.security import generate_password_hash
 
 # password = "test1234"                          # whatever you want the password to be
 # hashed   = generate_password_hash(password)
 
 # print(hashed)
+
 
