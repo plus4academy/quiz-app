@@ -80,7 +80,7 @@ def get_mysql_connection():
     )
 
 # ==========================================================================
-# Helper: Generate username and password from name + phone
+# Helper: Generate username from name + phone
 # ==========================================================================
 def generate_username(full_name, phone):
     """Generate username: firstname.lastname + last 4 digits of phone"""
@@ -211,7 +211,7 @@ def index():
     return redirect(url_for('test_page', class_level=class_level, stream=stream))
 
 # --------------------------------------------------------------------------
-# SIGNUP ROUTE
+# SIGNUP ROUTE (FIXED)
 # --------------------------------------------------------------------------
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
@@ -279,11 +279,11 @@ def signup():
                 conn.close()
                 return render_template('signup.html', error="Email already registered")
 
-            # Insert new user
+            # ✅ FIXED: Insert with correct column name and created_at timestamp
             cur.execute("""
-                INSERT INTO users (full_name, phone, email, username, password, promoted_to_class, has_attempted_set)
-                VALUES (%s, %s, %s, %s, %s, %s, 0)
-            """, (full_name, phone, email, username, password, promoted_to_class))
+                INSERT INTO users (full_name, phone, email, username, password, promoted_to_class, has_attempted_test, created_at)
+                VALUES (%s, %s, %s, %s, %s, %s, 0, %s)
+            """, (full_name, phone, email, username, password, promoted_to_class, datetime.now()))
 
             conn.commit()
             cur.close()
@@ -298,7 +298,7 @@ def signup():
     return render_template('signup.html')
 
 # --------------------------------------------------------------------------
-# LOGIN ROUTE (UPDATED)
+# LOGIN ROUTE (FIXED)
 # --------------------------------------------------------------------------
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -313,8 +313,9 @@ def login():
             conn = get_mysql_connection()
             cur = conn.cursor()
 
+            # ✅ FIXED: Query correct column name
             cur.execute("""
-                SELECT id, full_name, username, password, promoted_to_class, has_attempted_set
+                SELECT id, full_name, username, password, promoted_to_class, has_attempted_test
                 FROM users
                 WHERE username = %s
             """, (username,))
@@ -331,7 +332,8 @@ def login():
                 conn.close()
                 return render_template('login.html', error="Invalid username or password")
 
-            if user['has_attempted_set'] == 1:
+            # ✅ FIXED: Check correct column name
+            if user['has_attempted_test'] == 1:
                 cur.close()
                 conn.close()
                 return render_template('login.html', 
@@ -379,7 +381,7 @@ def login():
     return render_template('login.html')
 
 # --------------------------------------------------------------------------
-# TEST PAGE (MARK ATTEMPTED ON START)
+# TEST PAGE (FIXED - MARK ATTEMPTED ON START)
 # --------------------------------------------------------------------------
 @app.route('/test/<class_level>')
 @app.route('/test/<class_level>/<stream>')
@@ -389,18 +391,22 @@ def test_page(class_level=None, stream=None):
     try:
         conn = get_mysql_connection()
         cur = conn.cursor()
-        cur.execute("SELECT has_attempted_set FROM users WHERE id = %s",
+        
+        # ✅ FIXED: Query correct column name
+        cur.execute("SELECT has_attempted_test FROM users WHERE id = %s",
                     (session.get('mysql_user_id'),))
         row = cur.fetchone()
 
-        if row and row['has_attempted_set'] == 1:
+        # ✅ FIXED: Check correct column name
+        if row and row['has_attempted_test'] == 1:
             cur.close()
             conn.close()
             return render_template('error.html',
                                    message="You have already attempted the test. Only one attempt is allowed.")
 
+        # ✅ FIXED: Update correct column name
         # 🔥 MARK TEST AS ATTEMPTED RIGHT NOW (when test starts)
-        cur.execute("UPDATE users SET has_attempted_set = 1 WHERE id = %s",
+        cur.execute("UPDATE users SET has_attempted_test = 1 WHERE id = %s",
                     (session.get('mysql_user_id'),))
         conn.commit()
         cur.close()
@@ -572,4 +578,3 @@ def server_error(e):
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
     app.run(debug=False, host='0.0.0.0', port=port)
-
