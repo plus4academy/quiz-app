@@ -5,7 +5,7 @@ import os
 from urllib.parse import urlparse
 
 # Get DATABASE_URL from environment (Railway provides this)
-database_url = os.getenv('DATABASE_URL', '')
+database_url = os.getenv('DATABASE_URL', 'mysql://root:uskuEvQQvvSAkWFsMmYvcAjnrNJUTZeC@mysql.railway.internal:3306/railway')
 
 if database_url:
     # Parse the Railway MySQL URL
@@ -36,3 +36,4 @@ else:
 # hashed   = generate_password_hash(password)
 
 # print(hashed)
+
