@@ -1226,3 +1226,433 @@ body {
         padding: 2rem 1.5rem;
     }
 }
+
+/* ========================================================================
+   PAGINATED TEST PAGE STYLES
+   ======================================================================== */
+
+.test-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 0;
+    min-height: calc(100vh - 80px);
+}
+
+/* Question Palette (Left Sidebar) */
+.question-palette {
+    background: #FFFFFF;
+    border-right: 2px solid #E5E7EB;
+    padding: 2rem;
+    overflow-y: auto;
+    position: sticky;
+    top: 80px;
+    height: calc(100vh - 80px);
+}
+
+.palette-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.palette-header h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #374151;
+    margin: 0;
+}
+
+.close-palette {
+    display: none;
+    /* Hidden on desktop */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #6B7280;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+}
+
+/* Palette Stats */
+.palette-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #E5E7EB;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.875rem;
+    color: #6B7280;
+}
+
+.stat-circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #D1D5DB;
+    background: #FFFFFF;
+}
+
+.stat-circle.answered {
+    background: #10B981;
+    border-color: #10B981;
+}
+
+.stat-circle.visited {
+    background: #F59E0B;
+    border-color: #F59E0B;
+}
+
+/* Palette Grid */
+.palette-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.palette-btn {
+    aspect-ratio: 1;
+    border: 2px solid #D1D5DB;
+    background: #FFFFFF;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.palette-btn:hover {
+    border-color: #2563EB;
+    transform: scale(1.05);
+}
+
+.palette-btn.current {
+    border-color: #2563EB;
+    background: #EFF6FF;
+    color: #2563EB;
+    border-width: 3px;
+}
+
+.palette-btn.answered {
+    background: #10B981;
+    border-color: #10B981;
+    color: #FFFFFF;
+}
+
+.palette-btn.visited {
+    background: #F59E0B;
+    border-color: #F59E0B;
+    color: #FFFFFF;
+}
+
+.palette-btn.marked::after {
+    content: '★';
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #F59E0B;
+    color: #FFFFFF;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tab Switch Info in Palette */
+.tab-switch-info {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid #E5E7EB;
+    text-align: center;
+}
+
+/* Question Display (Right Side) */
+.question-display {
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.instructions-panel {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Question Container */
+.question-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.question-progress {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    color: #6B7280;
+}
+
+.question-progress #questionNumber {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1E3A8A;
+}
+
+/* Single Question Card */
+.question-card-single {
+    background: #FFFFFF;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.question-text-large {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #374151;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+/* Large Options */
+.options-container-large {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.option-label-large {
+    display: flex;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    border: 2px solid #E5E7EB;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.option-label-large:hover {
+    border-color: #2563EB;
+    background: #EFF6FF;
+}
+
+.option-label-large.selected {
+    border-color: #2563EB;
+    background: #EFF6FF;
+    border-width: 3px;
+}
+
+.option-input-large {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.option-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.option-letter-large {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #E5E7EB;
+    color: #374151;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.option-label-large.selected .option-letter-large {
+    background: #2563EB;
+    color: #FFFFFF;
+}
+
+.option-text-large {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #374151;
+}
+
+.option-checkmark {
+    display: none;
+    font-size: 1.5rem;
+    color: #10B981;
+    margin-left: auto;
+}
+
+.option-label-large.selected .option-checkmark {
+    display: block;
+}
+
+/* Question Navigation */
+.question-navigation {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-spacer {
+    flex: 1;
+    min-width: 1rem;
+}
+
+.btn-icon-only {
+    padding: 0.75rem;
+    display: none;
+    /* Hidden on desktop */
+}
+
+.btn-outline {
+    background: #FFFFFF;
+    border: 2px solid #D1D5DB;
+    color: #374151;
+}
+
+.btn-outline:hover {
+    border-color: #2563EB;
+    background: #EFF6FF;
+    color: #2563EB;
+}
+
+.btn-outline.marked {
+    border-color: #F59E0B;
+    background: #FFFBEB;
+    color: #F59E0B;
+}
+
+.btn-success {
+    background: #10B981;
+    color: #FFFFFF;
+}
+
+.btn-success:hover {
+    background: #059669;
+}
+
+/* ========================================================================
+   MOBILE RESPONSIVE (Tablets & Phones)
+   ======================================================================== */
+
+@media (max-width: 1024px) {
+    .test-layout {
+        grid-template-columns: 1fr;
+    }
+
+    /* Mobile Palette - Slide in from left */
+    .question-palette {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 85%;
+        max-width: 320px;
+        height: 100vh;
+        z-index: 1000;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .question-palette.active {
+        transform: translateX(0);
+    }
+
+    .close-palette {
+        display: block;
+    }
+
+    .btn-icon-only {
+        display: inline-flex;
+    }
+
+    /* Overlay when palette is open */
+    .question-palette.active::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+    }
+
+    .question-display {
+        padding: 1.5rem 1rem;
+    }
+
+    .question-card-single {
+        padding: 1.5rem;
+    }
+
+    .question-text-large {
+        font-size: 1.125rem;
+    }
+
+    .option-label-large {
+        padding: 1rem;
+    }
+
+    .question-navigation {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .question-navigation button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-spacer {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .palette-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .question-progress #questionNumber {
+        font-size: 1.25rem;
+    }
+
+    .question-text-large {
+        font-size: 1rem;
+    }
+
+    .option-letter-large {
+        width: 32px;
+        height: 32px;
+        font-size: 0.875rem;
+    }
+
+    .option-text-large {
+        font-size: 0.9375rem;
+    }
+}

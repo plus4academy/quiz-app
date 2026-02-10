@@ -1,51 +1,44 @@
 /**
- * Quiz Platform - Test Page JavaScript
- * Handles timer, tab switching detection, and test submission
+ * Quiz Platform - Test Page JavaScript (Paginated Version)
+ * One question per page with navigation palette
  */
 
 // ===== Global Variables =====
-let timeRemaining = TEST_DURATION; // in seconds
+let timeRemaining = TEST_DURATION;
 let timerInterval = null;
 let tabSwitchCount = 0;
 const MAX_TAB_SWITCHES = 3;
 let testSubmitted = false;
-let answers = {};
+let testStarted = false;
+
+// Question state tracking
+let currentQuestionIndex = 0;
+let answers = {}; // {questionId: answerIndex}
+let visitedQuestions = new Set(); // Track visited questions
+let markedForReview = new Set(); // Track marked questions
 
 // ===== Timer Functions =====
-
-/**
- * Format seconds into MM:SS format
- */
 function formatTime(seconds) {
   const minutes = Math.floor(seconds / 60);
   const secs = seconds % 60;
   return `${String(minutes).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
 }
 
-/**
- * Update timer display
- */
 function updateTimerDisplay() {
   const timerElement = document.getElementById("timer");
   timerElement.textContent = formatTime(timeRemaining);
 
-  // Add warning class when time is running low (less than 5 minutes)
   if (timeRemaining <= 300 && timeRemaining > 0) {
     timerElement.classList.add("timer-warning");
   }
 }
 
-/**
- * Start the countdown timer
- */
 function startTimer() {
   updateTimerDisplay();
-
   timerInterval = setInterval(() => {
     timeRemaining--;
     updateTimerDisplay();
 
-    // Auto-submit when time is up
     if (timeRemaining <= 0) {
       clearInterval(timerInterval);
       autoSubmitTest("timeout");
@@ -53,17 +46,204 @@ function startTimer() {
   }, 1000);
 }
 
-// ===== Tab Switching Detection =====
+// ===== Question Navigation =====
+function startTest() {
+  document.getElementById("instructionsPanel").style.display = "none";
+  document.getElementById("questionContainer").style.display = "block";
+  testStarted = true;
+  initializeQuestionPalette();
+  showQuestion(0);
+  startTimer();
+}
 
-/**
- * Handle visibility change (tab switching)
- */
+function showQuestion(index) {
+  if (index < 0 || index >= questions.length) return;
+
+  currentQuestionIndex = index;
+  visitedQuestions.add(index);
+
+  const question = questions[index];
+  const container = document.getElementById("currentQuestion");
+
+  // Update question number
+  document.getElementById("questionNumber").textContent =
+    `Question ${index + 1}`;
+
+  // Render question
+  container.innerHTML = `
+    <div class="question-text-large">${question.question}</div>
+    <div class="options-container-large">
+      ${question.options
+        .map(
+          (option, optIdx) => `
+        <label class="option-label-large ${answers[question.id] == optIdx ? "selected" : ""}">
+          <input 
+            type="radio" 
+            name="question_${question.id}" 
+            value="${optIdx}" 
+            class="option-input-large"
+            ${answers[question.id] == optIdx ? "checked" : ""}
+            onchange="selectAnswer(${question.id}, ${optIdx})"
+          >
+          <span class="option-content">
+            <span class="option-letter-large">${["A", "B", "C", "D"][optIdx]}</span>
+            <span class="option-text-large">${option}</span>
+          </span>
+          <span class="option-checkmark">✓</span>
+        </label>
+      `,
+        )
+        .join("")}
+    </div>
+  `;
+
+  // Update navigation buttons
+  document.getElementById("prevBtn").disabled = index === 0;
+
+  const nextBtn = document.getElementById("nextBtn");
+  const submitBtn = document.getElementById("submitBtn");
+
+  if (index === questions.length - 1) {
+    nextBtn.style.display = "none";
+    submitBtn.style.display = "inline-flex";
+  } else {
+    nextBtn.style.display = "inline-flex";
+    submitBtn.style.display = "none";
+  }
+
+  // Update mark for review button
+  const markBtn = document.getElementById("markReviewBtn");
+  if (markedForReview.has(index)) {
+    markBtn.classList.add("marked");
+    markBtn.innerHTML = `
+      <svg class="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+      </svg>
+      Marked
+    `;
+  } else {
+    markBtn.classList.remove("marked");
+    markBtn.innerHTML = `
+      <svg class="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+      </svg>
+      Mark for Review
+    `;
+  }
+
+  updateQuestionPalette();
+}
+
+function nextQuestion() {
+  if (currentQuestionIndex < questions.length - 1) {
+    showQuestion(currentQuestionIndex + 1);
+  }
+}
+
+function previousQuestion() {
+  if (currentQuestionIndex > 0) {
+    showQuestion(currentQuestionIndex - 1);
+  }
+}
+
+function jumpToQuestion(index) {
+  showQuestion(index);
+  if (window.innerWidth <= 1024) {
+    toggleQuestionPalette(); // Close palette on mobile after selection
+  }
+}
+
+function selectAnswer(questionId, answerIndex) {
+  answers[questionId] = answerIndex;
+  updateQuestionPalette();
+
+  // Add visual feedback
+  document.querySelectorAll(".option-label-large").forEach((label) => {
+    label.classList.remove("selected");
+  });
+  event.target.closest(".option-label-large").classList.add("selected");
+}
+
+function markForReview() {
+  if (markedForReview.has(currentQuestionIndex)) {
+    markedForReview.delete(currentQuestionIndex);
+  } else {
+    markedForReview.add(currentQuestionIndex);
+  }
+  showQuestion(currentQuestionIndex); // Refresh to update button
+}
+
+// ===== Question Palette =====
+function initializeQuestionPalette() {
+  const grid = document.getElementById("paletteGrid");
+  grid.innerHTML = questions
+    .map(
+      (q, idx) => `
+    <button 
+      class="palette-btn" 
+      id="paletteBtn${idx}"
+      onclick="jumpToQuestion(${idx})"
+      title="Question ${idx + 1}"
+    >
+      ${idx + 1}
+    </button>
+  `,
+    )
+    .join("");
+  updateQuestionPalette();
+}
+
+function updateQuestionPalette() {
+  let answeredCount = 0;
+  let notAnsweredButVisited = 0;
+  let notVisitedCount = 0;
+
+  questions.forEach((q, idx) => {
+    const btn = document.getElementById(`paletteBtn${idx}`);
+    if (!btn) return;
+
+    // Remove all status classes
+    btn.classList.remove("answered", "visited", "current", "marked");
+
+    // Add current class
+    if (idx === currentQuestionIndex) {
+      btn.classList.add("current");
+    }
+
+    // Add marked class
+    if (markedForReview.has(idx)) {
+      btn.classList.add("marked");
+    }
+
+    // Add answered/visited class
+    if (answers[q.id] !== undefined) {
+      btn.classList.add("answered");
+      answeredCount++;
+    } else if (visitedQuestions.has(idx)) {
+      btn.classList.add("visited");
+      notAnsweredButVisited++;
+    } else {
+      notVisitedCount++;
+    }
+  });
+
+  // Update stats
+  document.getElementById("answeredCount").textContent = answeredCount;
+  document.getElementById("notAnsweredCount").textContent =
+    notAnsweredButVisited;
+  document.getElementById("notVisitedCount").textContent = notVisitedCount;
+}
+
+function toggleQuestionPalette() {
+  const palette = document.getElementById("questionPalette");
+  palette.classList.toggle("active");
+}
+
+// ===== Tab Switching Detection =====
 function handleVisibilityChange() {
-  if (document.hidden && !testSubmitted) {
+  if (document.hidden && !testSubmitted && testStarted) {
     tabSwitchCount++;
     logTabSwitch();
-
-    // Update display
     updateTabSwitchDisplay();
 
     if (tabSwitchCount <= MAX_TAB_SWITCHES) {
@@ -76,69 +256,41 @@ function handleVisibilityChange() {
   }
 }
 
-/**
- * Log tab switch to server
- */
 function logTabSwitch() {
   fetch("/api/log_tab_switch", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({}),
-  }).catch((error) => {
-    console.error("Error logging tab switch:", error);
-  });
+  }).catch((err) => console.error("Error logging tab switch:", err));
 }
 
-/**
- * Update tab switch display counter
- */
 function updateTabSwitchDisplay() {
   const displayElement = document.getElementById("tabSwitchDisplay");
   displayElement.textContent = `${tabSwitchCount} / ${MAX_TAB_SWITCHES}`;
 
-  // Change color based on count
   if (tabSwitchCount >= MAX_TAB_SWITCHES) {
-    displayElement.style.color = "#EF4444"; // Red
+    displayElement.style.color = "#EF4444";
   } else if (tabSwitchCount >= 2) {
-    displayElement.style.color = "#F59E0B"; // Orange
+    displayElement.style.color = "#F59E0B";
   }
 }
 
-/**
- * Show tab switch warning modal
- */
 function showTabWarningModal() {
   const modal = document.getElementById("tabWarningModal");
   const switchCountSpan = document.getElementById("switchCount");
-
   switchCountSpan.textContent = tabSwitchCount;
   modal.classList.add("active");
-
-  // Play warning sound (optional)
   playWarningSound();
 }
 
-/**
- * Close warning modal
- */
 function closeWarningModal() {
-  const modal = document.getElementById("tabWarningModal");
-  modal.classList.remove("active");
+  document.getElementById("tabWarningModal").classList.remove("active");
 }
 
-/**
- * Show test terminated modal
- */
 function showTestTerminatedModal() {
-  const modal = document.getElementById("testTerminatedModal");
-  modal.classList.add("active");
+  document.getElementById("testTerminatedModal").classList.add("active");
 }
 
-/**
- * Play warning sound (simple beep using Web Audio API)
- */
 function playWarningSound() {
   try {
     const audioContext = new (
@@ -166,52 +318,19 @@ function playWarningSound() {
   }
 }
 
-// ===== Answer Collection =====
-
-/**
- * Collect all answers from form
- */
-function collectAnswers() {
-  const answers = {};
-  const radioButtons = document.querySelectorAll(".option-input:checked");
-
-  radioButtons.forEach((radio) => {
-    const questionId = radio.dataset.questionId;
-    const answerValue = radio.value;
-    answers[questionId] = answerValue;
-  });
-
-  return answers;
-}
-
-/**
- * Check if all questions are answered
- */
-function areAllQuestionsAnswered() {
-  const totalQuestions = TOTAL_QUESTIONS;
-  const answeredQuestions = document.querySelectorAll(
-    ".option-input:checked",
-  ).length;
-  return answeredQuestions === totalQuestions;
-}
-
 // ===== Test Submission =====
-
-/**
- * Confirm before manual submission
- */
 function confirmSubmit() {
   if (testSubmitted) return;
 
-  const answeredCount = document.querySelectorAll(
-    ".option-input:checked",
-  ).length;
+  const answeredCount = Object.keys(answers).length;
   const unansweredCount = TOTAL_QUESTIONS - answeredCount;
 
   let message = "Are you sure you want to submit your test?";
-
   if (unansweredCount > 0) {
     message += `\n\nYou have ${unansweredCount} unanswered question(s).`;
+  }
+  if (markedForReview.size > 0) {
+    message += `\n\n${markedForReview.size} question(s) marked for review.`;
   }
 
   if (confirm(message)) {
@@ -219,71 +338,50 @@ function confirmSubmit() {
   }
 }
 
-/**
- * Auto-submit test (timeout or tab violation)
- */
 function autoSubmitTest(reason) {
   if (testSubmitted) return;
 
   if (reason === "tab_violation") {
     showTestTerminatedModal();
-    setTimeout(() => {
-      submitTest(reason);
-    }, 2000);
+    setTimeout(() => submitTest(reason), 2000);
   } else {
     submitTest(reason);
   }
 }
 
-/**
- * Submit test to server
- */
 function submitTest(submissionType) {
   if (testSubmitted) return;
-
   testSubmitted = true;
 
-  // Stop timer
-  if (timerInterval) {
-    clearInterval(timerInterval);
-  }
+  if (timerInterval) clearInterval(timerInterval);
 
-  // Collect answers
-  const answers = collectAnswers();
-
-  // Prepare data
   const data = {
     answers: answers,
     tab_switches: tabSwitchCount,
     submission_type: submissionType,
   };
 
-  // Show loading state
-  const submitButton = document.querySelector(".submit-section .btn");
-  if (submitButton) {
-    submitButton.disabled = true;
-    submitButton.innerHTML = "<span>Submitting...</span>";
+  const submitBtn = document.getElementById("submitBtn");
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = "<span>Submitting...</span>";
   }
 
-  // Send to server
   fetch("/api/submit_test", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
   })
     .then((response) => response.json())
     .then((data) => {
       if (data.success) {
-        // Redirect to score page
         window.location.href = "/score";
       } else {
         alert("Error submitting test. Please try again.");
         testSubmitted = false;
-        if (submitButton) {
-          submitButton.disabled = false;
-          submitButton.innerHTML = "Submit Test";
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = "Submit Test";
         }
       }
     })
@@ -291,206 +389,85 @@ function submitTest(submissionType) {
       console.error("Error submitting test:", error);
       alert("Error submitting test. Please try again.");
       testSubmitted = false;
-      if (submitButton) {
-        submitButton.disabled = false;
-        submitButton.innerHTML = "Submit Test";
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = "Submit Test";
       }
     });
 }
 
 // ===== Event Listeners =====
-
-/**
- * Track answer selections
- */
-function setupAnswerTracking() {
-  const radioButtons = document.querySelectorAll(".option-input");
-  radioButtons.forEach((radio) => {
-    radio.addEventListener("change", function () {
-      const questionId = this.dataset.questionId;
-      const answerValue = this.value;
-      answers[questionId] = answerValue;
-
-      // Visual feedback
-      const questionCard = document.getElementById(`question-${questionId}`);
-      if (questionCard) {
-        questionCard.style.borderLeft = "4px solid var(--primary-blue)";
-      }
-    });
-  });
-}
-
-/**
- * Prevent accidental page refresh
- */
 function preventAccidentalRefresh(e) {
-  if (!testSubmitted) {
+  if (!testSubmitted && testStarted) {
     e.preventDefault();
     e.returnValue = "";
     return "";
   }
 }
 
-/**
- * Prevent right-click context menu (optional security measure)
- */
-function preventContextMenu(e) {
-  e.preventDefault();
-  return false;
-}
-
-/**
- * Prevent text selection (optional security measure)
- */
-function preventTextSelection() {
-  document.body.style.userSelect = "none";
-  document.body.style.webkitUserSelect = "none";
-  document.body.style.mozUserSelect = "none";
-  document.body.style.msUserSelect = "none";
-}
-
 // ===== Keyboard Shortcuts =====
+document.addEventListener("keydown", (e) => {
+  if (!testStarted || testSubmitted) return;
 
-/**
- * Handle keyboard shortcuts
- */
-function handleKeyboardShortcuts(e) {
-  // Prevent certain key combinations
-  if (e.ctrlKey || e.metaKey) {
-    // Prevent Ctrl+P (Print)
-    if (e.key === "p" || e.keyCode === 80) {
-      e.preventDefault();
-      return false;
-    }
-    // Prevent Ctrl+S (Save)
-    if (e.key === "s" || e.keyCode === 83) {
-      e.preventDefault();
-      return false;
-    }
-    // Prevent Ctrl+U (View Source)
-    if (e.key === "u" || e.keyCode === 85) {
-      e.preventDefault();
-      return false;
-    }
-  }
-
-  // Prevent F12 (Developer Tools)
-  if (e.keyCode === 123) {
+  // Arrow keys for navigation
+  if (e.key === "ArrowRight" && currentQuestionIndex < questions.length - 1) {
     e.preventDefault();
-    return false;
+    nextQuestion();
+  } else if (e.key === "ArrowLeft" && currentQuestionIndex > 0) {
+    e.preventDefault();
+    previousQuestion();
   }
-}
+
+  // Number keys (1-4) for selecting options
+  if (e.key >= "1" && e.key <= "4") {
+    const optionIndex = parseInt(e.key) - 1;
+    const question = questions[currentQuestionIndex];
+    if (optionIndex < question.options.length) {
+      e.preventDefault();
+      selectAnswer(question.id, optionIndex);
+      // Trigger the radio button
+      const radio = document.querySelector(
+        `input[name="question_${question.id}"][value="${optionIndex}"]`,
+      );
+      if (radio) radio.checked = true;
+      showQuestion(currentQuestionIndex); // Refresh
+    }
+  }
+
+  // M key for mark/unmark
+  if (e.key === "m" || e.key === "M") {
+    e.preventDefault();
+    markForReview();
+  }
+});
 
 // ===== Initialization =====
-
-/**
- * Initialize the test page
- */
 function initializeTestPage() {
   console.log("Initializing test page...");
 
-  // Start timer
-  startTimer();
-
-  // Setup tab switching detection
   document.addEventListener("visibilitychange", handleVisibilityChange);
-
-  // Setup answer tracking
-  setupAnswerTracking();
-
-  // Prevent accidental page refresh
   window.addEventListener("beforeunload", preventAccidentalRefresh);
 
-  // Optional security measures (uncomment if needed)
-  // document.addEventListener('contextmenu', preventContextMenu);
-  // preventTextSelection();
-  // document.addEventListener('keydown', handleKeyboardShortcuts);
-
-  // Focus on first question
-  const firstQuestion = document.querySelector(".question-card");
-  if (firstQuestion) {
-    firstQuestion.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
+  // Close palette when clicking outside on mobile
+  document.addEventListener("click", (e) => {
+    const palette = document.getElementById("questionPalette");
+    const toggleBtn = document.getElementById("paletteToggleBtn");
+    if (
+      window.innerWidth <= 1024 &&
+      palette.classList.contains("active") &&
+      !palette.contains(e.target) &&
+      !toggleBtn.contains(e.target)
+    ) {
+      toggleQuestionPalette();
+    }
+  });
 
   console.log("Test page initialized successfully");
 }
 
-// ===== Auto-save (Optional Enhancement) =====
-
-/**
- * Auto-save answers periodically
- */
-function setupAutoSave() {
-  setInterval(() => {
-    if (!testSubmitted) {
-      const currentAnswers = collectAnswers();
-      // Could save to localStorage or send to server
-      localStorage.setItem(
-        "quiz_answers_backup",
-        JSON.stringify(currentAnswers),
-      );
-    }
-  }, 30000); // Save every 30 seconds
-}
-
-// ===== Start Everything =====
-
-// Wait for DOM to be ready
+// Start
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initializeTestPage);
 } else {
   initializeTestPage();
 }
-
-// Optional: Setup auto-save
-// setupAutoSave();
-
-// ===== Utility Functions =====
-
-/**
- * Scroll to unanswered question
- */
-function scrollToFirstUnanswered() {
-  const allQuestions = document.querySelectorAll(".question-card");
-
-  for (let i = 0; i < allQuestions.length; i++) {
-    const questionCard = allQuestions[i];
-    const questionId = questionCard.id.replace("question-", "");
-    const isAnswered = document.querySelector(
-      `input[data-question-id="${questionId}"]:checked`,
-    );
-
-    if (!isAnswered) {
-      questionCard.scrollIntoView({ behavior: "smooth", block: "center" });
-      questionCard.style.animation = "pulse 1s ease-in-out";
-      setTimeout(() => {
-        questionCard.style.animation = "";
-      }, 1000);
-      break;
-    }
-  }
-}
-
-/**
- * Get test progress percentage
- */
-function getProgress() {
-  const answeredCount = Object.keys(answers).length;
-  return Math.round((answeredCount / TOTAL_QUESTIONS) * 100);
-}
-
-/**
- * Log test activity (for debugging)
- */
-function logActivity(action, details = {}) {
-  const timestamp = new Date().toISOString();
-  console.log(`[${timestamp}] ${action}:`, details);
-}
-
-// Export functions for potential external use
-window.testFunctions = {
-  confirmSubmit,
-  closeWarningModal,
-  scrollToFirstUnanswered,
-  getProgress,
-};
