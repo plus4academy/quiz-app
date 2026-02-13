@@ -389,7 +389,7 @@ def test_page(class_level=None, stream=None):
     try:
         conn = get_mysql_connection()
         cur = conn.cursor()
-        cur.execute("SELECT has_attempted_test FROM users WHERE id = %s",
+        cur.execute("SELECT has_attempted_set FROM users WHERE id = %s",
                     (session.get('mysql_user_id'),))
         row = cur.fetchone()
 
