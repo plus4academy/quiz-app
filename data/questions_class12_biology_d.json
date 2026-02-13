@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "question": "Fluid mosaic model was proposed by",
+    "options": [
+      "Watson & Crick",
+      "Singer & Nicolson",
+      "Darwin",
+      "Mendel"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 2,
+    "question": "Which pigment absorbs maximum red light?",
+    "options": [
+      "Chlorophyll a",
+      "Chlorophyll b",
+      "Carotene",
+      "Xanthophyll"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 3,
+    "question": "Counter current mechanism occurs in",
+    "options": [
+      "Liver",
+      "Kidney",
+      "Lung",
+      "Heart"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 4,
+    "question": "Which hormone is called emergency hormone?",
+    "options": [
+      "Insulin",
+      "Adrenaline",
+      "Thyroxine",
+      "Estrogen"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 5,
+    "question": "Which tissue conducts food?",
+    "options": [
+      "Xylem",
+      "Phloem",
+      "Cambium",
+      "Cortex"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 6,
+    "question": "Which is oviparous?",
+    "options": [
+      "Whale",
+      "Frog",
+      "Human",
+      "Dog"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 7,
+    "question": "RBC life span is approximately",
+    "options": [
+      "60 days",
+      "90 days",
+      "120 days",
+      "180 days"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 8,
+    "question": "Which is not a secondary metabolite?",
+    "options": [
+      "Alkaloid",
+      "Tannin",
+      "Protein",
+      "Latex"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 9,
+    "question": "Synapsis occurs during",
+    "options": [
+      "Mitosis",
+      "Meiosis I",
+      "Meiosis II",
+      "Interphase"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 10,
+    "question": "Which is a monocot seed?",
+    "options": [
+      "Pea",
+      "Gram",
+      "Maize",
+      "Bean"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 11,
+    "question": "Plasma membrane is",
+    "options": [
+      "Permeable",
+      "Impermeable",
+      "Selectively permeable",
+      "Non-living"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 12,
+    "question": "Which gland secretes growth hormone?",
+    "options": [
+      "Thyroid",
+      "Pituitary",
+      "Adrenal",
+      "Pancreas"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 13,
+    "question": "Which phylum shows water vascular system?",
+    "options": [
+      "Arthropoda",
+      "Mollusca",
+      "Echinodermata",
+      "Annelida"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 14,
+    "question": "Stomatal opening is maximum during",
+    "options": [
+      "Night",
+      "Day",
+      "Evening",
+      "Midnight"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 15,
+    "question": "Which vitamin deficiency causes scurvy?",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 16,
+    "question": "Which is a coenzyme?",
+    "options": [
+      "NAD",
+      "Pepsin",
+      "Trypsin",
+      "Insulin"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 17,
+    "question": "Frog respiration occurs through",
+    "options": [
+      "Skin",
+      "Lungs",
+      "Buccal cavity",
+      "All of these"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 18,
+    "question": "Which part of nephron reabsorbs most water?",
+    "options": [
+      "PCT",
+      "DCT",
+      "Loop of Henle",
+      "Collecting duct"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 19,
+    "question": "Which hormone regulates menstrual cycle?",
+    "options": [
+      "FSH & LH",
+      "Insulin",
+      "GH",
+      "ADH"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 20,
+    "question": "Which disease is caused by deficiency of iodine?",
+    "options": [
+      "Goitre",
+      "Diabetes",
+      "Rickets",
+      "Scurvy"
+    ],
+    "correct": 0
+  }
+]

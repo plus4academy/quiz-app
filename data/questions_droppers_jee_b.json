@@ -1,0 +1,442 @@
+[
+  {
+    "id": 1,
+    "question": "If f(x) = 2x+3, then f⁻¹(x) is",
+    "options": [
+      "(x−3)/2",
+      "(x+3)/2",
+      "2x−3",
+      "x/2"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 2,
+    "question": "lim(x→0) (1−cos x)/x² =",
+    "options": [
+      "0",
+      "1",
+      "1/2",
+      "∞"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 3,
+    "question": "Sum of first 20 natural numbers is",
+    "options": [
+      "200",
+      "210",
+      "220",
+      "400"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 4,
+    "question": "Nature of roots of x²+4x+5=0 is",
+    "options": [
+      "real & equal",
+      "real & unequal",
+      "complex",
+      "rational"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 5,
+    "question": "sin 30° + cos 60° =",
+    "options": [
+      "0",
+      "1",
+      "1/2",
+      "2"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 6,
+    "question": "Number of solutions of |x| = 5 is",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "infinite"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 7,
+    "question": "If A and B are independent events, then",
+    "options": [
+      "P(A∩B) = P(A) + P(B)",
+      "P(A∩B) = P(A)P(B)",
+      "P(A∩B) = P(A)/P(B)",
+      "P(A∩B) = P(A) − P(B)"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 8,
+    "question": "Equation of line with slope 3 passing through (0,−2) is",
+    "options": [
+      "y = 3x+2",
+      "y = 3x−2",
+      "y = −3x−2",
+      "y = −3x+2"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 9,
+    "question": "If aˣ = aʸ (a>0, a≠1), then",
+    "options": [
+      "x+y = 0",
+      "x = y",
+      "x = −y",
+      "a = 1"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 10,
+    "question": "Value of log₁₀ 1 is",
+    "options": [
+      "1",
+      "0",
+      "−1",
+      "undefined"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 11,
+    "question": "If y = x²+3x, then dy/dx at x=1 is",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 12,
+    "question": "Number of permutations of word \"BOOK\" is",
+    "options": [
+      "12",
+      "24",
+      "6",
+      "4"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 13,
+    "question": "Mean of first 10 even natural numbers is",
+    "options": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 14,
+    "question": "The function f(x) = x² is",
+    "options": [
+      "one-one",
+      "onto",
+      "neither",
+      "many-one"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 15,
+    "question": "Distance between (2,3) and (6,6) is",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "√13"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 16,
+    "question": "If sin θ = 0, then θ =",
+    "options": [
+      "0°",
+      "90°",
+      "45°",
+      "30°"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 17,
+    "question": "Determinant of [[2,4],[1,2]] is",
+    "options": [
+      "0",
+      "2",
+      "−2",
+      "4"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 18,
+    "question": "Number of subsets of a set having n elements is",
+    "options": [
+      "n",
+      "2n",
+      "2ⁿ",
+      "n²"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 19,
+    "question": "Sum of infinite GP exists when |r|",
+    "options": [
+      ">1",
+      "=1",
+      "<1",
+      "=0"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 20,
+    "question": "Function f(x) = |x| is not differentiable at",
+    "options": [
+      "x = 1",
+      "x = −1",
+      "x = 0",
+      "x = 2"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 21,
+    "question": "Unit of momentum is",
+    "options": [
+      "kg m/s",
+      "N s",
+      "both A and B",
+      "kg m/s²"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 22,
+    "question": "Newton's first law is also called",
+    "options": [
+      "law of force",
+      "law of inertia",
+      "law of action",
+      "law of momentum"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 23,
+    "question": "If velocity is constant, acceleration is",
+    "options": [
+      "zero",
+      "increasing",
+      "decreasing",
+      "infinite"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 24,
+    "question": "Work done depends on",
+    "options": [
+      "path",
+      "displacement",
+      "velocity",
+      "acceleration"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 25,
+    "question": "SI unit of frequency is",
+    "options": [
+      "rad/s",
+      "hertz",
+      "joule",
+      "watt"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 26,
+    "question": "Ohm's law is",
+    "options": [
+      "V = IR",
+      "P = VI",
+      "F = ma",
+      "q = It"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 27,
+    "question": "Sound cannot travel in",
+    "options": [
+      "solid",
+      "liquid",
+      "gas",
+      "vacuum"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 28,
+    "question": "Mirror used in headlights of vehicles is",
+    "options": [
+      "plane",
+      "convex",
+      "concave",
+      "cylindrical"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 29,
+    "question": "Charge is conserved in",
+    "options": [
+      "chemical reactions",
+      "nuclear reactions",
+      "physical processes",
+      "all of these"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 30,
+    "question": "Maximum penetrating power is of",
+    "options": [
+      "α rays",
+      "β rays",
+      "γ rays",
+      "X-rays"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 31,
+    "question": "Gravitational force is always",
+    "options": [
+      "repulsive",
+      "attractive",
+      "zero",
+      "variable"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 32,
+    "question": "Unit of electric current is",
+    "options": [
+      "volt",
+      "ampere",
+      "ohm",
+      "watt"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 33,
+    "question": "Image formed by plane mirror is",
+    "options": [
+      "real",
+      "inverted",
+      "virtual",
+      "diminished"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 34,
+    "question": "Speed of light in vacuum is",
+    "options": [
+      "3×10⁸ m/s",
+      "3×10⁶ m/s",
+      "3×10⁵ m/s",
+      "3×10⁴ m/s"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 35,
+    "question": "Which quantity remains conserved in elastic collision?",
+    "options": [
+      "momentum",
+      "kinetic energy",
+      "both A & B",
+      "force"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 36,
+    "question": "Unit of pressure is",
+    "options": [
+      "joule",
+      "pascal",
+      "watt",
+      "newton"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 37,
+    "question": "Transformer works on",
+    "options": [
+      "DC",
+      "AC",
+      "both AC & DC",
+      "battery"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 38,
+    "question": "Focal length of convex lens is",
+    "options": [
+      "positive",
+      "negative",
+      "zero",
+      "infinite"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 39,
+    "question": "Dimensional formula of energy is",
+    "options": [
+      "ML²T⁻²",
+      "MLT⁻²",
+      "ML²T⁻¹",
+      "MT⁻²"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 40,
+    "question": "Which particle has no charge?",
+    "options": [
+      "proton",
+      "electron",
+      "neutron",
+      "alpha"
+    ],
+    "correct": 2
+  }
+]

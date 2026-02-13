@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "question": "Which organelle is semi-autonomous?",
+    "options": [
+      "Golgi",
+      "Lysosome",
+      "Mitochondria",
+      "ER"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 2,
+    "question": "Light reaction of photosynthesis occurs in",
+    "options": [
+      "Stroma",
+      "Thylakoid membrane",
+      "Cytoplasm",
+      "Matrix"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 3,
+    "question": "Bohr effect is related to",
+    "options": [
+      "Oxygen transport",
+      "Digestion",
+      "Excretion",
+      "Immunity"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 4,
+    "question": "Which hormone controls metamorphosis in insects?",
+    "options": [
+      "Ecdysone",
+      "Insulin",
+      "Thyroxine",
+      "Cortisol"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 5,
+    "question": "Apical meristem is responsible for",
+    "options": [
+      "Thickness",
+      "Primary growth",
+      "Secondary growth",
+      "Reproduction"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 6,
+    "question": "Which is a living component of xylem?",
+    "options": [
+      "Vessel",
+      "Tracheid",
+      "Xylem parenchyma",
+      "Fibre"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 7,
+    "question": "Which part of brain controls temperature?",
+    "options": [
+      "Cerebrum",
+      "Cerebellum",
+      "Hypothalamus",
+      "Medulla"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 8,
+    "question": "Glycogen is stored in",
+    "options": [
+      "Brain",
+      "Liver",
+      "Kidney",
+      "Heart"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 9,
+    "question": "Which is diploblastic?",
+    "options": [
+      "Frog",
+      "Hydra",
+      "Earthworm",
+      "Cockroach"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 10,
+    "question": "Human vertebral column has",
+    "options": [
+      "26 bones",
+      "33 bones",
+      "28 bones",
+      "30 bones"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 11,
+    "question": "Enzyme specificity is due to",
+    "options": [
+      "Temperature",
+      "Shape of active site",
+      "pH",
+      "Substrate amount"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 12,
+    "question": "Which plant hormone promotes dormancy?",
+    "options": [
+      "Auxin",
+      "Cytokinin",
+      "ABA",
+      "Gibberellin"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 13,
+    "question": "Which blood cells lack nucleus?",
+    "options": [
+      "RBC",
+      "WBC",
+      "Platelets",
+      "Both A & C"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 14,
+    "question": "Which nitrogenous base pairs with adenine in RNA?",
+    "options": [
+      "Thymine",
+      "Uracil",
+      "Cytosine",
+      "Guanine"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 15,
+    "question": "Which is an autotroph?",
+    "options": [
+      "Mushroom",
+      "Amoeba",
+      "Grass",
+      "Paramecium"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 16,
+    "question": "Which layer of heart is muscular?",
+    "options": [
+      "Endocardium",
+      "Pericardium",
+      "Myocardium",
+      "Epicardium"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 17,
+    "question": "Which is not a connective tissue?",
+    "options": [
+      "Blood",
+      "Bone",
+      "Cartilage",
+      "Muscle"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 18,
+    "question": "In angiosperms endosperm is",
+    "options": [
+      "Haploid",
+      "Diploid",
+      "Triploid",
+      "Tetraploid"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 19,
+    "question": "Which enzyme breaks hydrogen peroxide?",
+    "options": [
+      "Amylase",
+      "Catalase",
+      "Pepsin",
+      "Lipase"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 20,
+    "question": "Which phylum has jointed appendages?",
+    "options": [
+      "Mollusca",
+      "Arthropoda",
+      "Annelida",
+      "Porifera"
+    ],
+    "correct": 1
+  }
+]
