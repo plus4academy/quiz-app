@@ -281,7 +281,7 @@ def signup():
 
             # Insert new user
             cur.execute("""
-                INSERT INTO users (full_name, phone, email, username, password, promoted_to_class, has_attempted_test)
+                INSERT INTO users (full_name, phone, email, username, password, promoted_to_class, has_attempted_set)
                 VALUES (%s, %s, %s, %s, %s, %s, 0)
             """, (full_name, phone, email, username, password, promoted_to_class))
 
@@ -314,7 +314,7 @@ def login():
             cur = conn.cursor()
 
             cur.execute("""
-                SELECT id, full_name, username, password, promoted_to_class, has_attempted_test
+                SELECT id, full_name, username, password, promoted_to_class, has_attempted_set
                 FROM users
                 WHERE username = %s
             """, (username,))
@@ -331,7 +331,7 @@ def login():
                 conn.close()
                 return render_template('login.html', error="Invalid username or password")
 
-            if user['has_attempted_test'] == 1:
+            if user['has_attempted_set'] == 1:
                 cur.close()
                 conn.close()
                 return render_template('login.html', 
@@ -389,18 +389,18 @@ def test_page(class_level=None, stream=None):
     try:
         conn = get_mysql_connection()
         cur = conn.cursor()
-        cur.execute("SELECT has_attempted_test FROM users WHERE id = %s",
+        cur.execute("SELECT _attempted_test FROM users WHERE id = %s",
                     (session.get('mysql_user_id'),))
         row = cur.fetchone()
 
-        if row and row['has_attempted_test'] == 1:
+        if row and row['has_attempted_set'] == 1:
             cur.close()
             conn.close()
             return render_template('error.html',
                                    message="You have already attempted the test. Only one attempt is allowed.")
 
         # 🔥 MARK TEST AS ATTEMPTED RIGHT NOW (when test starts)
-        cur.execute("UPDATE users SET has_attempted_test = 1 WHERE id = %s",
+        cur.execute("UPDATE users SET has_attempted_set = 1 WHERE id = %s",
                     (session.get('mysql_user_id'),))
         conn.commit()
         cur.close()
@@ -429,8 +429,8 @@ def test_page(class_level=None, stream=None):
     if not questions:
         label = class_level
         if user_stream != 'general':
-            label += f" – {user_stream}"
-        label += f" – Set {assigned_set.upper()}"
+            label += f" - {user_stream}"
+        label += f" - Set {assigned_set.upper()}"
         return render_template('error.html',
                                message=f"No questions available for {label}")
 
