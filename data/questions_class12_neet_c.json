@@ -2,25 +2,61 @@
   {
     "id": 1,
     "question": "Which organelle is semi-autonomous?",
+<<<<<<< HEAD
     "options": ["Golgi", "Lysosome", "Mitochondria", "ER"],
+=======
+    "options": [
+      "Golgi",
+      "Lysosome",
+      "Mitochondria",
+      "ER"
+    ],
+>>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 2
   },
   {
     "id": 2,
     "question": "Light reaction of photosynthesis occurs in",
+<<<<<<< HEAD
     "options": ["Stroma", "Thylakoid membrane", "Cytoplasm", "Matrix"],
+=======
+    "options": [
+      "Stroma",
+      "Thylakoid membrane",
+      "Cytoplasm",
+      "Matrix"
+    ],
+>>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 1
   },
   {
     "id": 3,
     "question": "Bohr effect is related to",
+<<<<<<< HEAD
     "options": ["Oxygen transport", "Digestion", "Excretion", "Immunity"],
+=======
+    "options": [
+      "Oxygen transport",
+      "Digestion",
+      "Excretion",
+      "Immunity"
+    ],
+>>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 0
   },
   {
     "id": 4,
     "question": "Which hormone controls metamorphosis in insects?",
+<<<<<<< HEAD
     "options": ["Ecdysone", "Insulin", "Thyroxine", "Cortisol"],
+=======
+    "options": [
+      "Ecdysone",
+      "Insulin",
+      "Thyroxine",
+      "Cortisol"
+    ],
+>>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 0
   },
   {
@@ -37,31 +73,76 @@
   {
     "id": 6,
     "question": "Which is a living component of xylem?",
+<<<<<<< HEAD
     "options": ["Vessel", "Tracheid", "Xylem parenchyma", "Fibre"],
+=======
+    "options": [
+      "Vessel",
+      "Tracheid",
+      "Xylem parenchyma",
+      "Fibre"
+    ],
+>>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 2
   },
   {
     "id": 7,
     "question": "Which part of brain controls temperature?",
+<<<<<<< HEAD
     "options": ["Cerebrum", "Cerebellum", "Hypothalamus", "Medulla"],
+=======
+    "options": [
+      "Cerebrum",
+      "Cerebellum",
+      "Hypothalamus",
+      "Medulla"
+    ],
+>>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 2
   },
   {
     "id": 8,
     "question": "Glycogen is stored in",
+<<<<<<< HEAD
     "options": ["Brain", "Liver", "Kidney", "Heart"],
+=======
+    "options": [
+      "Brain",
+      "Liver",
+      "Kidney",
+      "Heart"
+    ],
+>>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 1
   },
   {
     "id": 9,
     "question": "Which is diploblastic?",
+<<<<<<< HEAD
     "options": ["Frog", "Hydra", "Earthworm", "Cockroach"],
+=======
+    "options": [
+      "Frog",
+      "Hydra",
+      "Earthworm",
+      "Cockroach"
+    ],
+>>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 1
   },
   {
     "id": 10,
     "question": "Human vertebral column has",
+<<<<<<< HEAD
     "options": ["26 bones", "33 bones", "28 bones", "30 bones"],
+=======
+    "options": [
+      "26 bones",
+      "33 bones",
+      "28 bones",
+      "30 bones"
+    ],
+>>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 0
   },
   {
@@ -78,54 +159,127 @@
   {
     "id": 12,
     "question": "Which plant hormone promotes dormancy?",
+<<<<<<< HEAD
     "options": ["Auxin", "Cytokinin", "ABA", "Gibberellin"],
+=======
+    "options": [
+      "Auxin",
+      "Cytokinin",
+      "ABA",
+      "Gibberellin"
+    ],
+>>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 2
   },
   {
     "id": 13,
     "question": "Which blood cells lack nucleus?",
+<<<<<<< HEAD
     "options": ["RBC", "WBC", "Platelets", "Both A & C"],
+=======
+    "options": [
+      "RBC",
+      "WBC",
+      "Platelets",
+      "Both A & C"
+    ],
+>>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 3
   },
   {
     "id": 14,
     "question": "Which nitrogenous base pairs with adenine in RNA?",
+<<<<<<< HEAD
     "options": ["Thymine", "Uracil", "Cytosine", "Guanine"],
+=======
+    "options": [
+      "Thymine",
+      "Uracil",
+      "Cytosine",
+      "Guanine"
+    ],
+>>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 1
   },
   {
     "id": 15,
     "question": "Which is an autotroph?",
+<<<<<<< HEAD
     "options": ["Mushroom", "Amoeba", "Grass", "Paramecium"],
+=======
+    "options": [
+      "Mushroom",
+      "Amoeba",
+      "Grass",
+      "Paramecium"
+    ],
+>>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 2
   },
   {
     "id": 16,
     "question": "Which layer of heart is muscular?",
+<<<<<<< HEAD
     "options": ["Endocardium", "Pericardium", "Myocardium", "Epicardium"],
+=======
+    "options": [
+      "Endocardium",
+      "Pericardium",
+      "Myocardium",
+      "Epicardium"
+    ],
+>>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 2
   },
   {
     "id": 17,
     "question": "Which is not a connective tissue?",
+<<<<<<< HEAD
     "options": ["Blood", "Bone", "Cartilage", "Muscle"],
+=======
+    "options": [
+      "Blood",
+      "Bone",
+      "Cartilage",
+      "Muscle"
+    ],
+>>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 3
   },
   {
     "id": 18,
     "question": "In angiosperms endosperm is",
+<<<<<<< HEAD
     "options": ["Haploid", "Diploid", "Triploid", "Tetraploid"],
+=======
+    "options": [
+      "Haploid",
+      "Diploid",
+      "Triploid",
+      "Tetraploid"
+    ],
+>>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 2
   },
   {
     "id": 19,
     "question": "Which enzyme breaks hydrogen peroxide?",
+<<<<<<< HEAD
     "options": ["Amylase", "Catalase", "Pepsin", "Lipase"],
+=======
+    "options": [
+      "Amylase",
+      "Catalase",
+      "Pepsin",
+      "Lipase"
+    ],
+>>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 1
   },
   {
     "id": 20,
     "question": "Which phylum has jointed appendages?",
+<<<<<<< HEAD
     "options": ["Mollusca", "Arthropoda", "Annelida", "Porifera"],
     "correct": 1
   },
@@ -368,5 +522,14 @@
     "question": "Solution of equation x² = 9 is",
     "options": ["3", "–3", "±3", "0"],
     "correct": 2
+=======
+    "options": [
+      "Mollusca",
+      "Arthropoda",
+      "Annelida",
+      "Porifera"
+    ],
+    "correct": 1
+>>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
   }
 ]
