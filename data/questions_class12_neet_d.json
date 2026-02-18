@@ -1,0 +1,387 @@
+[
+  {
+    "id": 1,
+    "question": "Fluid mosaic model was proposed by",
+    "options": ["Watson & Crick", "Singer & Nicolson", "Darwin", "Mendel"],
+    "correct": 1
+  },
+  {
+    "id": 2,
+    "question": "Which pigment absorbs maximum red light?",
+    "options": ["Chlorophyll a", "Chlorophyll b", "Carotene", "Xanthophyll"],
+    "correct": 0
+  },
+  {
+    "id": 3,
+    "question": "Counter current mechanism occurs in",
+    "options": ["Liver", "Kidney", "Lung", "Heart"],
+    "correct": 1
+  },
+  {
+    "id": 4,
+    "question": "Which hormone is called emergency hormone?",
+    "options": ["Insulin", "Adrenaline", "Thyroxine", "Estrogen"],
+    "correct": 1
+  },
+  {
+    "id": 5,
+    "question": "Which tissue conducts food?",
+    "options": ["Xylem", "Phloem", "Cambium", "Cortex"],
+    "correct": 1
+  },
+  {
+    "id": 6,
+    "question": "Which is oviparous?",
+    "options": ["Whale", "Frog", "Human", "Dog"],
+    "correct": 1
+  },
+  {
+    "id": 7,
+    "question": "RBC life span is approximately",
+    "options": ["60 days", "90 days", "120 days", "180 days"],
+    "correct": 2
+  },
+  {
+    "id": 8,
+    "question": "Which is not a secondary metabolite?",
+    "options": ["Alkaloid", "Tannin", "Protein", "Latex"],
+    "correct": 2
+  },
+  {
+    "id": 9,
+    "question": "Synapsis occurs during",
+    "options": ["Mitosis", "Meiosis I", "Meiosis II", "Interphase"],
+    "correct": 1
+  },
+  {
+    "id": 10,
+    "question": "Which is a monocot seed?",
+    "options": ["Pea", "Gram", "Maize", "Bean"],
+    "correct": 2
+  },
+  {
+    "id": 11,
+    "question": "Plasma membrane is",
+    "options": [
+      "Permeable",
+      "Impermeable",
+      "Selectively permeable",
+      "Non-living"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 12,
+    "question": "Which gland secretes growth hormone?",
+    "options": ["Thyroid", "Pituitary", "Adrenal", "Pancreas"],
+    "correct": 1
+  },
+  {
+    "id": 13,
+    "question": "Which phylum shows water vascular system?",
+    "options": ["Arthropoda", "Mollusca", "Echinodermata", "Annelida"],
+    "correct": 2
+  },
+  {
+    "id": 14,
+    "question": "Stomatal opening is maximum during",
+    "options": ["Night", "Day", "Evening", "Midnight"],
+    "correct": 1
+  },
+  {
+    "id": 15,
+    "question": "Which vitamin deficiency causes scurvy?",
+    "options": ["A", "B", "C", "D"],
+    "correct": 2
+  },
+  {
+    "id": 16,
+    "question": "Which is a coenzyme?",
+    "options": ["NAD", "Pepsin", "Trypsin", "Insulin"],
+    "correct": 0
+  },
+  {
+    "id": 17,
+    "question": "Frog respiration occurs through",
+    "options": ["Skin", "Lungs", "Buccal cavity", "All of these"],
+    "correct": 3
+  },
+  {
+    "id": 18,
+    "question": "Which part of nephron reabsorbs most water?",
+    "options": ["PCT", "DCT", "Loop of Henle", "Collecting duct"],
+    "correct": 0
+  },
+  {
+    "id": 19,
+    "question": "Which hormone regulates menstrual cycle?",
+    "options": ["FSH & LH", "Insulin", "GH", "ADH"],
+    "correct": 0
+  },
+  {
+    "id": 20,
+    "question": "Which disease is caused by deficiency of iodine?",
+    "options": ["Goitre", "Diabetes", "Rickets", "Scurvy"],
+    "correct": 0
+  },
+  {
+    "id": 21,
+    "question": "SI unit of length",
+    "options": ["cm", "mm", "m", "km"],
+    "correct": 0
+  },
+  {
+    "id": 22,
+    "question": "Dimensional formula of acceleration",
+    "options": ["LT⁻¹", "LT⁻²", "L²T⁻¹", "T⁻¹"],
+    "correct": 1
+  },
+  {
+    "id": 23,
+    "question": "Slope of displacement–time graph gives",
+    "options": ["Acceleration", "Velocity", "Distance", "Force"],
+    "correct": 2
+  },
+  {
+    "id": 24,
+    "question": "Action–reaction forces act on",
+    "options": [
+      "Same body",
+      "Different bodies",
+      "Same direction",
+      "Same surface"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 25,
+    "question": "Work done when force is perpendicular to displacement",
+    "options": ["Max", "Min", "Zero", "Infinite"],
+    "correct": 1
+  },
+  {
+    "id": 26,
+    "question": "KE depends on",
+    "options": ["Mass only", "Velocity only", "Both m and v", "Force"],
+    "correct": 2
+  },
+  {
+    "id": 27,
+    "question": "Weight of body is zero at",
+    "options": ["Earth", "Moon", "Centre of Earth", "Surface"],
+    "correct": 1
+  },
+  {
+    "id": 28,
+    "question": "Unit of density",
+    "options": ["kg", "kg/m³", "N/m²", "g"],
+    "correct": 0
+  },
+  {
+    "id": 29,
+    "question": "Linear momentum is conserved when",
+    "options": [
+      "External force = 0",
+      "Force ≠ 0",
+      "Energy conserved",
+      "Motion circular"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 30,
+    "question": "Moment of inertia depends on",
+    "options": ["Mass only", "Shape only", "Axis of rotation", "All"],
+    "correct": 1
+  },
+  {
+    "id": 31,
+    "question": "Value of g on Moon is about",
+    "options": ["1.6 m/s²", "9.8 m/s²", "4.9 m/s²", "3.7 m/s²"],
+    "correct": 2
+  },
+  {
+    "id": 32,
+    "question": "Angular displacement unit",
+    "options": ["Degree", "radian", "both A & B", "meter"],
+    "correct": 0
+  },
+  {
+    "id": 33,
+    "question": "Heat flows from",
+    "options": [
+      "Low to high temp",
+      "High to low temp",
+      "Any direction",
+      "No direction"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 34,
+    "question": "SI unit of temperature",
+    "options": ["°C", "K", "°F", "J"],
+    "correct": 2
+  },
+  {
+    "id": 35,
+    "question": "Boyle’s law relates",
+    "options": ["P–T", "V–T", "P–V", "n–V"],
+    "correct": 1
+  },
+  {
+    "id": 36,
+    "question": "Centripetal force acts",
+    "options": ["Tangential", "Radially outward", "Radially inward", "Random"],
+    "correct": 0
+  },
+  {
+    "id": 37,
+    "question": "Power =",
+    "options": [
+      "Work × time",
+      "Work / time",
+      "Force × distance",
+      "Energy × time"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 38,
+    "question": "Sound cannot travel in",
+    "options": ["Air", "Water", "Steel", "Vacuum"],
+    "correct": 1
+  },
+  {
+    "id": 39,
+    "question": "1 mole contains",
+    "options": ["6.02×10²²", "6.02×10²³", "6.02×10²¹", "6.02×10²⁴"],
+    "correct": 2
+  },
+  {
+    "id": 40,
+    "question": "Law of conservation of mass given by",
+    "options": ["Dalton", "Lavoisier", "Avogadro", "Bohr"],
+    "correct": 0
+  },
+  {
+    "id": 41,
+    "question": "pH value of acidic solution is",
+    "options": ["<7", ">7", "=7", "=0"],
+    "correct": 1
+  },
+  {
+    "id": 42,
+    "question": "Number of electrons in neutral atom =",
+    "options": ["Neutrons", "Protons", "Mass number", "Atomic mass"],
+    "correct": 2
+  },
+  {
+    "id": 43,
+    "question": "Shape of sp² hybridisation",
+    "options": ["Linear", "Trigonal planar", "Tetrahedral", "Octahedral"],
+    "correct": 0
+  },
+  {
+    "id": 44,
+    "question": "Least electronegative element",
+    "options": ["F", "O", "Na", "Cl"],
+    "correct": 1
+  },
+  {
+    "id": 45,
+    "question": "Endothermic reaction absorbs",
+    "options": ["Heat", "Light", "Work", "Catalyst"],
+    "correct": 2
+  },
+  {
+    "id": 46,
+    "question": "If A={1,2,3}A = \\{1,2,3\\}A={1,2,3}, number of subsets of A is",
+    "options": ["3", "6", "8", "9"],
+    "correct": 2
+  },
+  {
+    "id": 47,
+    "question": "Domain of 2x−1\\sqrt{2x-1}2x−1​ is",
+    "options": ["x ≥ 1/2", "x ≤ 1/2", "x ≥ 2", "All real x"],
+    "correct": 0
+  },
+  {
+    "id": 48,
+    "question": "sin⁡30∘+cos⁡60∘=\\sin 30^\\circ + \\cos 60^\\circ =sin30∘+cos60∘=",
+    "options": ["1", "0", "1/2", "√2"],
+    "correct": 0
+  },
+  {
+    "id": 49,
+    "question": "Value of i2025i^{2025}i2025 is",
+    "options": ["1", "–1", "i", "–i"],
+    "correct": 2
+  },
+  {
+    "id": 50,
+    "question": "Roots of equation x2−5x+6=0x^2 - 5x + 6 = 0x2−5x+6=0 are",
+    "options": ["1,6", "2,3", "–2,–3", "3,4"],
+    "correct": 1
+  },
+  {
+    "id": 51,
+    "question": "10th term of AP: 2, 5, 8, … is",
+    "options": ["29", "30", "32", "28"],
+    "correct": 0
+  },
+  {
+    "id": 52,
+    "question": "Coefficient of x² in (1 + x)⁴ is",
+    "options": ["4", "6", "12", "24"],
+    "correct": 1
+  },
+  {
+    "id": 53,
+    "question": "Number of ways to arrange letters of “MATH” is",
+    "options": ["12", "16", "24", "48"],
+    "correct": 2
+  },
+  {
+    "id": 54,
+    "question": "Slope of line 3x – 2y + 6 = 0 is",
+    "options": ["3/2", "–3/2", "2/3", "–2/3"],
+    "correct": 0
+  },
+  {
+    "id": 55,
+    "question": "Centre of circle x² + y² = 9 is",
+    "options": ["(0,0)", "(3,0)", "(0,3)", "(–3,0)"],
+    "correct": 0
+  },
+  {
+    "id": 56,
+    "question": "limₓ→0 (sin x / x) =",
+    "options": ["0", "1", "∞", "–1"],
+    "correct": 1
+  },
+  {
+    "id": 57,
+    "question": "Derivative of x² is",
+    "options": ["x", "2x", "x²", "2"],
+    "correct": 1
+  },
+  {
+    "id": 58,
+    "question": "If tan θ = 1, θ =",
+    "options": ["30°", "45°", "60°", "90°"],
+    "correct": 1
+  },
+  {
+    "id": 59,
+    "question": "Sum of first 20 natural numbers is",
+    "options": ["200", "210", "220", "190"],
+    "correct": 0
+  },
+  {
+    "id": 60,
+    "question": "Number of solutions of |x| = 5 is",
+    "options": ["1", "2", "3", "Infinite"],
+    "correct": 0
+  }
+]

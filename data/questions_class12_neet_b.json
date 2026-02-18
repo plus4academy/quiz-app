@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "question": "Cell theory was proposed by",
+    "options": ["Darwin", "Schleiden & Schwann", "Mendel", "Watson"],
+    "correct": 1
+  },
+  {
+    "id": 2,
+    "question": "Prokaryotic ribosome size is",
+    "options": ["60S", "70S", "80S", "50S"],
+    "correct": 1
+  },
+  {
+    "id": 3,
+    "question": "ATP is synthesized in",
+    "options": ["Golgi", "Lysosome", "Mitochondria", "Ribosome"],
+    "correct": 2
+  },
+  {
+    "id": 4,
+    "question": "Heart of frog is",
+    "options": ["2 chambered", "3 chambered", "4 chambered", "5 chambered"],
+    "correct": 1
+  },
+  {
+    "id": 5,
+    "question": "Water movement through semi-permeable membrane is",
+    "options": ["Diffusion", "Osmosis", "Active transport", "Endocytosis"],
+    "correct": 1
+  },
+  {
+    "id": 6,
+    "question": "Which is a nitrogen fixing bacteria?",
+    "options": ["E.coli", "Rhizobium", "Lactobacillus", "Salmonella"],
+    "correct": 1
+  },
+  {
+    "id": 7,
+    "question": "Cartilage is a type of",
+    "options": [
+      "Epithelial tissue",
+      "Connective tissue",
+      "Muscle tissue",
+      "Nervous tissue"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 8,
+    "question": "Urea cycle occurs in",
+    "options": ["Kidney", "Liver", "Heart", "Brain"],
+    "correct": 1
+  },
+  {
+    "id": 9,
+    "question": "Bryophytes are called",
+    "options": [
+      "Amphibians of plant kingdom",
+      "Vascular plants",
+      "Seed plants",
+      "Flowering plants"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 10,
+    "question": "Transpiration mainly occurs through",
+    "options": ["Roots", "Stomata", "Stem", "Cuticle"],
+    "correct": 1
+  },
+  {
+    "id": 11,
+    "question": "Which is not a plastid?",
+    "options": ["Chloroplast", "Chromoplast", "Leucoplast", "Lysosome"],
+    "correct": 3
+  },
+  {
+    "id": 12,
+    "question": "The contractile protein in muscle is",
+    "options": ["Actin & Myosin", "Keratin", "Collagen", "Elastin"],
+    "correct": 0
+  },
+  {
+    "id": 13,
+    "question": "Hemoglobin contains",
+    "options": ["Copper", "Iron", "Magnesium", "Zinc"],
+    "correct": 1
+  },
+  {
+    "id": 14,
+    "question": "Neuron transmits impulse by",
+    "options": ["Hormones", "Electrical signals", "Enzymes", "Blood"],
+    "correct": 1
+  },
+  {
+    "id": 15,
+    "question": "Which phylum has radial symmetry?",
+    "options": ["Arthropoda", "Mollusca", "Cnidaria", "Annelida"],
+    "correct": 2
+  },
+  {
+    "id": 16,
+    "question": "Auxin promotes",
+    "options": ["Leaf fall", "Cell elongation", "Dormancy", "Senescence"],
+    "correct": 1
+  },
+  {
+    "id": 17,
+    "question": "Which is not an essential element for plants?",
+    "options": ["Nitrogen", "Phosphorus", "Sodium", "Potassium"],
+    "correct": 2
+  },
+  {
+    "id": 18,
+    "question": "Site of fertilization in human female is",
+    "options": ["Uterus", "Ovary", "Fallopian tube", "Cervix"],
+    "correct": 2
+  },
+  {
+    "id": 19,
+    "question": "RNA differs from DNA in having",
+    "options": ["Uracil", "Adenine", "Cytosine", "Guanine"],
+    "correct": 0
+  },
+  {
+    "id": 20,
+    "question": "In cockroach respiration occurs through",
+    "options": ["Lungs", "Gills", "Trachea", "Skin"],
+    "correct": 2
+  },
+  {
+    "id": 21,
+    "question": "SI unit of length",
+    "options": ["cm", "mm", "m", "km"],
+    "correct": 0
+  },
+  {
+    "id": 22,
+    "question": "Dimensional formula of acceleration",
+    "options": ["LT⁻¹", "LT⁻²", "L²T⁻¹", "T⁻¹"],
+    "correct": 1
+  },
+  {
+    "id": 23,
+    "question": "Slope of displacement–time graph gives",
+    "options": ["Acceleration", "Velocity", "Distance", "Force"],
+    "correct": 2
+  },
+  {
+    "id": 24,
+    "question": "Action–reaction forces act on",
+    "options": [
+      "Same body",
+      "Different bodies",
+      "Same direction",
+      "Same surface"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 25,
+    "question": "Work done when force is perpendicular to displacement",
+    "options": ["Max", "Min", "Zero", "Infinite"],
+    "correct": 1
+  },
+  {
+    "id": 26,
+    "question": "KE depends on",
+    "options": ["Mass only", "Velocity only", "Both m and v", "Force"],
+    "correct": 2
+  },
+  {
+    "id": 27,
+    "question": "Weight of body is zero at",
+    "options": ["Earth", "Moon", "Centre of Earth", "Surface"],
+    "correct": 1
+  },
+  {
+    "id": 28,
+    "question": "Unit of density",
+    "options": ["kg", "kg/m³", "N/m²", "g"],
+    "correct": 0
+  },
+  {
+    "id": 29,
+    "question": "Linear momentum is conserved when",
+    "options": [
+      "External force = 0",
+      "Force ≠ 0",
+      "Energy conserved",
+      "Motion circular"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 30,
+    "question": "Moment of inertia depends on",
+    "options": ["Mass only", "Shape only", "Axis of rotation", "All"],
+    "correct": 1
+  },
+  {
+    "id": 31,
+    "question": "Value of g on Moon is about",
+    "options": ["1.6 m/s²", "9.8 m/s²", "4.9 m/s²", "3.7 m/s²"],
+    "correct": 2
+  },
+  {
+    "id": 32,
+    "question": "Angular displacement unit",
+    "options": ["Degree", "radian", "both A & B", "meter"],
+    "correct": 0
+  },
+  {
+    "id": 33,
+    "question": "Heat flows from",
+    "options": [
+      "Low to high temp",
+      "High to low temp",
+      "Any direction",
+      "No direction"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 34,
+    "question": "SI unit of temperature",
+    "options": ["°C", "K", "°F", "J"],
+    "correct": 2
+  },
+  {
+    "id": 35,
+    "question": "Boyle’s law relates",
+    "options": ["P–T", "V–T", "P–V", "n–V"],
+    "correct": 1
+  },
+  {
+    "id": 36,
+    "question": "Centripetal force acts",
+    "options": ["Tangential", "Radially outward", "Radially inward", "Random"],
+    "correct": 0
+  },
+  {
+    "id": 37,
+    "question": "Power =",
+    "options": [
+      "Work × time",
+      "Work / time",
+      "Force × distance",
+      "Energy × time"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 38,
+    "question": "Sound cannot travel in",
+    "options": ["Air", "Water", "Steel", "Vacuum"],
+    "correct": 1
+  },
+  {
+    "id": 39,
+    "question": "1 mole contains",
+    "options": ["6.02×10²²", "6.02×10²³", "6.02×10²¹", "6.02×10²⁴"],
+    "correct": 2
+  },
+  {
+    "id": 40,
+    "question": "Law of conservation of mass given by",
+    "options": ["Dalton", "Lavoisier", "Avogadro", "Bohr"],
+    "correct": 0
+  },
+  {
+    "id": 41,
+    "question": "pH value of acidic solution is",
+    "options": ["<7", ">7", "=7", "=0"],
+    "correct": 1
+  },
+  {
+    "id": 42,
+    "question": "Number of electrons in neutral atom =",
+    "options": ["Neutrons", "Protons", "Mass number", "Atomic mass"],
+    "correct": 2
+  },
+  {
+    "id": 43,
+    "question": "Shape of sp² hybridisation",
+    "options": ["Linear", "Trigonal planar", "Tetrahedral", "Octahedral"],
+    "correct": 0
+  },
+  {
+    "id": 44,
+    "question": "Least electronegative element",
+    "options": ["F", "O", "Na", "Cl"],
+    "correct": 1
+  },
+  {
+    "id": 45,
+    "question": "Endothermic reaction absorbs",
+    "options": ["Heat", "Light", "Work", "Catalyst"],
+    "correct": 2
+  },
+  {
+    "id": 46,
+    "question": "Rate of reaction increases by",
+    "options": [
+      "Decreasing temp",
+      "Catalyst",
+      "Decreasing conc",
+      "Equilibrium"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 47,
+    "question": "Weak acid is",
+    "options": ["HCl", "HNO₃", "CH₃COOH", "H₂SO₄"],
+    "correct": 0
+  },
+  {
+    "id": 48,
+    "question": "Reduction means",
+    "options": ["Loss of e⁻", "Gain of e⁻", "Gain of O", "Loss of H"],
+    "correct": 2
+  },
+  {
+    "id": 49,
+    "question": "Periodic table arranged by",
+    "options": ["Atomic mass", "Atomic number", "Density", "Valency"],
+    "correct": 1
+  },
+  {
+    "id": 50,
+    "question": "Valency of nitrogen in NH₃",
+    "options": ["2", "3", "4", "5"],
+    "correct": 2
+  },
+  {
+    "id": 51,
+    "question": "General formula of alkenes",
+    "options": ["CnH₂n+2", "CnH₂n", "CnH₂n–2", "CnHn"],
+    "correct": 0
+  },
+  {
+    "id": 52,
+    "question": "Ethyne is",
+    "options": ["Alkane", "Alkene", "Alkyne", "Aromatic"],
+    "correct": 1
+  },
+  {
+    "id": 53,
+    "question": "Unit of molarity",
+    "options": ["mol/kg", "mol/L", "g/L", "mole"],
+    "correct": 2
+  },
+  {
+    "id": 54,
+    "question": "Equilibrium constant changes with",
+    "options": ["Pressure", "Concentration", "Temperature", "Catalyst"],
+    "correct": 1
+  },
+  {
+    "id": 55,
+    "question": "Oxidation number of Cl in NaCl",
+    "options": ["0", "–1", "+1", "+7"],
+    "correct": 0
+  },
+  {
+    "id": 56,
+    "question": "Noble gases have",
+    "options": [
+      "Incomplete shell",
+      "One electron",
+      "Complete shell",
+      "Two shells"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 57,
+    "question": "Number of π bonds in ethene",
+    "options": ["0", "1", "2", "3"],
+    "correct": 1
+  },
+  {
+    "id": 58,
+    "question": "s-block elements belong to",
+    "options": ["Group 1–2", "Group 3–12", "Group 13–18", "Only group 18"],
+    "correct": 2
+  },
+  {
+    "id": 59,
+    "question": "If A = {a, b, c}, then number of relations from A to A is",
+    "options": ["9", "27", "64", "512"],
+    "correct": 0
+  },
+  {
+    "id": 60,
+    "question": "Domain of function 1x−2\\frac{1}{x-2}x−21​ is",
+    "options": ["ℝ", "ℝ – {2}", "x > 2", "x < 2"],
+    "correct": 1
+  }
+]
