@@ -4,6 +4,11 @@
 import os
 from urllib.parse import urlparse
 
+def _to_bool(value, default=True):
+    if value is None:
+        return default
+    return str(value).strip().lower() in ('1', 'true', 'yes', 'on')
+
 # Railway provides DATABASE_URL
 database_url = os.getenv('DATABASE_URL')
 
@@ -29,6 +34,16 @@ else:
         'port':     3306,
         'charset':  'utf8mb4',
     }
+
+# SMTP configuration for result emails
+SMTP_CONFIG = {
+    'host': os.getenv('SMTP_HOST', ''),
+    'port': int(os.getenv('SMTP_PORT', '587')),
+    'username': os.getenv('SMTP_USERNAME', ''),
+    'password': os.getenv('SMTP_PASSWORD', ''),
+    'sender': os.getenv('SMTP_SENDER', os.getenv('SMTP_USERNAME', '')),
+    'use_tls': _to_bool(os.getenv('SMTP_USE_TLS', 'true')),
+}
 
 
 # from werkzeug.security import generate_password_hash
