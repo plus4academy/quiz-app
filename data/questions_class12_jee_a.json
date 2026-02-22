@@ -1,6 +1,6 @@
 [
   {
-    "id": 46,
+    "id": 1,
     "question": "If A={1,2,3}A = \\{1,2,3\\}A={1,2,3}, number of subsets of A is",
     "options": [
       "3",
@@ -11,7 +11,7 @@
     "correct": 2
   },
   {
-    "id": 47,
+    "id": 2,
     "question": "Domain of 2x−1\\sqrt{2x-1}2x−1​ is",
     "options": [
       "x ≥ 1/2",
@@ -22,7 +22,7 @@
     "correct": 0
   },
   {
-    "id": 48,
+    "id": 3,
     "question": "sin⁡30∘+cos⁡60∘=\\sin 30^\\circ + \\cos 60^\\circ =sin30∘+cos60∘=",
     "options": [
       "1",
@@ -33,7 +33,7 @@
     "correct": 0
   },
   {
-    "id": 49,
+    "id": 4,
     "question": "Value of i2025i^{2025}i2025 is",
     "options": [
       "1",
@@ -44,7 +44,7 @@
     "correct": 2
   },
   {
-    "id": 50,
+    "id": 5,
     "question": "Roots of equation x2−5x+6=0x^2 - 5x + 6 = 0x2−5x+6=0 are",
     "options": [
       "1,6",
@@ -55,7 +55,7 @@
     "correct": 1
   },
   {
-    "id": 51,
+    "id": 6,
     "question": "10th term of AP: 2, 5, 8, … is",
     "options": [
       "29",
@@ -66,7 +66,7 @@
     "correct": 0
   },
   {
-    "id": 52,
+    "id": 7,
     "question": "Coefficient of x² in (1 + x)⁴ is",
     "options": [
       "4",
@@ -77,7 +77,7 @@
     "correct": 1
   },
   {
-    "id": 53,
+    "id": 8,
     "question": "Number of ways to arrange letters of “MATH” is",
     "options": [
       "12",
@@ -88,7 +88,7 @@
     "correct": 2
   },
   {
-    "id": 54,
+    "id": 9,
     "question": "Slope of line 3x – 2y + 6 = 0 is",
     "options": [
       "3/2",
@@ -99,7 +99,7 @@
     "correct": 0
   },
   {
-    "id": 55,
+    "id": 10,
     "question": "Centre of circle x² + y² = 9 is",
     "options": [
       "(0,0)",
@@ -110,7 +110,7 @@
     "correct": 0
   },
   {
-    "id": 56,
+    "id": 11,
     "question": "limₓ→0 (sin x / x) =",
     "options": [
       "0",
@@ -121,7 +121,7 @@
     "correct": 1
   },
   {
-    "id": 57,
+    "id": 12,
     "question": "Derivative of x² is",
     "options": [
       "x",
@@ -132,7 +132,7 @@
     "correct": 1
   },
   {
-    "id": 58,
+    "id": 13,
     "question": "If tan θ = 1, θ =",
     "options": [
       "30°",
@@ -143,7 +143,7 @@
     "correct": 1
   },
   {
-    "id": 59,
+    "id": 14,
     "question": "Sum of first 20 natural numbers is",
     "options": [
       "200",
@@ -154,7 +154,7 @@
     "correct": 0
   },
   {
-    "id": 60,
+    "id": 15,
     "question": "Number of solutions of |x| = 5 is",
     "options": [
       "1",

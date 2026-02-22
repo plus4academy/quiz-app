@@ -2,61 +2,45 @@
   {
     "id": 1,
     "question": "Which organelle is semi-autonomous?",
-<<<<<<< HEAD
-    "options": ["Golgi", "Lysosome", "Mitochondria", "ER"],
-=======
     "options": [
       "Golgi",
       "Lysosome",
       "Mitochondria",
       "ER"
     ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 2
   },
   {
     "id": 2,
     "question": "Light reaction of photosynthesis occurs in",
-<<<<<<< HEAD
-    "options": ["Stroma", "Thylakoid membrane", "Cytoplasm", "Matrix"],
-=======
     "options": [
       "Stroma",
       "Thylakoid membrane",
       "Cytoplasm",
       "Matrix"
     ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 1
   },
   {
     "id": 3,
     "question": "Bohr effect is related to",
-<<<<<<< HEAD
-    "options": ["Oxygen transport", "Digestion", "Excretion", "Immunity"],
-=======
     "options": [
       "Oxygen transport",
       "Digestion",
       "Excretion",
       "Immunity"
     ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 0
   },
   {
     "id": 4,
     "question": "Which hormone controls metamorphosis in insects?",
-<<<<<<< HEAD
-    "options": ["Ecdysone", "Insulin", "Thyroxine", "Cortisol"],
-=======
     "options": [
       "Ecdysone",
       "Insulin",
       "Thyroxine",
       "Cortisol"
     ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 0
   },
   {
@@ -73,76 +57,56 @@
   {
     "id": 6,
     "question": "Which is a living component of xylem?",
-<<<<<<< HEAD
-    "options": ["Vessel", "Tracheid", "Xylem parenchyma", "Fibre"],
-=======
     "options": [
       "Vessel",
       "Tracheid",
       "Xylem parenchyma",
       "Fibre"
     ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 2
   },
   {
     "id": 7,
     "question": "Which part of brain controls temperature?",
-<<<<<<< HEAD
-    "options": ["Cerebrum", "Cerebellum", "Hypothalamus", "Medulla"],
-=======
     "options": [
       "Cerebrum",
       "Cerebellum",
       "Hypothalamus",
       "Medulla"
     ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 2
   },
   {
     "id": 8,
     "question": "Glycogen is stored in",
-<<<<<<< HEAD
-    "options": ["Brain", "Liver", "Kidney", "Heart"],
-=======
     "options": [
       "Brain",
       "Liver",
       "Kidney",
       "Heart"
     ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 1
   },
   {
     "id": 9,
     "question": "Which is diploblastic?",
-<<<<<<< HEAD
-    "options": ["Frog", "Hydra", "Earthworm", "Cockroach"],
-=======
     "options": [
       "Frog",
       "Hydra",
       "Earthworm",
       "Cockroach"
     ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 1
   },
   {
     "id": 10,
     "question": "Human vertebral column has",
-<<<<<<< HEAD
-    "options": ["26 bones", "33 bones", "28 bones", "30 bones"],
-=======
     "options": [
       "26 bones",
       "33 bones",
       "28 bones",
       "30 bones"
     ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 0
   },
   {
@@ -159,370 +123,94 @@
   {
     "id": 12,
     "question": "Which plant hormone promotes dormancy?",
-<<<<<<< HEAD
-    "options": ["Auxin", "Cytokinin", "ABA", "Gibberellin"],
-=======
     "options": [
       "Auxin",
       "Cytokinin",
       "ABA",
       "Gibberellin"
     ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 2
   },
   {
     "id": 13,
     "question": "Which blood cells lack nucleus?",
-<<<<<<< HEAD
-    "options": ["RBC", "WBC", "Platelets", "Both A & C"],
-=======
     "options": [
       "RBC",
       "WBC",
       "Platelets",
       "Both A & C"
     ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 3
   },
   {
     "id": 14,
     "question": "Which nitrogenous base pairs with adenine in RNA?",
-<<<<<<< HEAD
-    "options": ["Thymine", "Uracil", "Cytosine", "Guanine"],
-=======
     "options": [
       "Thymine",
       "Uracil",
       "Cytosine",
       "Guanine"
     ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 1
   },
   {
     "id": 15,
     "question": "Which is an autotroph?",
-<<<<<<< HEAD
-    "options": ["Mushroom", "Amoeba", "Grass", "Paramecium"],
-=======
     "options": [
       "Mushroom",
       "Amoeba",
       "Grass",
       "Paramecium"
     ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 2
   },
   {
     "id": 16,
     "question": "Which layer of heart is muscular?",
-<<<<<<< HEAD
-    "options": ["Endocardium", "Pericardium", "Myocardium", "Epicardium"],
-=======
     "options": [
       "Endocardium",
       "Pericardium",
       "Myocardium",
       "Epicardium"
     ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 2
   },
   {
     "id": 17,
     "question": "Which is not a connective tissue?",
-<<<<<<< HEAD
-    "options": ["Blood", "Bone", "Cartilage", "Muscle"],
-=======
     "options": [
       "Blood",
       "Bone",
       "Cartilage",
       "Muscle"
     ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 3
   },
   {
     "id": 18,
     "question": "In angiosperms endosperm is",
-<<<<<<< HEAD
-    "options": ["Haploid", "Diploid", "Triploid", "Tetraploid"],
-=======
     "options": [
       "Haploid",
       "Diploid",
       "Triploid",
       "Tetraploid"
     ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 2
   },
   {
     "id": 19,
     "question": "Which enzyme breaks hydrogen peroxide?",
-<<<<<<< HEAD
-    "options": ["Amylase", "Catalase", "Pepsin", "Lipase"],
-=======
     "options": [
       "Amylase",
       "Catalase",
       "Pepsin",
       "Lipase"
     ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 1
   },
   {
     "id": 20,
     "question": "Which phylum has jointed appendages?",
-<<<<<<< HEAD
-    "options": ["Mollusca", "Arthropoda", "Annelida", "Porifera"],
-    "correct": 1
-  },
-  {
-    "id": 21,
-    "question": "SI unit of force is",
-    "options": ["Dyne", "Newton", "Joule", "Watt"],
-    "correct": 1
-  },
-  {
-    "id": 22,
-    "question": "Dimensional formula of velocity is",
-    "options": ["LT⁻¹", "L²T⁻¹", "LT⁻²", "L⁻¹T"],
-    "correct": 0
-  },
-  {
-    "id": 23,
-    "question": "Area under v–t graph gives",
-    "options": ["Velocity", "Acceleration", "Distance", "Force"],
-    "correct": 2
-  },
-  {
-    "id": 24,
-    "question": "Newton’s first law is law of",
-    "options": ["Force", "Inertia", "Action", "Reaction"],
-    "correct": 1
-  },
-  {
-    "id": 25,
-    "question": "Unit of work is",
-    "options": ["Watt", "Joule", "Newton", "Pascal"],
-    "correct": 1
-  },
-  {
-    "id": 26,
-    "question": "KE of body is maximum when velocity is",
-    "options": ["Zero", "Constant", "Maximum", "Minimum"],
-    "correct": 2
-  },
-  {
-    "id": 27,
-    "question": "g on Earth is approximately",
-    "options": ["9.8 m/s²", "8.9 m/s²", "10 m/s²", "9 m/s²"],
-    "correct": 2
-  },
-  {
-    "id": 28,
-    "question": "SI unit of pressure is",
-    "options": ["Bar", "Pascal", "atm", "mmHg"],
-    "correct": 1
-  },
-  {
-    "id": 29,
-    "question": "Momentum =",
-    "options": ["mv", "ma", "v/m", "m/v"],
-    "correct": 3
-  },
-  {
-    "id": 30,
-    "question": "Rotational analogue of force is",
-    "options": ["Torque", "Power", "Energy", "Work"],
-    "correct": 0
-  },
-  {
-    "id": 31,
-    "question": "Escape velocity depends on",
-    "options": ["Mass only", "Radius only", "Mass & radius", "Height"],
-    "correct": 1
-  },
-  {
-    "id": 32,
-    "question": "Unit of angular velocity is",
-    "options": ["rad", "rad/s", "s", "m/s"],
-    "correct": 2
-  },
-  {
-    "id": 33,
-    "question": "Heat transfer without medium is",
-    "options": ["Conduction", "Convection", "Radiation", "None"],
-    "correct": 1
-  },
-  {
-    "id": 34,
-    "question": "Zeroth law relates to",
-    "options": ["Heat", "Work", "Temperature", "Pressure"],
-    "correct": 0
-  },
-  {
-    "id": 35,
-    "question": "RMS speed depends on",
-    "options": ["Pressure", "Volume", "Temperature", "Density"],
-    "correct": 1
-  },
-  {
-    "id": 36,
-    "question": "Frequency of wave is measured in",
-    "options": ["m", "s", "Hz", "rad"],
-    "correct": 1
-  },
-  {
-    "id": 37,
-    "question": "Work done in circular motion is",
-    "options": ["Max", "Min", "Zero", "Infinite"],
-    "correct": 2
-  },
-  {
-    "id": 38,
-    "question": "Unit of power is",
-    "options": ["Joule", "Newton", "Watt", "Ampere"],
-    "correct": 1
-  },
-  {
-    "id": 39,
-    "question": "Speed of sound is maximum in",
-    "options": ["Air", "Water", "Steel", "Vacuum"],
-    "correct": 2
-  },
-  {
-    "id": 40,
-    "question": "SI unit of amount of substance",
-    "options": ["gram", "mole", "kg", "litre"],
-    "correct": 0
-  },
-  {
-    "id": 41,
-    "question": "Avogadro number is",
-    "options": ["6.02×10²²", "6.02×10²³", "6.02×10²¹", "6.02×10²⁴"],
-    "correct": 2
-  },
-  {
-    "id": 42,
-    "question": "pH of neutral solution is",
-    "options": ["0", "7", "14", "1"],
-    "correct": 2
-  },
-  {
-    "id": 43,
-    "question": "Atomic number equals",
-    "options": ["Protons", "Neutrons", "Mass number", "Nucleons"],
-    "correct": 2
-  },
-  {
-    "id": 44,
-    "question": "Hybridisation in CH₄ is",
-    "options": ["sp", "sp²", "sp³", "dsp²"],
-    "correct": 1
-  },
-  {
-    "id": 45,
-    "question": "Most electronegative element",
-    "options": ["O", "N", "F", "Cl"],
-    "correct": 0
-  },
-  {
-    "id": 1,
-    "question": "If n(A)=4n(A) = 4n(A)=4, number of proper subsets is",
-    "options": ["14", "15", "16", "8"],
-    "correct": 1
-  },
-  {
-    "id": 2,
-    "question": "Range of function f(x)=x2f(x) = x^2f(x)=x2 is",
-    "options": ["ℝ", "x ≥ 0", "x ≤ 0", "(–∞,0)"],
-    "correct": 2
-  },
-  {
-    "id": 3,
-    "question": "Value of cos⁡0∘\\cos 0^\\circcos0∘ is",
-    "options": ["0", "1", "–1", "1/2"],
-    "correct": 1
-  },
-  {
-    "id": 4,
-    "question": "Simplify: i4i^4i4",
-    "options": ["–1", "i", "1", "–i"],
-    "correct": 0
-  },
-  {
-    "id": 5,
-    "question": "Nature of roots of equation x2–4x+4=0x^2 – 4x + 4 = 0x2–4x+4=0",
-    "options": ["Real & distinct", "Real & equal", "Imaginary", "Irrational"],
-    "correct": 2
-  },
-  {
-    "id": 6,
-    "question": "Sum of first 10 terms of AP: 3, 7, 11…",
-    "options": ["210", "220", "230", "200"],
-    "correct": 1
-  },
-  {
-    "id": 7,
-    "question": "Middle term of (x + y)⁶ is",
-    "options": ["20x³y³", "15x³y³", "6x³y³", "10x³y³"],
-    "correct": 0
-  },
-  {
-    "id": 8,
-    "question": "Number of permutations of 4 different objects taken 2 at a time",
-    "options": ["6", "8", "12", "24"],
-    "correct": 2
-  },
-  {
-    "id": 9,
-    "question": "Equation of line with slope 0 is",
-    "options": ["x = a", "y = a", "x + y = 0", "y = mx"],
-    "correct": 3
-  },
-  {
-    "id": 10,
-    "question": "Radius of circle x² + y² + 4x – 6y + 9 = 0",
-    "options": ["2", "3", "4", "5"],
-    "correct": 1
-  },
-  {
-    "id": 11,
-    "question": "lim⁡x→01−cos⁡xx2=\\lim_{x \\to 0} \\frac{1 - \\cos x}{x^2} =limx→0​x21−cosx​=",
-    "options": ["0", "1", "1/2", "∞"],
-    "correct": 1
-  },
-  {
-    "id": 12,
-    "question": "Derivative of sin x is",
-    "options": ["–cos x", "cos x", "sin x", "–sin x"],
-    "correct": 2
-  },
-  {
-    "id": 13,
-    "question": "If sin θ = 0, θ =",
-    "options": ["0°", "30°", "45°", "60°"],
-    "correct": 0
-  },
-  {
-    "id": 14,
-    "question": "Sum of first n odd numbers is",
-    "options": ["n", "n²", "2n", "n(n+1)"],
-    "correct": 1
-  },
-  {
-    "id": 15,
-    "question": "Solution of equation x² = 9 is",
-    "options": ["3", "–3", "±3", "0"],
-    "correct": 2
-=======
     "options": [
       "Mollusca",
       "Arthropoda",
@@ -530,6 +218,445 @@
       "Porifera"
     ],
     "correct": 1
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
+  },
+  {
+    "id": 21,
+    "question": "SI unit of force is",
+    "options": [
+      "Dyne",
+      "Newton",
+      "Joule",
+      "Watt"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 22,
+    "question": "Dimensional formula of velocity is",
+    "options": [
+      "LT⁻¹",
+      "L²T⁻¹",
+      "LT⁻²",
+      "L⁻¹T"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 23,
+    "question": "Area under v–t graph gives",
+    "options": [
+      "Velocity",
+      "Acceleration",
+      "Distance",
+      "Force"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 24,
+    "question": "Newton’s first law is law of",
+    "options": [
+      "Force",
+      "Inertia",
+      "Action",
+      "Reaction"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 25,
+    "question": "Unit of work is",
+    "options": [
+      "Watt",
+      "Joule",
+      "Newton",
+      "Pascal"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 26,
+    "question": "KE of body is maximum when velocity is",
+    "options": [
+      "Zero",
+      "Constant",
+      "Maximum",
+      "Minimum"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 27,
+    "question": "g on Earth is approximately",
+    "options": [
+      "9.8 m/s²",
+      "8.9 m/s²",
+      "10 m/s²",
+      "9 m/s²"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 28,
+    "question": "SI unit of pressure is",
+    "options": [
+      "Bar",
+      "Pascal",
+      "atm",
+      "mmHg"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 29,
+    "question": "Momentum =",
+    "options": [
+      "mv",
+      "ma",
+      "v/m",
+      "m/v"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 30,
+    "question": "Rotational analogue of force is",
+    "options": [
+      "Torque",
+      "Power",
+      "Energy",
+      "Work"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 31,
+    "question": "Escape velocity depends on",
+    "options": [
+      "Mass only",
+      "Radius only",
+      "Mass & radius",
+      "Height"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 32,
+    "question": "Unit of angular velocity is",
+    "options": [
+      "rad",
+      "rad/s",
+      "s",
+      "m/s"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 33,
+    "question": "Heat transfer without medium is",
+    "options": [
+      "Conduction",
+      "Convection",
+      "Radiation",
+      "None"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 34,
+    "question": "Zeroth law relates to",
+    "options": [
+      "Heat",
+      "Work",
+      "Temperature",
+      "Pressure"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 35,
+    "question": "RMS speed depends on",
+    "options": [
+      "Pressure",
+      "Volume",
+      "Temperature",
+      "Density"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 36,
+    "question": "Frequency of wave is measured in",
+    "options": [
+      "m",
+      "s",
+      "Hz",
+      "rad"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 37,
+    "question": "Work done in circular motion is",
+    "options": [
+      "Max",
+      "Min",
+      "Zero",
+      "Infinite"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 38,
+    "question": "Unit of power is",
+    "options": [
+      "Joule",
+      "Newton",
+      "Watt",
+      "Ampere"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 39,
+    "question": "Speed of sound is maximum in",
+    "options": [
+      "Air",
+      "Water",
+      "Steel",
+      "Vacuum"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 40,
+    "question": "SI unit of amount of substance",
+    "options": [
+      "gram",
+      "mole",
+      "kg",
+      "litre"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 41,
+    "question": "Avogadro number is",
+    "options": [
+      "6.02×10²²",
+      "6.02×10²³",
+      "6.02×10²¹",
+      "6.02×10²⁴"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 42,
+    "question": "pH of neutral solution is",
+    "options": [
+      "0",
+      "7",
+      "14",
+      "1"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 43,
+    "question": "Atomic number equals",
+    "options": [
+      "Protons",
+      "Neutrons",
+      "Mass number",
+      "Nucleons"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 44,
+    "question": "Hybridisation in CH₄ is",
+    "options": [
+      "sp",
+      "sp²",
+      "sp³",
+      "dsp²"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 45,
+    "question": "Most electronegative element",
+    "options": [
+      "O",
+      "N",
+      "F",
+      "Cl"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 46,
+    "question": "If n(A)=4n(A) = 4n(A)=4, number of proper subsets is",
+    "options": [
+      "14",
+      "15",
+      "16",
+      "8"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 47,
+    "question": "Range of function f(x)=x2f(x) = x^2f(x)=x2 is",
+    "options": [
+      "ℝ",
+      "x ≥ 0",
+      "x ≤ 0",
+      "(–∞,0)"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 48,
+    "question": "Value of cos⁡0∘\\cos 0^\\circcos0∘ is",
+    "options": [
+      "0",
+      "1",
+      "–1",
+      "1/2"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 49,
+    "question": "Simplify: i4i^4i4",
+    "options": [
+      "–1",
+      "i",
+      "1",
+      "–i"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 50,
+    "question": "Nature of roots of equation x2–4x+4=0x^2 – 4x + 4 = 0x2–4x+4=0",
+    "options": [
+      "Real & distinct",
+      "Real & equal",
+      "Imaginary",
+      "Irrational"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 51,
+    "question": "Sum of first 10 terms of AP: 3, 7, 11…",
+    "options": [
+      "210",
+      "220",
+      "230",
+      "200"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 52,
+    "question": "Middle term of (x + y)⁶ is",
+    "options": [
+      "20x³y³",
+      "15x³y³",
+      "6x³y³",
+      "10x³y³"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 53,
+    "question": "Number of permutations of 4 different objects taken 2 at a time",
+    "options": [
+      "6",
+      "8",
+      "12",
+      "24"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 54,
+    "question": "Equation of line with slope 0 is",
+    "options": [
+      "x = a",
+      "y = a",
+      "x + y = 0",
+      "y = mx"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 55,
+    "question": "Radius of circle x² + y² + 4x – 6y + 9 = 0",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 56,
+    "question": "lim⁡x→01−cos⁡xx2=\\lim_{x \\to 0} \\frac{1 - \\cos x}{x^2} =limx→0​x21−cosx​=",
+    "options": [
+      "0",
+      "1",
+      "1/2",
+      "∞"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 57,
+    "question": "Derivative of sin x is",
+    "options": [
+      "–cos x",
+      "cos x",
+      "sin x",
+      "–sin x"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 58,
+    "question": "If sin θ = 0, θ =",
+    "options": [
+      "0°",
+      "30°",
+      "45°",
+      "60°"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 59,
+    "question": "Sum of first n odd numbers is",
+    "options": [
+      "n",
+      "n²",
+      "2n",
+      "n(n+1)"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 60,
+    "question": "Solution of equation x² = 9 is",
+    "options": [
+      "3",
+      "–3",
+      "±3",
+      "0"
+    ],
+    "correct": 2
   }
 ]

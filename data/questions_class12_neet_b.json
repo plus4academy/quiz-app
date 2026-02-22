@@ -2,91 +2,37 @@
   {
     "id": 1,
     "question": "Cell theory was proposed by",
-<<<<<<< HEAD
     "options": ["Darwin", "Schleiden & Schwann", "Mendel", "Watson"],
-=======
-    "options": [
-      "Darwin",
-      "Schleiden & Schwann",
-      "Mendel",
-      "Watson"
-    ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 1
   },
   {
     "id": 2,
     "question": "Prokaryotic ribosome size is",
-<<<<<<< HEAD
     "options": ["60S", "70S", "80S", "50S"],
-=======
-    "options": [
-      "60S",
-      "70S",
-      "80S",
-      "50S"
-    ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 1
   },
   {
     "id": 3,
     "question": "ATP is synthesized in",
-<<<<<<< HEAD
     "options": ["Golgi", "Lysosome", "Mitochondria", "Ribosome"],
-=======
-    "options": [
-      "Golgi",
-      "Lysosome",
-      "Mitochondria",
-      "Ribosome"
-    ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 2
   },
   {
     "id": 4,
     "question": "Heart of frog is",
-<<<<<<< HEAD
     "options": ["2 chambered", "3 chambered", "4 chambered", "5 chambered"],
-=======
-    "options": [
-      "2 chambered",
-      "3 chambered",
-      "4 chambered",
-      "5 chambered"
-    ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 1
   },
   {
     "id": 5,
     "question": "Water movement through semi-permeable membrane is",
-<<<<<<< HEAD
     "options": ["Diffusion", "Osmosis", "Active transport", "Endocytosis"],
-=======
-    "options": [
-      "Diffusion",
-      "Osmosis",
-      "Active transport",
-      "Endocytosis"
-    ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 1
   },
   {
     "id": 6,
     "question": "Which is a nitrogen fixing bacteria?",
-<<<<<<< HEAD
     "options": ["E.coli", "Rhizobium", "Lactobacillus", "Salmonella"],
-=======
-    "options": [
-      "E.coli",
-      "Rhizobium",
-      "Lactobacillus",
-      "Salmonella"
-    ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 1
   },
   {
@@ -103,16 +49,7 @@
   {
     "id": 8,
     "question": "Urea cycle occurs in",
-<<<<<<< HEAD
     "options": ["Kidney", "Liver", "Heart", "Brain"],
-=======
-    "options": [
-      "Kidney",
-      "Liver",
-      "Heart",
-      "Brain"
-    ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 1
   },
   {
@@ -129,157 +66,66 @@
   {
     "id": 10,
     "question": "Transpiration mainly occurs through",
-<<<<<<< HEAD
     "options": ["Roots", "Stomata", "Stem", "Cuticle"],
-=======
-    "options": [
-      "Roots",
-      "Stomata",
-      "Stem",
-      "Cuticle"
-    ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 1
   },
   {
     "id": 11,
     "question": "Which is not a plastid?",
-<<<<<<< HEAD
     "options": ["Chloroplast", "Chromoplast", "Leucoplast", "Lysosome"],
-=======
-    "options": [
-      "Chloroplast",
-      "Chromoplast",
-      "Leucoplast",
-      "Lysosome"
-    ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 3
   },
   {
     "id": 12,
     "question": "The contractile protein in muscle is",
-<<<<<<< HEAD
     "options": ["Actin & Myosin", "Keratin", "Collagen", "Elastin"],
-=======
-    "options": [
-      "Actin & Myosin",
-      "Keratin",
-      "Collagen",
-      "Elastin"
-    ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 0
   },
   {
     "id": 13,
     "question": "Hemoglobin contains",
-<<<<<<< HEAD
     "options": ["Copper", "Iron", "Magnesium", "Zinc"],
-=======
-    "options": [
-      "Copper",
-      "Iron",
-      "Magnesium",
-      "Zinc"
-    ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 1
   },
   {
     "id": 14,
     "question": "Neuron transmits impulse by",
-<<<<<<< HEAD
     "options": ["Hormones", "Electrical signals", "Enzymes", "Blood"],
-=======
-    "options": [
-      "Hormones",
-      "Electrical signals",
-      "Enzymes",
-      "Blood"
-    ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 1
   },
   {
     "id": 15,
     "question": "Which phylum has radial symmetry?",
-<<<<<<< HEAD
     "options": ["Arthropoda", "Mollusca", "Cnidaria", "Annelida"],
-=======
-    "options": [
-      "Arthropoda",
-      "Mollusca",
-      "Cnidaria",
-      "Annelida"
-    ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 2
   },
   {
     "id": 16,
     "question": "Auxin promotes",
-<<<<<<< HEAD
     "options": ["Leaf fall", "Cell elongation", "Dormancy", "Senescence"],
-=======
-    "options": [
-      "Leaf fall",
-      "Cell elongation",
-      "Dormancy",
-      "Senescence"
-    ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 1
   },
   {
     "id": 17,
     "question": "Which is not an essential element for plants?",
-<<<<<<< HEAD
     "options": ["Nitrogen", "Phosphorus", "Sodium", "Potassium"],
-=======
-    "options": [
-      "Nitrogen",
-      "Phosphorus",
-      "Sodium",
-      "Potassium"
-    ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 2
   },
   {
     "id": 18,
     "question": "Site of fertilization in human female is",
-<<<<<<< HEAD
     "options": ["Uterus", "Ovary", "Fallopian tube", "Cervix"],
-=======
-    "options": [
-      "Uterus",
-      "Ovary",
-      "Fallopian tube",
-      "Cervix"
-    ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 2
   },
   {
     "id": 19,
     "question": "RNA differs from DNA in having",
-<<<<<<< HEAD
     "options": ["Uracil", "Adenine", "Cytosine", "Guanine"],
-=======
-    "options": [
-      "Uracil",
-      "Adenine",
-      "Cytosine",
-      "Guanine"
-    ],
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
     "correct": 0
   },
   {
     "id": 20,
     "question": "In cockroach respiration occurs through",
-<<<<<<< HEAD
     "options": ["Lungs", "Gills", "Trachea", "Skin"],
     "correct": 2
   },
@@ -552,14 +398,5 @@
     "question": "Domain of function 1x−2\\frac{1}{x-2}x−21​ is",
     "options": ["ℝ", "ℝ – {2}", "x > 2", "x < 2"],
     "correct": 1
-=======
-    "options": [
-      "Lungs",
-      "Gills",
-      "Trachea",
-      "Skin"
-    ],
-    "correct": 2
->>>>>>> d1548fac2e134e118e6439a8d9e1a05311523c1f
   }
 ]

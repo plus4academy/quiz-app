@@ -1,6 +1,6 @@
 [
   {
-    "id": 36,
+    "id": 1,
     "question": "If α and β are roots of x² – 7x + 10 = 0, then α + β is",
     "options": [
       "10",
@@ -11,7 +11,7 @@
     "correct": 1
   },
   {
-    "id": 37,
+    "id": 2,
     "question": "The HCF of 306 and 657 is",
     "options": [
       "9",
@@ -22,7 +22,7 @@
     "correct": 0
   },
   {
-    "id": 38,
+    "id": 3,
     "question": "The value of sin 60° cos 30° is",
     "options": [
       "1/4",
@@ -33,7 +33,7 @@
     "correct": 3
   },
   {
-    "id": 39,
+    "id": 4,
     "question": "If A = {1,2,3} and B = {2,3,4}, then A ∩ B =",
     "options": [
       "{1,4}",
@@ -44,7 +44,7 @@
     "correct": 1
   },
   {
-    "id": 40,
+    "id": 5,
     "question": "Distance between points (2,3) and (6,3) is",
     "options": [
       "2",
