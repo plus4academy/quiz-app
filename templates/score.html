@@ -96,13 +96,13 @@
 
             <!-- Scholarship Info -->
             <div class="scholarship-section">
-                <div class="scholarship-card {% if scholarship_percent >= 90 %}scholarship-gold{% elif scholarship_percent >= 50 %}scholarship-silver{% elif scholarship_percent >= 25 %}scholarship-bronze{% else %}scholarship-none{% endif %}">
+                <div class="scholarship-card {% if scholarship_percent >= 90 %}scholarship-gold{% elif scholarship_percent >= 70 %}scholarship-silver{% elif scholarship_percent >= 50 %}scholarship-bronze{% else %}scholarship-none{% endif %}">
                     <div class="scholarship-icon">
-                        {% if scholarship_percent == 100 %}
+                        {% if scholarship_percent >= 90 %}
                         🎓
-                        {% elif scholarship_percent == 50 %}
+                        {% elif scholarship_percent >= 70 %}
                         🎖️
-                        {% elif scholarship_percent == 25 %}
+                        {% elif scholarship_percent >= 50 %}
                         🏅
                         {% else %}
                         📚
@@ -111,6 +111,7 @@
                     <div class="scholarship-title">Scholarship Award</div>
                     <div class="scholarship-percent">{{ scholarship_percent }}%</div>
                     <div class="scholarship-message">{{ scholarship_message }}</div>
+                    <div class="scholarship-message">Scholarship awarded to each candidate will also be subjected to the marks the candidate scored in their previous year/class.</div>
                 </div>
             </div>
 

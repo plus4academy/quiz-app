@@ -185,14 +185,16 @@ def login_required(f):
 # Scholarship calculator
 # ==========================================================================
 def calculate_scholarship(percentage):
-    if percentage >= 90:
-        return 100, "Full Scholarship - Congratulations!"
+    if percentage >= 100:
+        return 95, "Great scholarship opportunity for a brilliant mind - Congratulations!"
+    elif percentage >= 90:
+        return 70, "What a score - Well Done!"
     elif percentage >= 75:
-        return 50, "Half Scholarship - Well Done!"
-    elif percentage >= 60:
-        return 25, "Quarter Scholarship - Good Effort!"
+        return 50, "Good effort!"
+    elif percentage >= 50:
+        return 25, "Quarter Scholarship - Keep Trying!"
     else:
-        return 0, "No Scholarship - Keep Trying!"
+        return 10, "A scholarship for participation - Don't give up, keep learning!"
 
 # ==========================================================================
 # Email helpers
