@@ -59,7 +59,7 @@
                 </div>
                 {% endif %}
 
-                <form method="POST" action="{{ url_for('signup') }}" class="signup-form" id="signupForm">
+                <form method="POST" action="{{ url_for('auth.signup') }}" class="signup-form" id="signupForm">
                     <!-- Full Name Field -->
                     <div class="form-group">
                         <label for="full_name" class="form-label">Full Name *</label>
@@ -69,6 +69,7 @@
                             name="full_name" 
                             class="form-input" 
                             placeholder="e.g. Om Wadhwani"
+                            value="{{ request.form.get('full_name', '') }}"
                             required
                             pattern="[A-Za-z\s]{2,}"
                             title="Please enter your full name (letters and spaces only)"
@@ -84,6 +85,7 @@
                             name="phone" 
                             class="form-input" 
                             placeholder="10-digit mobile number"
+                            value="{{ request.form.get('phone', '') }}"
                             required
                             pattern="[0-9]{10}"
                             maxlength="10"
@@ -101,6 +103,7 @@
                             name="email" 
                             class="form-input" 
                             placeholder="your.email@example.com"
+                            value="{{ request.form.get('email', '') }}"
                             required
                             title="Please enter a valid email address"
                         >
@@ -120,6 +123,10 @@
                             title="Password must be at least 6 characters"
                         >
                         <span class="form-hint">Minimum 6 characters</span>
+                        <label class="form-hint" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 8px;">
+                            <input type="checkbox" id="showPassword">
+                            Show password
+                        </label>
                     </div>
 
                     <!-- Class Selection -->
@@ -127,11 +134,11 @@
                         <label for="promoted_to_class" class="form-label">Class (Being Promoted To) *</label>
                         <select id="promoted_to_class" name="promoted_to_class" class="form-select" required>
                             <option value="">Select Class</option>
-                            <option value="9">Class 9</option>
-                            <option value="10">Class 10</option>
-                            <option value="11">Class 11</option>
-                            <option value="12">Class 12</option>
-                            <option value="dropper">Dropper</option>
+                            <option value="9" {% if request.form.get('promoted_to_class') == '9' %}selected{% endif %}>Class 9</option>
+                            <option value="10" {% if request.form.get('promoted_to_class') == '10' %}selected{% endif %}>Class 10</option>
+                            <option value="11" {% if request.form.get('promoted_to_class') == '11' %}selected{% endif %}>Class 11</option>
+                            <option value="12" {% if request.form.get('promoted_to_class') == '12' %}selected{% endif %}>Class 12</option>
+                            <option value="dropper" {% if request.form.get('promoted_to_class') == 'dropper' %}selected{% endif %}>Dropper</option>
                         </select>
                     </div>
 
@@ -140,8 +147,8 @@
                         <label for="stream" class="form-label">Stream *</label>
                         <select id="stream" name="stream" class="form-select">
                             <option value="">Select Stream</option>
-                            <option value="jee">JEE (Engineering)</option>
-                            <option value="neet">NEET (Medical)</option>
+                            <option value="jee" {% if request.form.get('stream') == 'jee' %}selected{% endif %}>JEE (Engineering)</option>
+                            <option value="neet" {% if request.form.get('stream') == 'neet' %}selected{% endif %}>NEET (Medical)</option>
                         </select>
                     </div>
 
@@ -157,7 +164,7 @@
                 <div class="form-footer">
                     <p class="footer-text">
                         Already have an account? 
-                        <a href="{{ url_for('login') }}" class="footer-link">Login here</a>
+                        <a href="{{ url_for('auth.login') }}" class="footer-link">Login here</a>
                     </p>
                 </div>
             </div>
@@ -172,6 +179,8 @@
         const fullNameInput = document.getElementById('full_name');
         const phoneInput = document.getElementById('phone');
         const usernamePreview = document.getElementById('usernamePreview');
+        const showPassword = document.getElementById('showPassword');
+        const passwordInput = document.getElementById('password');
         
         classSelect.addEventListener('change', function() {
             const selectedClass = this.value;
@@ -186,6 +195,8 @@
                 streamSelect.value = ''; // Reset stream selection
             }
         });
+
+        classSelect.dispatchEvent(new Event('change'));
 
         // Live username preview
         function updateUsernamePreview() {
@@ -213,6 +224,11 @@
 
         fullNameInput.addEventListener('input', updateUsernamePreview);
         phoneInput.addEventListener('input', updateUsernamePreview);
+        updateUsernamePreview();
+
+        showPassword.addEventListener('change', function () {
+            passwordInput.type = this.checked ? 'text' : 'password';
+        });
     </script>
 </body>
 </html>

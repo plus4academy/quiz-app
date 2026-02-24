@@ -2,210 +2,115 @@
   {
     "id": 1,
     "question": "Which of the following is not a kingdom in Whittaker's classification?",
-    "options": [
-      "Monera",
-      "Protista",
-      "Plantae",
-      "Virus"
-    ],
+    "options": ["Monera", "Protista", "Plantae", "Virus"],
     "correct": 3
   },
   {
     "id": 2,
     "question": "Cell wall of fungi is made up of",
-    "options": [
-      "Cellulose",
-      "Chitin",
-      "Peptidoglycan",
-      "Lignin"
-    ],
+    "options": ["Cellulose", "Chitin", "Peptidoglycan", "Lignin"],
     "correct": 1
   },
   {
     "id": 3,
     "question": "Glycolysis occurs in",
-    "options": [
-      "Mitochondria",
-      "Cytoplasm",
-      "Nucleus",
-      "Ribosome"
-    ],
+    "options": ["Mitochondria", "Cytoplasm", "Nucleus", "Ribosome"],
     "correct": 1
   },
   {
     "id": 4,
     "question": "Which is a connecting link between annelids and arthropods?",
-    "options": [
-      "Peripatus",
-      "Nereis",
-      "Earthworm",
-      "Cockroach"
-    ],
+    "options": ["Peripatus", "Nereis", "Earthworm", "Cockroach"],
     "correct": 0
   },
   {
     "id": 5,
     "question": "The functional unit of kidney is",
-    "options": [
-      "Neuron",
-      "Nephron",
-      "Alveolus",
-      "Villus"
-    ],
+    "options": ["Neuron", "Nephron", "Alveolus", "Villus"],
     "correct": 1
   },
   {
     "id": 6,
     "question": "Xylem transports",
-    "options": [
-      "Food",
-      "Water",
-      "Hormones",
-      "Oxygen"
-    ],
+    "options": ["Food", "Water", "Hormones", "Oxygen"],
     "correct": 1
   },
   {
     "id": 7,
     "question": "Mitosis occurs in",
-    "options": [
-      "Somatic cells",
-      "Germ cells",
-      "Zygote only",
-      "Gametes"
-    ],
+    "options": ["Somatic cells", "Germ cells", "Zygote only", "Gametes"],
     "correct": 0
   },
   {
     "id": 8,
     "question": "Which hormone regulates blood sugar level?",
-    "options": [
-      "Thyroxine",
-      "Insulin",
-      "Adrenaline",
-      "Estrogen"
-    ],
+    "options": ["Thyroxine", "Insulin", "Adrenaline", "Estrogen"],
     "correct": 1
   },
   {
     "id": 9,
     "question": "Photosynthesis takes place in",
-    "options": [
-      "Grana",
-      "Matrix",
-      "Cristae",
-      "Ribosome"
-    ],
+    "options": ["Grana", "Matrix", "Cristae", "Ribosome"],
     "correct": 0
   },
   {
     "id": 10,
     "question": "Smallest cell organelle is",
-    "options": [
-      "Nucleus",
-      "Ribosome",
-      "Golgi body",
-      "Lysosome"
-    ],
+    "options": ["Nucleus", "Ribosome", "Golgi body", "Lysosome"],
     "correct": 1
   },
   {
     "id": 11,
     "question": "Cockroach belongs to phylum",
-    "options": [
-      "Mollusca",
-      "Arthropoda",
-      "Annelida",
-      "Chordata"
-    ],
+    "options": ["Mollusca", "Arthropoda", "Annelida", "Chordata"],
     "correct": 1
   },
   {
     "id": 12,
     "question": "Double fertilization is seen in",
-    "options": [
-      "Gymnosperms",
-      "Angiosperms",
-      "Pteridophytes",
-      "Bryophytes"
-    ],
+    "options": ["Gymnosperms", "Angiosperms", "Pteridophytes", "Bryophytes"],
     "correct": 1
   },
   {
     "id": 13,
     "question": "The longest phase of cell cycle is",
-    "options": [
-      "Prophase",
-      "Metaphase",
-      "Interphase",
-      "Anaphase"
-    ],
+    "options": ["Prophase", "Metaphase", "Interphase", "Anaphase"],
     "correct": 2
   },
   {
     "id": 14,
     "question": "Oxygen dissociation curve is sigmoidal due to",
-    "options": [
-      "Myoglobin",
-      "Cooperative binding",
-      "Plasma",
-      "WBC"
-    ],
+    "options": ["Myoglobin", "Cooperative binding", "Plasma", "WBC"],
     "correct": 1
   },
   {
     "id": 15,
     "question": "Which tissue provides mechanical support in plants?",
-    "options": [
-      "Parenchyma",
-      "Collenchyma",
-      "Sclerenchyma",
-      "Phloem"
-    ],
+    "options": ["Parenchyma", "Collenchyma", "Sclerenchyma", "Phloem"],
     "correct": 2
   },
   {
     "id": 16,
     "question": "Nephridia are excretory organs of",
-    "options": [
-      "Earthworm",
-      "Frog",
-      "Human",
-      "Cockroach"
-    ],
+    "options": ["Earthworm", "Frog", "Human", "Cockroach"],
     "correct": 0
   },
   {
     "id": 17,
     "question": "Which vitamin is synthesized by bacteria in intestine?",
-    "options": [
-      "Vitamin A",
-      "Vitamin C",
-      "Vitamin K",
-      "Vitamin D"
-    ],
+    "options": ["Vitamin A", "Vitamin C", "Vitamin K", "Vitamin D"],
     "correct": 2
   },
   {
     "id": 18,
     "question": "Opening and closing of stomata is regulated by",
-    "options": [
-      "Guard cells",
-      "Xylem",
-      "Phloem",
-      "Cambium"
-    ],
+    "options": ["Guard cells", "Xylem", "Phloem", "Cambium"],
     "correct": 0
   },
   {
     "id": 19,
     "question": "Which is a C4 plant?",
-    "options": [
-      "Wheat",
-      "Rice",
-      "Maize",
-      "Potato"
-    ],
+    "options": ["Wheat", "Rice", "Maize", "Potato"],
     "correct": 2
   },
   {
@@ -219,323 +124,178 @@
     ],
     "correct": 1
   },
-{
+  {
     "id": 21,
     "question": "SI unit of force is",
-    "options": [
-      "Dyne",
-      "Newton",
-      "Joule",
-      "Watt"
-    ],
+    "options": ["Dyne", "Newton", "Joule", "Watt"],
     "correct": 1
   },
   {
     "id": 22,
     "question": "Dimensional formula of velocity is",
-    "options": [
-      "LT⁻¹",
-      "L²T⁻¹",
-      "LT⁻²",
-      "L⁻¹T"
-    ],
+    "options": ["LT⁻¹", "L²T⁻¹", "LT⁻²", "L⁻¹T"],
     "correct": 0
   },
   {
     "id": 23,
     "question": "Area under v–t graph gives",
-    "options": [
-      "Velocity",
-      "Acceleration",
-      "Distance",
-      "Force"
-    ],
+    "options": ["Velocity", "Acceleration", "Distance", "Force"],
     "correct": 2
   },
   {
     "id": 24,
     "question": "Newton’s first law is law of",
-    "options": [
-      "Force",
-      "Inertia",
-      "Action",
-      "Reaction"
-    ],
+    "options": ["Force", "Inertia", "Action", "Reaction"],
     "correct": 1
   },
   {
     "id": 25,
     "question": "Unit of work is",
-    "options": [
-      "Watt",
-      "Joule",
-      "Newton",
-      "Pascal"
-    ],
+    "options": ["Watt", "Joule", "Newton", "Pascal"],
     "correct": 1
   },
   {
     "id": 26,
     "question": "KE of body is maximum when velocity is",
-    "options": [
-      "Zero",
-      "Constant",
-      "Maximum",
-      "Minimum"
-    ],
+    "options": ["Zero", "Constant", "Maximum", "Minimum"],
     "correct": 2
   },
   {
     "id": 27,
     "question": "g on Earth is approximately",
-    "options": [
-      "9.8 m/s²",
-      "8.9 m/s²",
-      "10 m/s²",
-      "9 m/s²"
-    ],
+    "options": ["9.8 m/s²", "8.9 m/s²", "10 m/s²", "9 m/s²"],
     "correct": 2
   },
   {
     "id": 28,
     "question": "SI unit of pressure is",
-    "options": [
-      "Bar",
-      "Pascal",
-      "atm",
-      "mmHg"
-    ],
+    "options": ["Bar", "Pascal", "atm", "mmHg"],
     "correct": 1
   },
   {
     "id": 29,
     "question": "Momentum =",
-    "options": [
-      "mv",
-      "ma",
-      "v/m",
-      "m/v"
-    ],
+    "options": ["mv", "ma", "v/m", "m/v"],
     "correct": 3
   },
   {
     "id": 30,
     "question": "Rotational analogue of force is",
-    "options": [
-      "Torque",
-      "Power",
-      "Energy",
-      "Work"
-    ],
+    "options": ["Torque", "Power", "Energy", "Work"],
     "correct": 0
   },
   {
     "id": 31,
     "question": "Escape velocity depends on",
-    "options": [
-      "Mass only",
-      "Radius only",
-      "Mass & radius",
-      "Height"
-    ],
+    "options": ["Mass only", "Radius only", "Mass & radius", "Height"],
     "correct": 1
   },
   {
     "id": 32,
     "question": "Unit of angular velocity is",
-    "options": [
-      "rad",
-      "rad/s",
-      "s",
-      "m/s"
-    ],
+    "options": ["rad", "rad/s", "s", "m/s"],
     "correct": 2
   },
   {
     "id": 33,
     "question": "Heat transfer without medium is",
-    "options": [
-      "Conduction",
-      "Convection",
-      "Radiation",
-      "None"
-    ],
+    "options": ["Conduction", "Convection", "Radiation", "None"],
     "correct": 1
   },
   {
     "id": 34,
     "question": "Zeroth law relates to",
-    "options": [
-      "Heat",
-      "Work",
-      "Temperature",
-      "Pressure"
-    ],
+    "options": ["Heat", "Work", "Temperature", "Pressure"],
     "correct": 0
   },
   {
     "id": 35,
     "question": "RMS speed depends on",
-    "options": [
-      "Pressure",
-      "Volume",
-      "Temperature",
-      "Density"
-    ],
+    "options": ["Pressure", "Volume", "Temperature", "Density"],
     "correct": 1
   },
   {
     "id": 36,
     "question": "Frequency of wave is measured in",
-    "options": [
-      "m",
-      "s",
-      "Hz",
-      "rad"
-    ],
+    "options": ["m", "s", "Hz", "rad"],
     "correct": 1
   },
   {
     "id": 37,
     "question": "Work done in circular motion is",
-    "options": [
-      "Max",
-      "Min",
-      "Zero",
-      "Infinite"
-    ],
+    "options": ["Max", "Min", "Zero", "Infinite"],
     "correct": 2
   },
   {
     "id": 38,
     "question": "Unit of power is",
-    "options": [
-      "Joule",
-      "Newton",
-      "Watt",
-      "Ampere"
-    ],
+    "options": ["Joule", "Newton", "Watt", "Ampere"],
     "correct": 1
   },
   {
     "id": 39,
     "question": "Speed of sound is maximum in",
-    "options": [
-      "Air",
-      "Water",
-      "Steel",
-      "Vacuum"
-    ],
+    "options": ["Air", "Water", "Steel", "Vacuum"],
     "correct": 2
   },
   {
     "id": 40,
     "question": "SI unit of amount of substance",
-    "options": [
-      "gram",
-      "mole",
-      "kg",
-      "litre"
-    ],
+    "options": ["gram", "mole", "kg", "litre"],
     "correct": 0
   },
   {
     "id": 41,
     "question": "Avogadro number is",
-    "options": [
-      "6.02×10²²",
-      "6.02×10²³",
-      "6.02×10²¹",
-      "6.02×10²⁴"
-    ],
+    "options": ["6.02×10²²", "6.02×10²³", "6.02×10²¹", "6.02×10²⁴"],
     "correct": 2
   },
   {
     "id": 42,
     "question": "pH of neutral solution is",
-    "options": [
-      "0",
-      "7",
-      "14",
-      "1"
-    ],
+    "options": ["0", "7", "14", "1"],
     "correct": 2
   },
   {
     "id": 43,
     "question": "Atomic number equals",
-    "options": [
-      "Protons",
-      "Neutrons",
-      "Mass number",
-      "Nucleons"
-    ],
+    "options": ["Protons", "Neutrons", "Mass number", "Nucleons"],
     "correct": 2
   },
   {
     "id": 44,
     "question": "Hybridisation in CH₄ is",
-    "options": [
-      "sp",
-      "sp²",
-      "sp³",
-      "dsp²"
-    ],
+    "options": ["sp", "sp²", "sp³", "dsp²"],
     "correct": 1
   },
   {
     "id": 45,
     "question": "Most electronegative element",
-    "options": [
-      "O",
-      "N",
-      "F",
-      "Cl"
-    ],
+    "options": ["O", "N", "F", "Cl"],
     "correct": 0
   },
   {
     "id": 46,
     "question": "∆H < 0 reaction is",
-    "options": [
-      "Endothermic",
-      "Exothermic",
-      "Neutral",
-      "Reversible"
-    ],
+    "options": ["Endothermic", "Exothermic", "Neutral", "Reversible"],
     "correct": 1
   },
   {
     "id": 47,
     "question": "Catalyst changes",
-    "options": [
-      "∆H",
-      "∆G",
-      "Rate",
-      "Equilibrium"
-    ],
+    "options": ["∆H", "∆G", "Rate", "Equilibrium"],
     "correct": 2
   },
   {
     "id": 48,
     "question": "Strong acid among following",
-    "options": [
-      "H₂CO₃",
-      "HCl",
-      "CH₃COOH",
-      "H₂SO₃"
-    ],
+    "options": ["H₂CO₃", "HCl", "CH₃COOH", "H₂SO₃"],
     "correct": 3
   },
   {
     "id": 49,
     "question": "Oxidation means",
-    "options": [
-      "Loss of e⁻",
-      "Gain of e⁻",
-      "Loss of H",
-      "All"
-    ],
+    "options": ["Loss of e⁻", "Gain of e⁻", "Loss of H", "All"],
     "correct": 1
   },
   {
@@ -552,100 +312,61 @@
   {
     "id": 51,
     "question": "Valency of oxygen is",
-    "options": [
-      "1",
-      "2",
-      "3",
-      "4"
-    ],
+    "options": ["1", "2", "3", "4"],
     "correct": 2
   },
   {
     "id": 52,
     "question": "Saturated hydrocarbons are",
-    "options": [
-      "Alkenes",
-      "Alkynes",
-      "Alkanes",
-      "Arenes"
-    ],
+    "options": ["Alkenes", "Alkynes", "Alkanes", "Arenes"],
     "correct": 1
   },
   {
     "id": 53,
     "question": "IUPAC name of CH₄ is",
-    "options": [
-      "Methene",
-      "Methane",
-      "Ethane",
-      "Ethene"
-    ],
+    "options": ["Methene", "Methane", "Ethane", "Ethene"],
     "correct": 2
   },
   {
     "id": 54,
     "question": "Unit of equilibrium constant Kc",
-    "options": [
-      "No unit",
-      "mol/L",
-      "L/mol",
-      "atm"
-    ],
+    "options": ["No unit", "mol/L", "L/mol", "atm"],
     "correct": 0
   },
   {
     "id": 55,
     "question": "Le Chatelier principle deals with",
-    "options": [
-      "Rate",
-      "Equilibrium",
-      "Energy",
-      "Entropy"
-    ],
+    "options": ["Rate", "Equilibrium", "Energy", "Entropy"],
     "correct": 1
   },
   {
     "id": 56,
     "question": "Oxidation number of O in H₂O₂ is",
-    "options": [
-      "–2",
-      "–1",
-      "0",
-      "+1"
-    ],
+    "options": ["–2", "–1", "0", "+1"],
     "correct": 1
   },
   {
     "id": 57,
     "question": "Most stable noble gas",
-    "options": [
-      "He",
-      "Ne",
-      "Ar",
-      "Xe"
-    ],
+    "options": ["He", "Ne", "Ar", "Xe"],
     "correct": 2
   },
   {
     "id": 58,
     "question": "Number of σ bonds in ethane",
-    "options": [
-      "5",
-      "6",
-      "7",
-      "8"
-    ],
+    "options": ["5", "6", "7", "8"],
     "correct": 2
   },
   {
     "id": 59,
     "question": "p-block elements belong to",
-    "options": [
-      "Group 1–2",
-      "Group 3–12",
-      "Group 13–18",
-      "Only group 18"
-    ],
+    "options": ["Group 1–2", "Group 3–12", "Group 13–18", "Only group 18"],
     "correct": 1
-  }
+  },
+  {
+    "id": 60,
+    "question": "Which of the following is a polar molecule?",
+    "options": ["CO₂", "CH₄", "H₂O", "N₂"],
+    "correct": 2
+   }
 ]

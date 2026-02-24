@@ -1,882 +1,662 @@
 [
-  {
-    "id": 1,
-    "question": "If the roots of x²−5x+k=0 are real and equal, then k =",
-    "options": [
-      "25",
-      "0",
-      "25/4",
-      "5"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 2,
-    "question": "∫₀¹(3x²−2x+1) dx =",
-    "options": [
-      "1",
-      "4/3",
-      "3/2",
-      "2"
-    ],
-    "correct": 3
-  },
-  {
-    "id": 3,
-    "question": "Number of solutions of sin x = ½ in [0,2π] is",
-    "options": [
-      "1",
-      "2",
-      "3",
-      "4"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 4,
-    "question": "Determinant of [[1,2],[3,4]] is",
-    "options": [
-      "−2",
-      "2",
-      "−10",
-      "10"
-    ],
-    "correct": 0
-  },
-  {
-    "id": 5,
-    "question": "If a⋅b = 0, then vectors are",
-    "options": [
-      "Parallel",
-      "Anti-parallel",
-      "Perpendicular",
-      "Collinear"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 6,
-    "question": "Domain of f(x) = √(2x−3) is",
-    "options": [
-      "x ≥ 0",
-      "x ≥ 3/2",
-      "all real x",
-      "x ≤ 3/2"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 7,
-    "question": "If log_a(x) = 1, then x equals",
-    "options": [
-      "1",
-      "a",
-      "a²",
-      "0"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 8,
-    "question": "Slope of line perpendicular to 3x−4y+7=0 is",
-    "options": [
-      "3/4",
-      "−3/4",
-      "4/3",
-      "−4/3"
-    ],
-    "correct": 3
-  },
-  {
-    "id": 9,
-    "question": "If nCr = nC(n−r), then r =",
-    "options": [
-      "0",
-      "n",
-      "n/2",
-      "1"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 10,
-    "question": "Value of i²⁰²⁵ is",
-    "options": [
-      "i",
-      "−i",
-      "−1",
-      "1"
-    ],
-    "correct": 0
-  },
-  {
-    "id": 11,
-    "question": "lim(x→0) sin x/x equals",
-    "options": [
-      "0",
-      "1",
-      "∞",
-      "−1"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 12,
-    "question": "If AP has first term 2 and common difference 3, then 10th term is",
-    "options": [
-      "27",
-      "29",
-      "30",
-      "31"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 13,
-    "question": "Probability of getting a head when tossing a coin is",
-    "options": [
-      "0",
-      "1",
-      "1/2",
-      "1/3"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 14,
-    "question": "Equation of parabola with focus (0,1) and directrix y = −1 is",
-    "options": [
-      "x² = 4y",
-      "x² = −4y",
-      "y² = 4x",
-      "y² = −4x"
-    ],
-    "correct": 0
-  },
-  {
-    "id": 15,
-    "question": "If f(x) = x³, then f′(x) is",
-    "options": [
-      "x²",
-      "2x",
-      "3x²",
-      "3x"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 16,
-    "question": "Sum of infinite GP with a = 2, r = 1/2 is",
-    "options": [
-      "2",
-      "3",
-      "4",
-      "5"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 17,
-    "question": "Distance between points (1,2) and (4,6) is",
-    "options": [
-      "3",
-      "4",
-      "5",
-      "√13"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 18,
-    "question": "If tan θ = 1, then θ =",
-    "options": [
-      "30°",
-      "45°",
-      "60°",
-      "90°"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 19,
-    "question": "Number of subsets of a set with 4 elements is",
-    "options": [
-      "8",
-      "12",
-      "16",
-      "24"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 20,
-    "question": "The function f(x) = |x| is",
-    "options": [
-      "differentiable everywhere",
-      "not continuous",
-      "continuous but not differentiable at x=0",
-      "discontinuous at x=0"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 21,
-    "question": "SI unit of electric field is",
-    "options": [
-      "N",
-      "J/C",
-      "N/C",
-      "V"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 22,
-    "question": "Constant velocity motion implies",
-    "options": [
-      "zero acceleration",
-      "increasing acceleration",
-      "constant force",
-      "variable speed"
-    ],
-    "correct": 0
-  },
-  {
-    "id": 23,
-    "question": "Work done in uniform circular motion is",
-    "options": [
-      "maximum",
-      "zero",
-      "negative",
-      "infinite"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 24,
-    "question": "Dimensional formula of force is",
-    "options": [
-      "MLT⁻¹",
-      "MLT⁻²",
-      "ML²T⁻²",
-      "MT⁻²"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 25,
-    "question": "Unit of magnetic flux is",
-    "options": [
-      "Tesla",
-      "Weber",
-      "Henry",
-      "Coulomb"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 26,
-    "question": "At resonance in LCR circuit, impedance is",
-    "options": [
-      "maximum",
-      "minimum",
-      "zero",
-      "infinite"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 27,
-    "question": "Escape velocity depends on",
-    "options": [
-      "mass only",
-      "radius only",
-      "mass and radius of Earth",
-      "height only"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 28,
-    "question": "Slope of displacement–time graph gives",
-    "options": [
-      "acceleration",
-      "speed",
-      "velocity",
-      "force"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 29,
-    "question": "Photoelectric effect proves",
-    "options": [
-      "wave nature of light",
-      "particle nature of light",
-      "refraction",
-      "interference"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 30,
-    "question": "Energy of photon is",
-    "options": [
-      "mc²",
-      "hν",
-      "qV",
-      "Pt"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 31,
-    "question": "Unit of power is",
-    "options": [
-      "Joule",
-      "Watt",
-      "Newton",
-      "Ampere"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 32,
-    "question": "Which law explains conservation of momentum?",
-    "options": [
-      "First law",
-      "Second law",
-      "Third law",
-      "Gravitation"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 33,
-    "question": "Focal length of plane mirror is",
-    "options": [
-      "zero",
-      "infinite",
-      "half of radius",
-      "twice radius"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 34,
-    "question": "Charge on electron is",
-    "options": [
-      "+1.6×10⁻¹⁹ C",
-      "−1.6×10⁻¹⁹ C",
-      "1 C",
-      "zero"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 35,
-    "question": "The device converting AC to DC is",
-    "options": [
-      "transformer",
-      "rectifier",
-      "generator",
-      "motor"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 36,
-    "question": "Speed of light in vacuum is",
-    "options": [
-      "3×10⁸ m/s",
-      "3×10⁶ m/s",
-      "3×10⁵ km/s",
-      "both A and C"
-    ],
-    "correct": 3
-  },
-  {
-    "id": 37,
-    "question": "If resistance doubles, current becomes",
-    "options": [
-      "double",
-      "half",
-      "same",
-      "zero"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 38,
-    "question": "Unit of pressure is",
-    "options": [
-      "Joule",
-      "Pascal",
-      "Watt",
-      "Newton"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 39,
-    "question": "Binding energy is related to",
-    "options": [
-      "mass defect",
-      "velocity",
-      "charge",
-      "radius"
-    ],
-    "correct": 0
-  },
-  {
-    "id": 40,
-    "question": "Transformer works on principle of",
-    "options": [
-      "electrostatics",
-      "mutual induction",
-      "self induction",
-      "conduction"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 41,
-    "question": "Atomic number equals number of",
-    "options": [
-      "neutrons",
-      "protons",
-      "nucleons",
-      "protons + neutrons"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 42,
-    "question": "pH of neutral solution at 25°C is",
-    "options": [
-      "5",
-      "6",
-      "7",
-      "8"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 43,
-    "question": "Strongest acid is",
-    "options": [
-      "HCl",
-      "HNO₃",
-      "H₂SO₄",
-      "CH₃COOH"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 44,
-    "question": "Hybridisation in CH₄ is",
-    "options": [
-      "sp",
-      "sp²",
-      "sp³",
-      "dsp²"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 45,
-    "question": "Gas equation PV = nRT is",
-    "options": [
-      "Boyle law",
-      "Charles law",
-      "Ideal gas equation",
-      "Avogadro law"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 46,
-    "question": "Oxidation means",
-    "options": [
-      "gain of electrons",
-      "loss of electrons",
-      "gain of protons",
-      "loss of neutrons"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 47,
-    "question": "Highest boiling hydride is",
-    "options": [
-      "NH₃",
-      "PH₃",
-      "AsH₃",
-      "SbH₃"
-    ],
-    "correct": 0
-  },
-  {
-    "id": 48,
-    "question": "Unit of first order rate constant is",
-    "options": [
-      "mol L⁻¹ s⁻¹",
-      "s⁻¹",
-      "L mol⁻¹ s⁻¹",
-      "mol⁻¹ L s"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 49,
-    "question": "IUPAC name of CH₃–CH₂–OH is",
-    "options": [
-      "Methanol",
-      "Ethanol",
-      "Propanol",
-      "Butanol"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 50,
-    "question": "Strong electrolytes show",
-    "options": [
-      "partial ionization",
-      "no ionization",
-      "complete ionization",
-      "weak ionization"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 51,
-    "question": "Which is amphoteric oxide?",
-    "options": [
-      "Na₂O",
-      "CaO",
-      "Al₂O₃",
-      "CO₂"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 52,
-    "question": "Atomic mass unit is defined relative to",
-    "options": [
-      "H atom",
-      "O atom",
-      "C-12 atom",
-      "N atom"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 53,
-    "question": "Which is reducing agent?",
-    "options": [
-      "oxidised substance",
-      "reduced substance",
-      "electron donor",
-      "electron acceptor"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 54,
-    "question": "p-block elements belong to",
-    "options": [
-      "groups 1–2",
-      "groups 3–12",
-      "groups 13–18",
-      "lanthanides"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 55,
-    "question": "Maximum covalency of sulphur is",
-    "options": [
-      "2",
-      "4",
-      "6",
-      "8"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 56,
-    "question": "Which bond is strongest?",
-    "options": [
-      "single",
-      "double",
-      "triple",
-      "hydrogen"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 57,
-    "question": "Catalyst changes",
-    "options": [
-      "equilibrium constant",
-      "rate of reaction",
-      "enthalpy",
-      "free energy"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 58,
-    "question": "Molecular formula of glucose is",
-    "options": [
-      "C₆H₁₂O₆",
-      "C₆H₆",
-      "C₁₂H₂₂O₁₁",
-      "C₅H₁₀O₅"
-    ],
-    "correct": 0
-  },
-  {
-    "id": 59,
-    "question": "Which is not a state function?",
-    "options": [
-      "enthalpy",
-      "entropy",
-      "work",
-      "internal energy"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 60,
-    "question": "Hard water contains",
-    "options": [
-      "NaCl",
-      "Ca²⁺ and Mg²⁺",
-      "KCl",
-      "NH₄⁺"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 61,
-    "question": "Powerhouse of cell is",
-    "options": [
-      "Ribosome",
-      "Mitochondria",
-      "Golgi body",
-      "Lysosome"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 62,
-    "question": "DNA is present in",
-    "options": [
-      "nucleus only",
-      "mitochondria only",
-      "nucleus and mitochondria",
-      "cytoplasm only"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 63,
-    "question": "Functional unit of kidney is",
-    "options": [
-      "nephron",
-      "neuron",
-      "alveolus",
-      "glomerulus"
-    ],
-    "correct": 0
-  },
-  {
-    "id": 64,
-    "question": "Universal donor blood group is",
-    "options": [
-      "A",
-      "B",
-      "AB",
-      "O"
-    ],
-    "correct": 3
-  },
-  {
-    "id": 65,
-    "question": "Photosynthesis occurs in",
-    "options": [
-      "mitochondria",
-      "chloroplast",
-      "ribosome",
-      "nucleus"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 66,
-    "question": "Chromosome number in human gamete is",
-    "options": [
-      "22",
-      "23",
-      "44",
-      "46"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 67,
-    "question": "Insulin is secreted by",
-    "options": [
-      "liver",
-      "pancreas",
-      "kidney",
-      "thyroid"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 68,
-    "question": "Mendel experimented on",
-    "options": [
-      "maize",
-      "pea",
-      "wheat",
-      "rice"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 69,
-    "question": "Largest bone in human body is",
-    "options": [
-      "tibia",
-      "femur",
-      "humerus",
-      "fibula"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 70,
-    "question": "Vitamin helping in blood clotting is",
-    "options": [
-      "A",
-      "B",
-      "C",
-      "K"
-    ],
-    "correct": 3
-  },
-  {
-    "id": 71,
-    "question": "Site of protein synthesis is",
-    "options": [
-      "mitochondria",
-      "ribosome",
-      "lysosome",
-      "nucleus"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 72,
-    "question": "Genetic material in virus is",
-    "options": [
-      "DNA only",
-      "RNA only",
-      "DNA or RNA",
-      "protein"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 73,
-    "question": "Human heart has chambers",
-    "options": [
-      "2",
-      "3",
-      "4",
-      "5"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 74,
-    "question": "Oxygen is transported by",
-    "options": [
-      "plasma",
-      "RBC",
-      "WBC",
-      "platelets"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 75,
-    "question": "Which hormone regulates growth?",
-    "options": [
-      "insulin",
-      "thyroxine",
-      "growth hormone",
-      "adrenaline"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 76,
-    "question": "Transpiration occurs through",
-    "options": [
-      "roots",
-      "stem",
-      "stomata",
-      "flowers"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 77,
-    "question": "Which organ detoxifies blood?",
-    "options": [
-      "kidney",
-      "liver",
-      "pancreas",
-      "heart"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 78,
-    "question": "ABO blood groups were discovered by",
-    "options": [
-      "Mendel",
-      "Darwin",
-      "Landsteiner",
-      "Watson"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 79,
-    "question": "Xylem transports",
-    "options": [
-      "food",
-      "water",
-      "hormones",
-      "oxygen"
-    ],
-    "correct": 1
-  },
-  {
-    "id": 80,
-    "question": "Basic unit of life is",
-    "options": [
-      "tissue",
-      "organ",
-      "cell",
-      "system"
-    ],
-    "correct": 2
-  }
+    {
+        "id":  1,
+        "question":  "SI unit of electric field is",
+        "options":  [
+                        "N",
+                        "J/C",
+                        "N/C",
+                        "V"
+                    ],
+        "correct":  2
+    },
+    {
+        "id":  2,
+        "question":  "Constant velocity motion implies",
+        "options":  [
+                        "zero acceleration",
+                        "increasing acceleration",
+                        "constant force",
+                        "variable speed"
+                    ],
+        "correct":  0
+    },
+    {
+        "id":  3,
+        "question":  "Work done in uniform circular motion is",
+        "options":  [
+                        "maximum",
+                        "zero",
+                        "negative",
+                        "infinite"
+                    ],
+        "correct":  1
+    },
+    {
+        "id":  4,
+        "question":  "Dimensional formula of force is",
+        "options":  [
+                        "MLT⁻¹",
+                        "MLT⁻²",
+                        "ML²T⁻²",
+                        "MT⁻²"
+                    ],
+        "correct":  1
+    },
+    {
+        "id":  5,
+        "question":  "Unit of magnetic flux is",
+        "options":  [
+                        "Tesla",
+                        "Weber",
+                        "Henry",
+                        "Coulomb"
+                    ],
+        "correct":  1
+    },
+    {
+        "id":  6,
+        "question":  "At resonance in LCR circuit, impedance is",
+        "options":  [
+                        "maximum",
+                        "minimum",
+                        "zero",
+                        "infinite"
+                    ],
+        "correct":  1
+    },
+    {
+        "id":  7,
+        "question":  "Escape velocity depends on",
+        "options":  [
+                        "mass only",
+                        "radius only",
+                        "mass and radius of Earth",
+                        "height only"
+                    ],
+        "correct":  2
+    },
+    {
+        "id":  8,
+        "question":  "Slope of displacement–time graph gives",
+        "options":  [
+                        "acceleration",
+                        "speed",
+                        "velocity",
+                        "force"
+                    ],
+        "correct":  2
+    },
+    {
+        "id":  9,
+        "question":  "Photoelectric effect proves",
+        "options":  [
+                        "wave nature of light",
+                        "particle nature of light",
+                        "refraction",
+                        "interference"
+                    ],
+        "correct":  1
+    },
+    {
+        "id":  10,
+        "question":  "Energy of photon is",
+        "options":  [
+                        "mc²",
+                        "hν",
+                        "qV",
+                        "Pt"
+                    ],
+        "correct":  1
+    },
+    {
+        "id":  11,
+        "question":  "Unit of power is",
+        "options":  [
+                        "Joule",
+                        "Watt",
+                        "Newton",
+                        "Ampere"
+                    ],
+        "correct":  1
+    },
+    {
+        "id":  12,
+        "question":  "Which law explains conservation of momentum?",
+        "options":  [
+                        "First law",
+                        "Second law",
+                        "Third law",
+                        "Gravitation"
+                    ],
+        "correct":  2
+    },
+    {
+        "id":  13,
+        "question":  "Focal length of plane mirror is",
+        "options":  [
+                        "zero",
+                        "infinite",
+                        "half of radius",
+                        "twice radius"
+                    ],
+        "correct":  1
+    },
+    {
+        "id":  14,
+        "question":  "Charge on electron is",
+        "options":  [
+                        "+1.6×10⁻¹⁹ C",
+                        "−1.6×10⁻¹⁹ C",
+                        "1 C",
+                        "zero"
+                    ],
+        "correct":  1
+    },
+    {
+        "id":  15,
+        "question":  "The device converting AC to DC is",
+        "options":  [
+                        "transformer",
+                        "rectifier",
+                        "generator",
+                        "motor"
+                    ],
+        "correct":  1
+    },
+    {
+        "id":  16,
+        "question":  "Speed of light in vacuum is",
+        "options":  [
+                        "3×10⁸ m/s",
+                        "3×10⁶ m/s",
+                        "3×10⁵ km/s",
+                        "both A and C"
+                    ],
+        "correct":  3
+    },
+    {
+        "id":  17,
+        "question":  "If resistance doubles, current becomes",
+        "options":  [
+                        "double",
+                        "half",
+                        "same",
+                        "zero"
+                    ],
+        "correct":  1
+    },
+    {
+        "id":  18,
+        "question":  "Unit of pressure is",
+        "options":  [
+                        "Joule",
+                        "Pascal",
+                        "Watt",
+                        "Newton"
+                    ],
+        "correct":  1
+    },
+    {
+        "id":  19,
+        "question":  "Binding energy is related to",
+        "options":  [
+                        "mass defect",
+                        "velocity",
+                        "charge",
+                        "radius"
+                    ],
+        "correct":  0
+    },
+    {
+        "id":  20,
+        "question":  "Transformer works on principle of",
+        "options":  [
+                        "electrostatics",
+                        "mutual induction",
+                        "self induction",
+                        "conduction"
+                    ],
+        "correct":  1
+    },
+    {
+        "id":  21,
+        "question":  "Atomic number equals number of",
+        "options":  [
+                        "neutrons",
+                        "protons",
+                        "nucleons",
+                        "protons + neutrons"
+                    ],
+        "correct":  1
+    },
+    {
+        "id":  22,
+        "question":  "pH of neutral solution at 25°C is",
+        "options":  [
+                        "5",
+                        "6",
+                        "7",
+                        "8"
+                    ],
+        "correct":  2
+    },
+    {
+        "id":  23,
+        "question":  "Strongest acid is",
+        "options":  [
+                        "HCl",
+                        "HNO₃",
+                        "H₂SO₄",
+                        "CH₃COOH"
+                    ],
+        "correct":  2
+    },
+    {
+        "id":  24,
+        "question":  "Hybridisation in CH₄ is",
+        "options":  [
+                        "sp",
+                        "sp²",
+                        "sp³",
+                        "dsp²"
+                    ],
+        "correct":  2
+    },
+    {
+        "id":  25,
+        "question":  "Gas equation PV = nRT is",
+        "options":  [
+                        "Boyle law",
+                        "Charles law",
+                        "Ideal gas equation",
+                        "Avogadro law"
+                    ],
+        "correct":  2
+    },
+    {
+        "id":  26,
+        "question":  "Oxidation means",
+        "options":  [
+                        "gain of electrons",
+                        "loss of electrons",
+                        "gain of protons",
+                        "loss of neutrons"
+                    ],
+        "correct":  1
+    },
+    {
+        "id":  27,
+        "question":  "Highest boiling hydride is",
+        "options":  [
+                        "NH₃",
+                        "PH₃",
+                        "AsH₃",
+                        "SbH₃"
+                    ],
+        "correct":  0
+    },
+    {
+        "id":  28,
+        "question":  "Unit of first order rate constant is",
+        "options":  [
+                        "mol L⁻¹ s⁻¹",
+                        "s⁻¹",
+                        "L mol⁻¹ s⁻¹",
+                        "mol⁻¹ L s"
+                    ],
+        "correct":  1
+    },
+    {
+        "id":  29,
+        "question":  "IUPAC name of CH₃–CH₂–OH is",
+        "options":  [
+                        "Methanol",
+                        "Ethanol",
+                        "Propanol",
+                        "Butanol"
+                    ],
+        "correct":  1
+    },
+    {
+        "id":  30,
+        "question":  "Strong electrolytes show",
+        "options":  [
+                        "partial ionization",
+                        "no ionization",
+                        "complete ionization",
+                        "weak ionization"
+                    ],
+        "correct":  2
+    },
+    {
+        "id":  31,
+        "question":  "Which is amphoteric oxide?",
+        "options":  [
+                        "Na₂O",
+                        "CaO",
+                        "Al₂O₃",
+                        "CO₂"
+                    ],
+        "correct":  2
+    },
+    {
+        "id":  32,
+        "question":  "Atomic mass unit is defined relative to",
+        "options":  [
+                        "H atom",
+                        "O atom",
+                        "C-12 atom",
+                        "N atom"
+                    ],
+        "correct":  2
+    },
+    {
+        "id":  33,
+        "question":  "Which is reducing agent?",
+        "options":  [
+                        "oxidised substance",
+                        "reduced substance",
+                        "electron donor",
+                        "electron acceptor"
+                    ],
+        "correct":  2
+    },
+    {
+        "id":  34,
+        "question":  "p-block elements belong to",
+        "options":  [
+                        "groups 1–2",
+                        "groups 3–12",
+                        "groups 13–18",
+                        "lanthanides"
+                    ],
+        "correct":  2
+    },
+    {
+        "id":  35,
+        "question":  "Maximum covalency of sulphur is",
+        "options":  [
+                        "2",
+                        "4",
+                        "6",
+                        "8"
+                    ],
+        "correct":  2
+    },
+    {
+        "id":  36,
+        "question":  "Which bond is strongest?",
+        "options":  [
+                        "single",
+                        "double",
+                        "triple",
+                        "hydrogen"
+                    ],
+        "correct":  2
+    },
+    {
+        "id":  37,
+        "question":  "Catalyst changes",
+        "options":  [
+                        "equilibrium constant",
+                        "rate of reaction",
+                        "enthalpy",
+                        "free energy"
+                    ],
+        "correct":  1
+    },
+    {
+        "id":  38,
+        "question":  "Molecular formula of glucose is",
+        "options":  [
+                        "C₆H₁₂O₆",
+                        "C₆H₆",
+                        "C₁₂H₂₂O₁₁",
+                        "C₅H₁₀O₅"
+                    ],
+        "correct":  0
+    },
+    {
+        "id":  39,
+        "question":  "Which is not a state function?",
+        "options":  [
+                        "enthalpy",
+                        "entropy",
+                        "work",
+                        "internal energy"
+                    ],
+        "correct":  2
+    },
+    {
+        "id":  40,
+        "question":  "Hard water contains",
+        "options":  [
+                        "NaCl",
+                        "Ca²⁺ and Mg²⁺",
+                        "KCl",
+                        "NH₄⁺"
+                    ],
+        "correct":  1
+    },
+    {
+        "id":  41,
+        "question":  "Powerhouse of cell is",
+        "options":  [
+                        "Ribosome",
+                        "Mitochondria",
+                        "Golgi body",
+                        "Lysosome"
+                    ],
+        "correct":  1
+    },
+    {
+        "id":  42,
+        "question":  "DNA is present in",
+        "options":  [
+                        "nucleus only",
+                        "mitochondria only",
+                        "nucleus and mitochondria",
+                        "cytoplasm only"
+                    ],
+        "correct":  2
+    },
+    {
+        "id":  43,
+        "question":  "Functional unit of kidney is",
+        "options":  [
+                        "nephron",
+                        "neuron",
+                        "alveolus",
+                        "glomerulus"
+                    ],
+        "correct":  0
+    },
+    {
+        "id":  44,
+        "question":  "Universal donor blood group is",
+        "options":  [
+                        "A",
+                        "B",
+                        "AB",
+                        "O"
+                    ],
+        "correct":  3
+    },
+    {
+        "id":  45,
+        "question":  "Photosynthesis occurs in",
+        "options":  [
+                        "mitochondria",
+                        "chloroplast",
+                        "ribosome",
+                        "nucleus"
+                    ],
+        "correct":  1
+    },
+    {
+        "id":  46,
+        "question":  "Chromosome number in human gamete is",
+        "options":  [
+                        "22",
+                        "23",
+                        "44",
+                        "46"
+                    ],
+        "correct":  1
+    },
+    {
+        "id":  47,
+        "question":  "Insulin is secreted by",
+        "options":  [
+                        "liver",
+                        "pancreas",
+                        "kidney",
+                        "thyroid"
+                    ],
+        "correct":  1
+    },
+    {
+        "id":  48,
+        "question":  "Mendel experimented on",
+        "options":  [
+                        "maize",
+                        "pea",
+                        "wheat",
+                        "rice"
+                    ],
+        "correct":  1
+    },
+    {
+        "id":  49,
+        "question":  "Largest bone in human body is",
+        "options":  [
+                        "tibia",
+                        "femur",
+                        "humerus",
+                        "fibula"
+                    ],
+        "correct":  1
+    },
+    {
+        "id":  50,
+        "question":  "Vitamin helping in blood clotting is",
+        "options":  [
+                        "A",
+                        "B",
+                        "C",
+                        "K"
+                    ],
+        "correct":  3
+    },
+    {
+        "id":  51,
+        "question":  "Site of protein synthesis is",
+        "options":  [
+                        "mitochondria",
+                        "ribosome",
+                        "lysosome",
+                        "nucleus"
+                    ],
+        "correct":  1
+    },
+    {
+        "id":  52,
+        "question":  "Genetic material in virus is",
+        "options":  [
+                        "DNA only",
+                        "RNA only",
+                        "DNA or RNA",
+                        "protein"
+                    ],
+        "correct":  2
+    },
+    {
+        "id":  53,
+        "question":  "Human heart has chambers",
+        "options":  [
+                        "2",
+                        "3",
+                        "4",
+                        "5"
+                    ],
+        "correct":  2
+    },
+    {
+        "id":  54,
+        "question":  "Oxygen is transported by",
+        "options":  [
+                        "plasma",
+                        "RBC",
+                        "WBC",
+                        "platelets"
+                    ],
+        "correct":  1
+    },
+    {
+        "id":  55,
+        "question":  "Which hormone regulates growth?",
+        "options":  [
+                        "insulin",
+                        "thyroxine",
+                        "growth hormone",
+                        "adrenaline"
+                    ],
+        "correct":  2
+    },
+    {
+        "id":  56,
+        "question":  "Transpiration occurs through",
+        "options":  [
+                        "roots",
+                        "stem",
+                        "stomata",
+                        "flowers"
+                    ],
+        "correct":  2
+    },
+    {
+        "id":  57,
+        "question":  "Which organ detoxifies blood?",
+        "options":  [
+                        "kidney",
+                        "liver",
+                        "pancreas",
+                        "heart"
+                    ],
+        "correct":  1
+    },
+    {
+        "id":  58,
+        "question":  "ABO blood groups were discovered by",
+        "options":  [
+                        "Mendel",
+                        "Darwin",
+                        "Landsteiner",
+                        "Watson"
+                    ],
+        "correct":  2
+    },
+    {
+        "id":  59,
+        "question":  "Xylem transports",
+        "options":  [
+                        "food",
+                        "water",
+                        "hormones",
+                        "oxygen"
+                    ],
+        "correct":  1
+    },
+    {
+        "id":  60,
+        "question":  "Basic unit of life is",
+        "options":  [
+                        "tissue",
+                        "organ",
+                        "cell",
+                        "system"
+                    ],
+        "correct":  2
+    }
 ]

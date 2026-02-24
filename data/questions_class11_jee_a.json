@@ -427,5 +427,15 @@
       "Displacement"
     ],
     "correct": 0
+  }, {
+    "id": 40,
+    "question": "LCM of 24 and 36 is",
+    "options": [
+      "72",
+      "48",
+      "12",
+      "144"
+    ],
+    "correct": 0
   }
 ]

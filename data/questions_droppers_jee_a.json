@@ -438,5 +438,224 @@
       "conduction"
     ],
     "correct": 1
+  },{
+    "id": 41,
+    "question": "Atomic number equals number of",
+    "options": [
+      "neutrons",
+      "protons",
+      "nucleons",
+      "protons + neutrons"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 42,
+    "question": "pH of neutral solution at 25°C is",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 43,
+    "question": "Strongest acid is",
+    "options": [
+      "HCl",
+      "HNO₃",
+      "H₂SO₄",
+      "CH₃COOH"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 44,
+    "question": "Hybridisation in CH₄ is",
+    "options": [
+      "sp",
+      "sp²",
+      "sp³",
+      "dsp²"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 45,
+    "question": "Gas equation PV = nRT is",
+    "options": [
+      "Boyle law",
+      "Charles law",
+      "Ideal gas equation",
+      "Avogadro law"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 46,
+    "question": "Oxidation means",
+    "options": [
+      "gain of electrons",
+      "loss of electrons",
+      "gain of protons",
+      "loss of neutrons"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 47,
+    "question": "Highest boiling hydride is",
+    "options": [
+      "NH₃",
+      "PH₃",
+      "AsH₃",
+      "SbH₃"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 48,
+    "question": "Unit of first order rate constant is",
+    "options": [
+      "mol L⁻¹ s⁻¹",
+      "s⁻¹",
+      "L mol⁻¹ s⁻¹",
+      "mol⁻¹ L s"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 49,
+    "question": "IUPAC name of CH₃–CH₂–OH is",
+    "options": [
+      "Methanol",
+      "Ethanol",
+      "Propanol",
+      "Butanol"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 50,
+    "question": "Strong electrolytes show",
+    "options": [
+      "partial ionization",
+      "no ionization",
+      "complete ionization",
+      "weak ionization"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 51,
+    "question": "Which is amphoteric oxide?",
+    "options": [
+      "Na₂O",
+      "CaO",
+      "Al₂O₃",
+      "CO₂"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 52,
+    "question": "Atomic mass unit is defined relative to",
+    "options": [
+      "H atom",
+      "O atom",
+      "C-12 atom",
+      "N atom"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 53,
+    "question": "Which is reducing agent?",
+    "options": [
+      "oxidised substance",
+      "reduced substance",
+      "electron donor",
+      "electron acceptor"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 54,
+    "question": "p-block elements belong to",
+    "options": [
+      "groups 1–2",
+      "groups 3–12",
+      "groups 13–18",
+      "lanthanides"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 55,
+    "question": "Maximum covalency of sulphur is",
+    "options": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 56,
+    "question": "Which bond is strongest?",
+    "options": [
+      "single",
+      "double",
+      "triple",
+      "hydrogen"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 57,
+    "question": "Catalyst changes",
+    "options": [
+      "equilibrium constant",
+      "rate of reaction",
+      "enthalpy",
+      "free energy"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 58,
+    "question": "Molecular formula of glucose is",
+    "options": [
+      "C₆H₁₂O₆",
+      "C₆H₆",
+      "C₁₂H₂₂O₁₁",
+      "C₅H₁₀O₅"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 59,
+    "question": "Which is not a state function?",
+    "options": [
+      "enthalpy",
+      "entropy",
+      "work",
+      "internal energy"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 60,
+    "question": "Hard water contains",
+    "options": [
+      "NaCl",
+      "Ca²⁺ and Mg²⁺",
+      "KCl",
+      "NH₄⁺"
+    ],
+    "correct": 1
   }
 ]

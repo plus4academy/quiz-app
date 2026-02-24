@@ -395,8 +395,8 @@
   },
   {
     "id": 60,
-    "question": "Domain of function 1x−2\\frac{1}{x-2}x−21​ is",
-    "options": ["ℝ", "ℝ – {2}", "x > 2", "x < 2"],
-    "correct": 1
+    "question": "Which of the following is a polar molecule?",
+    "options": ["CO₂", "CH₄", "H₂O", "N₂"],
+    "correct": 2
   }
 ]

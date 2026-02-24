@@ -50,7 +50,7 @@
                 </div>
                 {% endif %}
 
-                <form method="POST" action="{{ url_for('login') }}" class="login-form">
+                <form method="POST" action="{{ url_for('auth.login') }}" class="login-form">
                     <!-- Username Field -->
                     <div class="form-group">
                         <label for="username" class="form-label">Username</label>
@@ -60,6 +60,7 @@
                             name="username" 
                             class="form-input" 
                             placeholder="e.g. om.wadhwani3210"
+                            value="{{ request.form.get('username', '') }}"
                             required
                             autocomplete="username"
                         >
@@ -78,6 +79,10 @@
                             required
                             autocomplete="current-password"
                         >
+                        <label class="form-hint" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 8px;">
+                            <input type="checkbox" id="showPassword">
+                            Show password
+                        </label>
                     </div>
 
                     <!-- Submit Button -->
@@ -92,11 +97,19 @@
                 <div class="form-footer">
                     <p class="footer-text">
                         Don't have an account? 
-                        <a href="{{ url_for('signup') }}" class="footer-link">Sign up here</a>
+                        <a href="{{ url_for('auth.signup') }}" class="footer-link">Sign up here</a>
                     </p>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        const showPassword = document.getElementById('showPassword');
+        const passwordInput = document.getElementById('password');
+
+        showPassword.addEventListener('change', function () {
+            passwordInput.type = this.checked ? 'text' : 'password';
+        });
+    </script>
 </body>
 </html>

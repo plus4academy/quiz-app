@@ -2,12 +2,43 @@
 # Edit ONLY this file when credentials change. app.py reads from here.
 
 import os
+from pathlib import Path
 from urllib.parse import urlparse
+
+
+def _load_local_env():
+    """
+    Minimal .env loader for local runs without external dependencies.
+    Existing process environment values are preserved.
+    """
+    env_path = Path(__file__).resolve().parent / '.env'
+    if not env_path.exists():
+        return
+
+    try:
+        lines = env_path.read_text(encoding='utf-8').splitlines()
+    except OSError:
+        return
+
+    for raw in lines:
+        line = raw.strip()
+        if not line or line.startswith('#') or '=' not in line:
+            continue
+
+        key, value = line.split('=', 1)
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+
+        if key and key not in os.environ:
+            os.environ[key] = value
 
 def _to_bool(value, default=True):
     if value is None:
         return default
     return str(value).strip().lower() in ('1', 'true', 'yes', 'on')
+
+
+_load_local_env()
 
 # Railway provides DATABASE_URL
 database_url = os.getenv('DATABASE_URL')

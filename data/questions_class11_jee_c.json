@@ -1,68 +1,39 @@
 [
   {
-    "id": 36,
-    "question": "If α and β are roots of x² – 7x + 10 = 0, then α + β is",
-    "options": [
-      "10",
-      "7",
-      "5",
-      "–7"
-    ],
-    "correct": 1
+    "id": 1,
+    "question": "The zeroes of polynomial x² – 9 are",
+    "options": ["3, 3", "–3, –3", "3, –3", "0, 9"],
+    "correct": 2
   },
   {
-    "id": 37,
-    "question": "The HCF of 306 and 657 is",
-    "options": [
-      "9",
-      "18",
-      "27",
-      "3"
-    ],
+    "id": 2,
+    "question": "LCM of 24 and 36 is",
+    "options": ["72", "48", "12", "144"],
     "correct": 0
   },
   {
-    "id": 38,
-    "question": "The value of sin 60° cos 30° is",
-    "options": [
-      "1/4",
-      "1/2",
-      "√3/4",
-      "3/4"
-    ],
-    "correct": 3
+    "id": 3,
+    "question": "If sin θ = √3/2, then θ =",
+    "options": ["30°", "45°", "60°", "90°"],
+    "correct": 0
   },
   {
-    "id": 39,
-    "question": "If A = {1,2,3} and B = {2,3,4}, then A ∩ B =",
-    "options": [
-      "{1,4}",
-      "{2,3}",
-      "{1,2}",
-      "{3,4}"
-    ],
+    "id": 4,
+    "question": "Distance between (–2,4) and (–2,–2) is",
+    "options": ["2", "4", "6", "8"],
     "correct": 1
   },
   {
-    "id": 40,
-    "question": "Distance between points (2,3) and (6,3) is",
-    "options": [
-      "2",
-      "4",
-      "6",
-      "8"
-    ],
-    "correct": 1
-  },
+    "id": 5,
+    "question": "First term of AP is 5 and common difference is 3. Second term is",
+    "options": ["8", "10", "15", "2"],
+    "correct": 0
+  }
+  ,
   {
     "id": 6,
     "question": "The common difference of AP: 5, 8, 11, 14… is",
-    "options": [
-      "2",
-      "3",
-      "4",
-      "5"
-    ],
+    "options": ["2", "3", "4", "5"],
     "correct": 1
   },
   {
@@ -79,364 +50,199 @@
   {
     "id": 8,
     "question": "tan 45° + sin 30° =",
-    "options": [
-      "1",
-      "3/2",
-      "2",
-      "1/2"
-    ],
+    "options": ["1", "3/2", "2", "1/2"],
     "correct": 1
   },
   {
     "id": 9,
     "question": "Area of a circle of radius 7 cm is",
-    "options": [
-      "44 cm²",
-      "154 cm²",
-      "308 cm²",
-      "22 cm²"
-    ],
+    "options": ["44 cm²", "154 cm²", "308 cm²", "22 cm²"],
     "correct": 1
   },
   {
     "id": 10,
     "question": "If P(A) = 3/8, then P(not A) =",
-    "options": [
-      "5/8",
-      "3/8",
-      "1/8",
-      "1/2"
-    ],
+    "options": ["5/8", "3/8", "1/8", "1/2"],
     "correct": 1
   },
   {
     "id": 11,
     "question": "The value of (27)¹ᐟ³ is",
-    "options": [
-      "3",
-      "9",
-      "6",
-      "1"
-    ],
+    "options": ["3", "9", "6", "1"],
     "correct": 0
   },
   {
     "id": 12,
     "question": "The coordinates of origin are",
-    "options": [
-      "(1,1)",
-      "(0,0)",
-      "(–1,–1)",
-      "(∞,∞)"
-    ],
+    "options": ["(1,1)", "(0,0)", "(–1,–1)", "(∞,∞)"],
     "correct": 0
   },
   {
     "id": 13,
     "question": "A die is thrown once. Probability of getting even number is",
-    "options": [
-      "1/6",
-      "1/3",
-      "1/2",
-      "2/3"
-    ],
+    "options": ["1/6", "1/3", "1/2", "2/3"],
     "correct": 1
   },
   {
     "id": 14,
     "question": "Which is a polynomial?",
-    "options": [
-      "1/x",
-      "√x",
-      "x² + 3x + 1",
-      "1/(x+1)"
-    ],
+    "options": ["1/x", "√x", "x² + 3x + 1", "1/(x+1)"],
     "correct": 2
   },
   {
     "id": 15,
     "question": "Volume of cube of side 5 cm is",
-    "options": [
-      "25",
-      "75",
-      "100",
-      "125"
-    ],
+    "options": ["25", "75", "100", "125"],
     "correct": 3
   },
   {
     "id": 16,
     "question": "If sin θ = 1/2, θ lies in which quadrant?",
-    "options": [
-      "I only",
-      "II only",
-      "I & II",
-      "III"
-    ],
+    "options": ["I only", "II only", "I & II", "III"],
     "correct": 1
   },
   {
     "id": 17,
     "question": "The graph of linear equation is",
-    "options": [
-      "Curve",
-      "Circle",
-      "Straight line",
-      "Parabola"
-    ],
+    "options": ["Curve", "Circle", "Straight line", "Parabola"],
     "correct": 0
   },
   {
     "id": 18,
     "question": "Sum of first 10 natural numbers is",
-    "options": [
-      "45",
-      "50",
-      "55",
-      "60"
-    ],
+    "options": ["45", "50", "55", "60"],
     "correct": 3
   },
   {
     "id": 19,
     "question": "The degree of polynomial 4x³ – x + 2 is",
-    "options": [
-      "1",
-      "2",
-      "3",
-      "4"
-    ],
+    "options": ["1", "2", "3", "4"],
     "correct": 3
   },
   {
     "id": 20,
     "question": "The value of cos 0° is",
-    "options": [
-      "0",
-      "1",
-      "–1",
-      "1/2"
-    ],
+    "options": ["0", "1", "–1", "1/2"],
     "correct": 1
   },
   {
     "id": 21,
     "question": "SI unit of force is",
-    "options": [
-      "Joule",
-      "Watt",
-      "Newton",
-      "Pascal"
-    ],
+    "options": ["Joule", "Watt", "Newton", "Pascal"],
     "correct": 2
   },
   {
     "id": 22,
     "question": "The pH of neutral solution is",
-    "options": [
-      "1",
-      "5",
-      "7",
-      "14"
-    ],
+    "options": ["1", "5", "7", "14"],
     "correct": 2
   },
   {
     "id": 23,
     "question": "Which gas is released in photosynthesis?",
-    "options": [
-      "CO₂",
-      "O₂",
-      "N₂",
-      "H₂"
-    ],
+    "options": ["CO₂", "O₂", "N₂", "H₂"],
     "correct": 1
   },
   {
     "id": 24,
     "question": "Ohm’s law is",
-    "options": [
-      "V ∝ I",
-      "V ∝ R",
-      "I ∝ R",
-      "V ∝ 1/I"
-    ],
+    "options": ["V ∝ I", "V ∝ R", "I ∝ R", "V ∝ 1/I"],
     "correct": 0
   },
   {
     "id": 25,
     "question": "The powerhouse of cell is",
-    "options": [
-      "Ribosome",
-      "Nucleus",
-      "Mitochondria",
-      "Lysosome"
-    ],
+    "options": ["Ribosome", "Nucleus", "Mitochondria", "Lysosome"],
     "correct": 2
   },
   {
     "id": 26,
     "question": "Unit of electric current is",
-    "options": [
-      "Volt",
-      "Ampere",
-      "Ohm",
-      "Coulomb"
-    ],
+    "options": ["Volt", "Ampere", "Ohm", "Coulomb"],
     "correct": 1
   },
   {
     "id": 27,
     "question": "Which metal is liquid at room temperature?",
-    "options": [
-      "Sodium",
-      "Iron",
-      "Mercury",
-      "Zinc"
-    ],
+    "options": ["Sodium", "Iron", "Mercury", "Zinc"],
     "correct": 2
   },
   {
     "id": 28,
     "question": "The functional unit of kidney is",
-    "options": [
-      "Alveolus",
-      "Nephron",
-      "Axon",
-      "Villi"
-    ],
+    "options": ["Alveolus", "Nephron", "Axon", "Villi"],
     "correct": 2
   },
   {
     "id": 29,
     "question": "Law of conservation of mass was given by",
-    "options": [
-      "Dalton",
-      "Lavoisier",
-      "Newton",
-      "Rutherford"
-    ],
+    "options": ["Dalton", "Lavoisier", "Newton", "Rutherford"],
     "correct": 1
   },
   {
     "id": 30,
     "question": "Which part controls reflex action?",
-    "options": [
-      "Brain",
-      "Cerebellum",
-      "Spinal cord",
-      "Heart"
-    ],
+    "options": ["Brain", "Cerebellum", "Spinal cord", "Heart"],
     "correct": 1
   },
   {
     "id": 31,
     "question": "Acids turn blue litmus",
-    "options": [
-      "Red",
-      "Green",
-      "Yellow",
-      "No change"
-    ],
+    "options": ["Red", "Green", "Yellow", "No change"],
     "correct": 3
   },
   {
     "id": 32,
     "question": "Which mirror is used in headlights?",
-    "options": [
-      "Plane",
-      "Convex",
-      "Concave",
-      "Cylindrical"
-    ],
+    "options": ["Plane", "Convex", "Concave", "Cylindrical"],
     "correct": 1
   },
   {
     "id": 33,
     "question": "SI unit of power is",
-    "options": [
-      "Joule",
-      "Watt",
-      "Newton",
-      "Volt"
-    ],
+    "options": ["Joule", "Watt", "Newton", "Volt"],
     "correct": 2
   },
   {
     "id": 34,
     "question": "Food is digested mainly in",
-    "options": [
-      "Mouth",
-      "Stomach",
-      "Small intestine",
-      "Large intestine"
-    ],
+    "options": ["Mouth", "Stomach", "Small intestine", "Large intestine"],
     "correct": 1
   },
   {
     "id": 35,
     "question": "Chemical formula of washing soda is",
-    "options": [
-      "NaHCO₃",
-      "Na₂CO₃·10H₂O",
-      "Na₂SO₄",
-      "CaCO₃"
-    ],
+    "options": ["NaHCO₃", "Na₂CO₃·10H₂O", "Na₂SO₄", "CaCO₃"],
     "correct": 2
   },
   {
-    "id": 1,
-    "question": "The zeroes of polynomial x² – 9 are",
-    "options": [
-      "3, 3",
-      "–3, –3",
-      "3, –3",
-      "0, 9"
-    ],
-    "correct": 2
-  },
-  {
-    "id": 2,
-    "question": "LCM of 24 and 36 is",
-    "options": [
-      "72",
-      "48",
-      "12",
-      "144"
-    ],
-    "correct": 0
-  },
-  {
-    "id": 3,
-    "question": "If sin θ = √3/2, then θ =",
-    "options": [
-      "30°",
-      "45°",
-      "60°",
-      "90°"
-    ],
-    "correct": 0
-  },
-  {
-    "id": 4,
-    "question": "Distance between (–2,4) and (–2,–2) is",
-    "options": [
-      "2",
-      "4",
-      "6",
-      "8"
-    ],
+    "id": 36,
+    "question": "If α and β are roots of x² – 7x + 10 = 0, then α + β is",
+    "options": ["10", "7", "5", "–7"],
     "correct": 1
   },
   {
-    "id": 5,
-    "question": "First term of AP is 5 and common difference is 3. Second term is",
-    "options": [
-      "8",
-      "10",
-      "15",
-      "2"
-    ],
+    "id": 37,
+    "question": "The HCF of 306 and 657 is",
+    "options": ["9", "18", "27", "3"],
     "correct": 0
+  },
+  {
+    "id": 38,
+    "question": "The value of sin 60° cos 30° is",
+    "options": ["1/4", "1/2", "√3/4", "3/4"],
+    "correct": 3
+  },
+  {
+    "id": 39,
+    "question": "If A = {1,2,3} and B = {2,3,4}, then A ∩ B =",
+    "options": ["{1,4}", "{2,3}", "{1,2}", "{3,4}"],
+    "correct": 1
+  },
+  {
+    "id": 40,
+    "question": "Distance between points (2,3) and (6,3) is",
+    "options": ["2", "4", "6", "8"],
+    "correct": 1
   }
 ]
