@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session, redirect, url_for, jsonify
+﻿from flask import Flask, render_template, request, session, redirect, url_for, jsonify
 from datetime import datetime, timedelta
 from functools import wraps
 from email.message import EmailMessage
@@ -274,7 +274,7 @@ def send_plain_email(to_address, subject, body):
     msg.set_content(body)
 
     try:
-        with smtplib.SMTP(SMTP_CONFIG['host'], SMTP_CONFIG['port']) as smtp:
+        with smtplib.SMTP(SMTP_CONFIG['host'], SMTP_CONFIG['port'], timeout=10) as smtp:
             if SMTP_CONFIG.get('use_tls', True):
                 smtp.starttls()
             if SMTP_CONFIG.get('username') and SMTP_CONFIG.get('password'):
@@ -521,7 +521,7 @@ def test_page(class_level=None, stream=None):
             return render_template('error.html',
                                    message="You have already attempted the test. Only one attempt is allowed.")
 
-        # 🔥 MARK TEST AS ATTEMPTED RIGHT NOW (when test starts)
+        # ðŸ”¥ MARK TEST AS ATTEMPTED RIGHT NOW (when test starts)
         cur.execute("UPDATE users SET has_attempted_set = 1 WHERE id = %s",
                     (session.get('mysql_user_id'),))
         conn.commit()
@@ -712,3 +712,4 @@ def server_error(e):
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
+
