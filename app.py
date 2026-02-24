@@ -8,6 +8,7 @@ import json
 import os
 import re
 import smtplib
+from typing import List
 
 import pymysql
 
@@ -125,7 +126,7 @@ def parse_promoted_class(promoted_to_class):
 # Round-robin set assignment
 # ==========================================================================
 def get_next_set(class_level, stream):
-    sets = ['a', 'b', 'c', 'd']
+    sets = get_available_sets(class_level, stream)
     conn = sqlite3.connect('quiz_app.db')
     cur = conn.cursor()
 
@@ -155,18 +156,56 @@ def get_next_set(class_level, stream):
 # ==========================================================================
 # Question loader
 # ==========================================================================
+def _class_level_aliases(class_level: str) -> List[str]:
+    if class_level == 'dropper':
+        return ['dropper', 'droppers']
+    return [class_level]
+
+def get_available_sets(class_level, stream):
+    base_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data')
+    aliases = _class_level_aliases(class_level)
+    stream_name = stream or 'general'
+    found_sets = set()
+
+    for alias in aliases:
+        pattern = re.compile(rf'^questions_{re.escape(alias)}_{re.escape(stream_name)}_([a-z])\.json$')
+        try:
+            for name in os.listdir(base_dir):
+                m = pattern.match(name)
+                if m:
+                    found_sets.add(m.group(1))
+        except FileNotFoundError:
+            pass
+
+    if found_sets:
+        return sorted(found_sets)
+    return ['a', 'b', 'c', 'd']
+
 def load_questions(class_level, stream, set_name):
     base_dir = os.path.dirname(os.path.abspath(__file__))
+    aliases = _class_level_aliases(class_level)
+    stream_name = stream or 'general'
 
-    set_path = os.path.join(base_dir, f'data/questions_{class_level}_{stream}_{set_name}.json')
-    if os.path.exists(set_path):
-        with open(set_path, 'r', encoding='utf-8') as fh:
-            return json.load(fh)
+    for alias in aliases:
+        set_path = os.path.join(base_dir, f'data/questions_{alias}_{stream_name}_{set_name}.json')
+        if os.path.exists(set_path):
+            with open(set_path, 'r', encoding='utf-8') as fh:
+                return json.load(fh)
 
-    shared_path = os.path.join(base_dir, f'data/questions_{class_level}_{stream}.json')
-    if os.path.exists(shared_path):
-        with open(shared_path, 'r', encoding='utf-8') as fh:
-            return json.load(fh)
+    for alias in aliases:
+        shared_path = os.path.join(base_dir, f'data/questions_{alias}_{stream_name}.json')
+        if os.path.exists(shared_path):
+            with open(shared_path, 'r', encoding='utf-8') as fh:
+                return json.load(fh)
+
+    # Fallback to first available set to avoid hard-fail on legacy assignments.
+    available_sets = get_available_sets(class_level, stream_name)
+    for fallback_set in available_sets:
+        for alias in aliases:
+            fallback_path = os.path.join(base_dir, f'data/questions_{alias}_{stream_name}_{fallback_set}.json')
+            if os.path.exists(fallback_path):
+                with open(fallback_path, 'r', encoding='utf-8') as fh:
+                    return json.load(fh)
 
     return []
 
@@ -195,6 +234,15 @@ def calculate_scholarship(percentage):
         return 25, "Quarter Scholarship - Keep Trying!"
     else:
         return 10, "A scholarship for participation - Don't give up, keep learning!"
+
+def get_test_duration_minutes(class_level):
+    duration_map = {
+        'class9': 30,
+        'class10': 30,
+        'class11': 40,
+        'class12': 45,
+    }
+    return duration_map.get(class_level, 60)
 
 # ==========================================================================
 # Email helpers
@@ -513,6 +561,7 @@ def test_page(class_level=None, stream=None):
                            class_level=class_level,
                            stream=user_stream,
                            assigned_set=assigned_set.upper(),
+                           test_duration_minutes=get_test_duration_minutes(class_level),
                            username=session.get('username'))
 
 # --------------------------------------------------------------------------

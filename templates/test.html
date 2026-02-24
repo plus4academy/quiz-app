@@ -48,7 +48,7 @@
                     </svg>
                     <div class="timer-display">
                         <div class="timer-label">Time Remaining</div>
-                        <div id="timer" class="timer-value">60:00</div>
+                        <div id="timer" class="timer-value">{{ "%02d:00"|format(test_duration_minutes) }}</div>
                     </div>
                 </div>
                 <button onclick="toggleQuestionPalette()" class="btn btn-secondary btn-icon-only" id="paletteToggleBtn">
@@ -101,7 +101,7 @@
                 <div class="instructions-panel" id="instructionsPanel">
                     <h3 class="instructions-title">Important Instructions</h3>
                     <ul class="instructions-list">
-                        <li>Test duration: <strong>60 minutes</strong></li>
+                        <li>Test duration: <strong>{{ test_duration_minutes }} minutes</strong></li>
                         <li>Total questions: <strong>{{ questions|length }}</strong></li>
                         <li>Select one answer for each question</li>
                         <li><strong>Do not switch tabs</strong> - Test will be terminated after 3 switches</li>
@@ -169,7 +169,7 @@
     <!-- Data for JavaScript -->
     <script>
         const TOTAL_QUESTIONS = {{ questions|length }};
-        const TEST_DURATION = 60 * 60; // 60 minutes in seconds
+        const TEST_DURATION = {{ test_duration_minutes }} * 60; // duration in seconds
         const questions = {{ questions|tojson }};
     </script>
     <script src="{{ url_for('static', filename='js/test.js') }}"></script>
