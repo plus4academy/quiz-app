@@ -1,6 +1,7 @@
 from flask import Flask
 from datetime import timedelta
 import secrets
+import os
 
 from blueprints.admin import admin_bp
 from blueprints.auth import auth_bp
@@ -11,7 +12,7 @@ from services.sqlite_store import init_db
 
 def create_app() -> Flask:
     app = Flask(__name__)
-    app.secret_key = secrets.token_hex(32)
+    app.secret_key = os.getenv("SECRET_KEY", secrets.token_hex(32))
     app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(hours=2)
 
     init_db()
