@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "question": "The value of 82–62 is",
+    "question": "The value of 8²–6² is",
     "options": [
       "16",
       "28",
@@ -12,7 +12,7 @@
   },
   {
     "id": 2,
-    "question": "If x=4, find the value of x2–3x is",
+    "question": "If x=4, find the value of x²–3x is",
     "options": [
       "4",
       "8",
@@ -56,7 +56,7 @@
   },
   {
     "id": 6,
-    "question": "The value of (−2)4 is",
+    "question": "The value of (−2)⁴ is",
     "options": [
       "–16",
       "–8",

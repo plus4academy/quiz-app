@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "question": "The value of 62+52 is",
+    "question": "The value of 6² + 5² is",
     "options": [
       "11",
       "36",
@@ -12,7 +12,7 @@
   },
   {
     "id": 2,
-    "question": "If x=2, then value of x3+3x is",
+    "question": "If x=2, then value of x³ + 3x is",
     "options": [
       "10",
       "14",
@@ -56,7 +56,7 @@
   },
   {
     "id": 6,
-    "question": "The value of (−5)3 is",
+    "question": "The value of (−5)³ is",
     "options": [
       "125",
       "–125",
@@ -100,7 +100,7 @@
   },
   {
     "id": 10,
-    "question": "The value of 15÷3×5 is",
+    "question": "The value of 15÷3x5 is",
     "options": [
       "1",
       "15",

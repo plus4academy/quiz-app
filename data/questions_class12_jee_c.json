@@ -61,7 +61,7 @@
   },
   {
     "id": 11,
-    "question": "lim⁡x→01−cos⁡xx2=\\lim_{x \\to 0} \\frac{1 - \\cos x}{x^2} =limx→0​x21−cosx​=",
+    "question": "limₓ→a (x − a) ",
     "options": ["0", "1", "1/2", "∞"],
     "correct": 1
   },
