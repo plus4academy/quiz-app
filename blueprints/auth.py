@@ -65,12 +65,6 @@ def signup():
                 conn.close()
                 return render_template('signup.html', error='Phone number already registered')
 
-            cur.execute('SELECT id FROM users WHERE email = %s', (email,))
-            if cur.fetchone():
-                cur.close()
-                conn.close()
-                return render_template('signup.html', error='Email already registered')
-
             cur.execute(
                 '''
                 INSERT INTO users (full_name, phone, email, username, password, promoted_to_class, has_attempted_set)
