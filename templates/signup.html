@@ -42,11 +42,26 @@
                 </div>
 
                 {% if success %}
-                <div class="alert alert-success">
-                    <svg class="alert-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                    </svg>
-                    {{ success }}
+                <div class="success-card" id="successCard">
+                    <div class="success-card-glow"></div>
+                    <div class="success-badge">
+                        <svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <p class="success-eyebrow">Account created</p>
+                    <h3 class="success-title">Your username is <span>{{ created_username }}</span></h3>
+                    <p class="success-text">{{ success }}</p>
+                    <button
+                        type="button"
+                        class="copy-username-btn"
+                        id="copyUsernameBtn"
+                        data-username="{{ created_username }}"
+                    >
+                        Click here to copy username
+                    </button>
+                    <p class="copy-feedback" id="copyFeedback" aria-live="polite"></p>
+                    <a href="{{ url_for('auth.login') }}" class="btn btn-primary btn-block success-login-btn">Go to Login</a>
                 </div>
                 {% endif %}
 
@@ -59,6 +74,7 @@
                 </div>
                 {% endif %}
 
+                {% if not success %}
                 <form method="POST" action="{{ url_for('auth.signup') }}" class="signup-form" id="signupForm">
                     <!-- Full Name Field -->
                     <div class="form-group">
@@ -92,6 +108,7 @@
                             title="Please enter a valid 10-digit phone number"
                         >
                         <span class="form-hint">Your username will be: <strong id="usernamePreview">firstname.lastname + last 4 digits</strong></span>
+                        <span class="form-note">Use your correct phone number. Test results and important updates will be shared through your contact details.</span>
                     </div>
 
                     <!-- Email Field -->
@@ -107,6 +124,7 @@
                             required
                             title="Please enter a valid email address"
                         >
+                        <span class="form-note">Provide the correct email address too. Your test result may be shared there as well.</span>
                     </div>
 
                     <!-- Password Field -->
@@ -160,10 +178,11 @@
                         </svg>
                     </button>
                 </form>
+                {% endif %}
 
                 <div class="form-footer">
                     <p class="footer-text">
-                        Already have an account? 
+                        {% if success %}Ready to continue?{% else %}Already have an account?{% endif %}
                         <a href="{{ url_for('auth.login') }}" class="footer-link">Login here</a>
                     </p>
                 </div>
@@ -181,22 +200,26 @@
         const usernamePreview = document.getElementById('usernamePreview');
         const showPassword = document.getElementById('showPassword');
         const passwordInput = document.getElementById('password');
+        const copyUsernameBtn = document.getElementById('copyUsernameBtn');
+        const copyFeedback = document.getElementById('copyFeedback');
         
-        classSelect.addEventListener('change', function() {
-            const selectedClass = this.value;
-            
-            // Show stream only for class 11, 12, and dropper
-            if (selectedClass === '11' || selectedClass === '12' || selectedClass === 'dropper') {
-                streamGroup.style.display = 'flex';
-                streamSelect.required = true;
-            } else {
-                streamGroup.style.display = 'none';
-                streamSelect.required = false;
-                streamSelect.value = ''; // Reset stream selection
-            }
-        });
+        if (classSelect && streamGroup && streamSelect) {
+            classSelect.addEventListener('change', function() {
+                const selectedClass = this.value;
 
-        classSelect.dispatchEvent(new Event('change'));
+                // Show stream only for class 11, 12, and dropper
+                if (selectedClass === '11' || selectedClass === '12' || selectedClass === 'dropper') {
+                    streamGroup.style.display = 'flex';
+                    streamSelect.required = true;
+                } else {
+                    streamGroup.style.display = 'none';
+                    streamSelect.required = false;
+                    streamSelect.value = '';
+                }
+            });
+
+            classSelect.dispatchEvent(new Event('change'));
+        }
 
         // Live username preview
         function updateUsernamePreview() {
@@ -222,13 +245,32 @@
             }
         }
 
-        fullNameInput.addEventListener('input', updateUsernamePreview);
-        phoneInput.addEventListener('input', updateUsernamePreview);
-        updateUsernamePreview();
+        if (fullNameInput && phoneInput && usernamePreview) {
+            fullNameInput.addEventListener('input', updateUsernamePreview);
+            phoneInput.addEventListener('input', updateUsernamePreview);
+            updateUsernamePreview();
+        }
 
-        showPassword.addEventListener('change', function () {
-            passwordInput.type = this.checked ? 'text' : 'password';
-        });
+        if (showPassword && passwordInput) {
+            showPassword.addEventListener('change', function () {
+                passwordInput.type = this.checked ? 'text' : 'password';
+            });
+        }
+
+        if (copyUsernameBtn) {
+            copyUsernameBtn.addEventListener('click', async function () {
+                const username = this.dataset.username;
+
+                try {
+                    await navigator.clipboard.writeText(username);
+                    copyFeedback.textContent = 'Username copied.';
+                    this.textContent = 'Copied';
+                    this.disabled = true;
+                } catch (error) {
+                    copyFeedback.textContent = 'Copy failed. Please copy it manually.';
+                }
+            });
+        }
     </script>
 </body>
 </html>

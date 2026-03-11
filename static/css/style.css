@@ -1129,6 +1129,129 @@ body {
     gap: 1.25rem;
 }
 
+.success-card {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 24px;
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    background:
+        radial-gradient(circle at top right, rgba(59, 130, 246, 0.18), transparent 40%),
+        linear-gradient(135deg, #ecfdf5 0%, #eff6ff 100%);
+    box-shadow: 0 24px 60px rgba(16, 185, 129, 0.18);
+    animation: signupSuccessReveal 0.65s ease-out;
+}
+
+.success-card-glow {
+    position: absolute;
+    inset: -30% auto auto 60%;
+    width: 180px;
+    height: 180px;
+    background: rgba(255, 255, 255, 0.55);
+    filter: blur(10px);
+    transform: rotate(18deg);
+    pointer-events: none;
+}
+
+.success-badge {
+    width: 52px;
+    height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #10b981 0%, #2563eb 100%);
+    color: #ffffff;
+    margin-bottom: 1rem;
+    box-shadow: 0 12px 28px rgba(37, 99, 235, 0.2);
+}
+
+.success-eyebrow {
+    margin: 0 0 0.35rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #047857;
+}
+
+.success-title {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    color: #0f172a;
+}
+
+.success-title span {
+    display: inline-block;
+    color: #1d4ed8;
+}
+
+.success-text {
+    margin: 0.75rem 0 1rem;
+    color: #334155;
+}
+
+.copy-username-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0.85rem 1.2rem;
+    border: 0;
+    border-radius: 999px;
+    background: #0f172a;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.copy-username-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.2);
+    background: #1e293b;
+}
+
+.copy-username-btn:disabled {
+    cursor: default;
+    background: #334155;
+    box-shadow: none;
+    transform: none;
+}
+
+.copy-feedback {
+    min-height: 1.25rem;
+    margin: 0.75rem 0 1rem;
+    font-size: 0.9rem;
+    color: #047857;
+}
+
+.success-login-btn {
+    text-decoration: none;
+}
+
+.form-note {
+    display: block;
+    margin-top: 0.5rem;
+    color: #92400e;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+@keyframes signupSuccessReveal {
+    from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
 /* ========================================================================
    ALERT STYLES (Success/Error/Warning)
    ======================================================================== */
@@ -1224,6 +1347,10 @@ body {
 
     .form-wrapper {
         padding: 2rem 1.5rem;
+    }
+
+    .success-title {
+        font-size: 1.25rem;
     }
 }
 

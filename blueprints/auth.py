@@ -79,7 +79,8 @@ def signup():
 
             return render_template(
                 'signup.html',
-                success=f'Account created successfully! Your username is: {username}. Please login to start the test.',
+                success='Account created successfully! Please login to start the test.',
+                created_username=username,
             )
 
         except Exception as err:
