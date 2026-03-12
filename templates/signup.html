@@ -50,6 +50,24 @@
                 </div>
                 {% endif %}
 
+                {% if created_username %}
+                <div class="success-card">
+                    <div class="success-card-glow"></div>
+                    <div class="success-badge">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M9 12.75L11.25 15L15.75 9.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <p class="success-eyebrow">Account Ready</p>
+                    <h3 class="success-title">Copy your username: <span id="createdUsername">{{ created_username }}</span></h3>
+                    <p class="success-text">Save this username before logging in. You will need it together with your password to start the quiz.</p>
+                    <button type="button" class="copy-username-btn" id="copyUsernameBtn" data-username="{{ created_username }}">Copy Username</button>
+                    <p class="copy-feedback" id="copyFeedback" aria-live="polite"></p>
+                    <a href="{{ url_for('auth.login') }}" class="btn btn-primary success-login-btn">Go to Login</a>
+                </div>
+                {% endif %}
+
                 {% if error %}
                 <div class="alert alert-error">
                     <svg class="alert-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
@@ -229,6 +247,24 @@
         showPassword.addEventListener('change', function () {
             passwordInput.type = this.checked ? 'text' : 'password';
         });
+
+        const copyUsernameBtn = document.getElementById('copyUsernameBtn');
+        const copyFeedback = document.getElementById('copyFeedback');
+
+        if (copyUsernameBtn) {
+            copyUsernameBtn.addEventListener('click', async function () {
+                const username = this.dataset.username || '';
+
+                try {
+                    await navigator.clipboard.writeText(username);
+                    copyFeedback.textContent = 'Username copied. Use it on the login page.';
+                    this.textContent = 'Copied';
+                    this.disabled = true;
+                } catch (_error) {
+                    copyFeedback.textContent = `Copy failed. Your username is ${username}`;
+                }
+            });
+        }
     </script>
 </body>
 </html>

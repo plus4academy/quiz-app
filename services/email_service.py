@@ -1,7 +1,11 @@
 import smtplib
+import logging
 from email.message import EmailMessage
+import ssl
 
 from config import SMTP_CONFIG
+
+logger = logging.getLogger(__name__)
 
 
 def format_class_label(class_level, stream):
@@ -36,14 +40,34 @@ def send_plain_email(to_address, subject, body):
     msg.set_content(body)
 
     try:
-        with smtplib.SMTP(SMTP_CONFIG['host'], SMTP_CONFIG['port'], timeout=10) as smtp:
-            if SMTP_CONFIG.get('use_tls', True):
-                smtp.starttls()
+        smtp_cls = smtplib.SMTP_SSL if SMTP_CONFIG.get('use_ssl') else smtplib.SMTP
+        with smtp_cls(
+            SMTP_CONFIG['host'],
+            SMTP_CONFIG['port'],
+            timeout=SMTP_CONFIG.get('timeout', 10),
+        ) as smtp:
+            smtp.ehlo()
+            if SMTP_CONFIG.get('use_tls', True) and not SMTP_CONFIG.get('use_ssl'):
+                smtp.starttls(context=ssl.create_default_context())
+                smtp.ehlo()
             if SMTP_CONFIG.get('username') and SMTP_CONFIG.get('password'):
                 smtp.login(SMTP_CONFIG['username'], SMTP_CONFIG['password'])
             smtp.send_message(msg)
         return True, 'sent'
     except Exception as err:
+        logger.exception(
+            'SMTP send failed',
+            extra={
+                'smtp_host': SMTP_CONFIG.get('host'),
+                'smtp_port': SMTP_CONFIG.get('port'),
+                'smtp_sender': sender,
+                'smtp_username_set': bool(SMTP_CONFIG.get('username')),
+                'smtp_password_set': bool(SMTP_CONFIG.get('password')),
+                'smtp_use_tls': SMTP_CONFIG.get('use_tls'),
+                'smtp_use_ssl': SMTP_CONFIG.get('use_ssl'),
+                'recipient': to_address,
+            },
+        )
         return False, str(err)
 
 

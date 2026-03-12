@@ -74,6 +74,8 @@ SMTP_CONFIG = {
     'password': os.getenv('SMTP_PASSWORD', ''),
     'sender': os.getenv('SMTP_SENDER', os.getenv('SMTP_USERNAME', '')),
     'use_tls': _to_bool(os.getenv('SMTP_USE_TLS', 'true')),
+    'use_ssl': _to_bool(os.getenv('SMTP_USE_SSL', 'false')),
+    'timeout': int(os.getenv('SMTP_TIMEOUT', '10')),
 }
 
 
