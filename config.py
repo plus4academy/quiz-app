@@ -80,14 +80,3 @@ SMTP_CONFIG = {
     'timeout': int(os.getenv('SMTP_TIMEOUT', '10')),
 }
 
-
-## Railway Variables You Should Have Set:
-
-SMTP_HOST="smtp-relay.brevo.com"
-SMTP_PORT=465
-SMTP_USERNAME="a34a4f001@smtp-brevo.com"
-SMTP_PASSWORD="xsmtpsib-8fe8ee8bb5f148eb25d8341b90bda6b18815195d7d114f5a443f683b287fcb6d-hdisBbupRjIiiaSE"
-SMTP_SENDER="plus4academy2025@gmail.com"
-SMTP_USE_TLS="false"
-SMTP_USE_SSL="true"
-SMTP_TIMEOUT=10
