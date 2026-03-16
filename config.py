@@ -74,7 +74,14 @@ SMTP_CONFIG = {
     'port': int(os.getenv('SMTP_PORT', '465')),
     'username': os.getenv('SMTP_USERNAME', ''),
     'password': os.getenv('SMTP_PASSWORD', ''),
+    'brevo_api_key': (
+        os.getenv('BREVO_API_KEY')
+        or os.getenv('SENDINBLUE_API_KEY')
+        or os.getenv('SIB_API_KEY')
+        or ''
+    ),
     'sender': os.getenv('SMTP_SENDER', os.getenv('SMTP_USERNAME', '')),
+    'sender_name': os.getenv('SMTP_SENDER_NAME', 'Plus4 Academy'),
     'use_tls': _to_bool(os.getenv('SMTP_USE_TLS', 'false')),
     'use_ssl': _to_bool(os.getenv('SMTP_USE_SSL', 'true')),
     'timeout': int(os.getenv('SMTP_TIMEOUT', '10')),

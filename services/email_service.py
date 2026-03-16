@@ -1,6 +1,8 @@
 import logging
+import smtplib
+import ssl
+from email.message import EmailMessage
 from config import SMTP_CONFIG
-import sib_api_v3_sdk
 logger = logging.getLogger(__name__)
 
 # Try to import Brevo SDK, fallback to SMTP if not available
@@ -9,9 +11,6 @@ try:
     from sib_api_v3_sdk.rest import ApiException
     USE_BREVO_API = True
 except ImportError:
-    import smtplib
-    from email.message import EmailMessage
-    import ssl
     USE_BREVO_API = False
     logger.warning("Brevo SDK not found, falling back to SMTP")
 
@@ -39,78 +38,96 @@ def send_plain_email(to_address, subject, body):
     if not sender_email:
         return False, 'Sender email not configured'
 
-    # Method 1: Use Brevo API (works on Railway)
+    # Method 1: Use Brevo API only when explicit API key env vars are set.
+    # If only SMTP_* vars are configured (common on Railway), skip API and use SMTP.
     if USE_BREVO_API:
-        api_key = SMTP_CONFIG.get('password')  # Reuse password field for API key
-        if not api_key:
-            return False, 'Brevo API key not configured'
+        api_key = (SMTP_CONFIG.get('brevo_api_key') or '').strip()
 
-        try:
-            # Configure Brevo API
-            configuration = sib_api_v3_sdk.Configuration()
-            configuration.api_key['api-key'] = api_key
-            api_instance = sib_api_v3_sdk.TransactionalEmailsApi(
-                sib_api_v3_sdk.ApiClient(configuration)
-            )
+        if api_key:
+            try:
+                # Configure Brevo API
+                configuration = sib_api_v3_sdk.Configuration()
+                configuration.api_key['api-key'] = api_key
+                api_instance = sib_api_v3_sdk.TransactionalEmailsApi(
+                    sib_api_v3_sdk.ApiClient(configuration)
+                )
 
-            # Create email
-            send_smtp_email = sib_api_v3_sdk.SendSmtpEmail(
-                to=[{"email": to_address}],
-                sender={"email": sender_email, "name": "Plus4 Academy"},
-                subject=subject,
-                text_content=body
-            )
+                # Create email
+                send_smtp_email = sib_api_v3_sdk.SendSmtpEmail(
+                    to=[{"email": to_address}],
+                    sender={
+                        "email": sender_email,
+                        "name": SMTP_CONFIG.get('sender_name') or 'Plus4 Academy',
+                    },
+                    subject=subject,
+                    text_content=body
+                )
 
-            # Send via API
-            api_instance.send_transac_email(send_smtp_email)
-            logger.info(f"Email sent via Brevo API to {to_address}")
-            return True, 'sent'
+                # Send via API
+                api_instance.send_transac_email(send_smtp_email)
+                logger.info(f"Email sent via Brevo API to {to_address}")
+                return True, 'sent'
 
-        except ApiException as e:
-            logger.error(f"Brevo API error: {e}")
-            return False, f'Brevo API error: {e}'
-        except Exception as err:
-            logger.error(f"Email send error: {err}")
-            return False, str(err)
+            except ApiException as e:
+                logger.error(f"Brevo API error: {e}")
+                if getattr(e, 'status', None) == 401:
+                    return (
+                        False,
+                        'Brevo unauthorized (401): check BREVO_API_KEY/SENDINBLUE_API_KEY in Railway',
+                    )
+                return False, f'Brevo API error: {e}'
+            except Exception as err:
+                logger.error(f"Email send error: {err}")
+                return False, str(err)
+
+        logger.warning(
+            'Brevo SDK is enabled but no API key found; falling back to SMTP',
+            extra={
+                'has_brevo_api_key': bool(SMTP_CONFIG.get('brevo_api_key')),
+                'smtp_host': SMTP_CONFIG.get('host'),
+            },
+        )
 
     # Method 2: SMTP fallback (for local development)
-    else:
-        if not SMTP_CONFIG.get('host'):
-            return False, 'SMTP host not configured'
+    if not SMTP_CONFIG.get('host'):
+        return (
+            False,
+            'No valid email transport configured. Set BREVO_API_KEY or SMTP_HOST/SMTP_USERNAME/SMTP_PASSWORD',
+        )
 
-        msg = EmailMessage()
-        msg['Subject'] = subject
-        msg['From'] = sender_email
-        msg['To'] = to_address
-        msg.set_content(body)
+    msg = EmailMessage()
+    msg['Subject'] = subject
+    msg['From'] = sender_email
+    msg['To'] = to_address
+    msg.set_content(body)
 
-        try:
-            smtp_cls = smtplib.SMTP_SSL if SMTP_CONFIG.get('use_ssl') else smtplib.SMTP
-            with smtp_cls(
-                SMTP_CONFIG['host'],
-                SMTP_CONFIG['port'],
-                timeout=SMTP_CONFIG.get('timeout', 10),
-            ) as smtp:
+    try:
+        smtp_cls = smtplib.SMTP_SSL if SMTP_CONFIG.get('use_ssl') else smtplib.SMTP
+        with smtp_cls(
+            SMTP_CONFIG['host'],
+            SMTP_CONFIG['port'],
+            timeout=SMTP_CONFIG.get('timeout', 10),
+        ) as smtp:
+            smtp.ehlo()
+            if SMTP_CONFIG.get('use_tls', True) and not SMTP_CONFIG.get('use_ssl'):
+                smtp.starttls(context=ssl.create_default_context())
                 smtp.ehlo()
-                if SMTP_CONFIG.get('use_tls', True) and not SMTP_CONFIG.get('use_ssl'):
-                    smtp.starttls(context=ssl.create_default_context())
-                    smtp.ehlo()
-                if SMTP_CONFIG.get('username') and SMTP_CONFIG.get('password'):
-                    smtp.login(SMTP_CONFIG['username'], SMTP_CONFIG['password'])
-                smtp.send_message(msg)
-            logger.info(f"Email sent via SMTP to {to_address}")
-            return True, 'sent'
-        except Exception as err:
-            logger.exception(
-                'SMTP send failed',
-                extra={
-                    'smtp_host': SMTP_CONFIG.get('host'),
-                    'smtp_port': SMTP_CONFIG.get('port'),
-                    'smtp_sender': sender_email,
-                    'recipient': to_address,
-                },
-            )
-            return False, str(err)
+            if SMTP_CONFIG.get('username') and SMTP_CONFIG.get('password'):
+                smtp.login(SMTP_CONFIG['username'], SMTP_CONFIG['password'])
+            smtp.send_message(msg)
+        logger.info(f"Email sent via SMTP to {to_address}")
+        return True, 'sent'
+    except Exception as err:
+        logger.exception(
+            'SMTP send failed',
+            extra={
+                'smtp_host': SMTP_CONFIG.get('host'),
+                'smtp_port': SMTP_CONFIG.get('port'),
+                'smtp_sender': sender_email,
+                'recipient': to_address,
+            },
+        )
+        return False, str(err)
 
 
 def send_result_emails(student_name, student_email, phone, class_level, stream, score, total_questions):
